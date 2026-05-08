@@ -117,6 +117,12 @@
 
     .no1-link { color: #c0392b; text-decoration: none; }
     .no1-link:hover { text-decoration: underline; }
+    .no2-link { color: #666; text-decoration: none; }
+    .no2-link:hover { text-decoration: underline; }
+    .no3-link { color: #7a4820; text-decoration: none; }
+    .no3-link:hover { text-decoration: underline; }
+    .label.no2-label { background: #888; }
+    .label.no3-label { background: #a05a2c; }
 
     article {
       background: #fff;
@@ -265,7 +271,30 @@ const DATA = {
       "Royce' nama-chocolate — silky fresh chocolate (keep refrigerated until you fly home)",
       "Shiroi Koibito — buttery langue de chat cookies with white chocolate, Hokkaido's most iconic snack",
       "Lavender honey and dried lavender products from Furano farm country"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Goryokaku Tower — 107 m observation tower overlooking the star-shaped Goryokaku Fort; the moat becomes a sea of sakura in late April",
+        "Hakodate Morning Market — over 250 stalls serving fresh seafood from 5 am; famous for live squid (ikasomen) and sea urchin rice bowls",
+        "Mt. Hakodate Night View — one of Japan's top three night panoramas; ride the ropeway after sunset for spectacular city-and-harbor views"
+      ],
+      transport: [
+        "Fly to Hakodate Airport → airport bus to Hakodate Station (20 min)",
+        "JR Hokuto limited express from Sapporo to Hakodate (3 h 30 min); Hokkaido Shinkansen from Tokyo to Shin-Hakodate-Hokuto + transfer (4 h)",
+        "Hakodate City Tram (streetcar) serves Goryokaku Park and the historic Motomachi district (one-day pass ¥600)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Otaru Canal — gas-lit 1.3 km waterway lined with stone warehouses converted to shops, cafés, and restaurants; most atmospheric at dusk",
+        "Kitaichi Glass — Otaru's most-visited glassware shop in a converted herring warehouse; hand-blown lamps and ornaments",
+        "Sushiya-dori (Sushi Street) — a dense block of sushi restaurants serving ultra-fresh Hokkaido seafood at counter seating"
+      ],
+      transport: [
+        "JR Hakodate Main Line Rapid from Sapporo to Otaru (35–40 min); one of the most scenic seaside rail routes in Japan",
+        "Otaru Canal is a 10-minute walk from Otaru Station"
+      ]
+    },
   },
   Aomori: {
     en: "Aomori",
@@ -289,7 +318,29 @@ const DATA = {
       "Tsugaru-nuri lacquerware — multi-layered, hand-polished lacquer with distinctive swirling patterns",
       "Hirosaki apples (Fuji, Mutsu) or apple jam and juice sets",
       "Kogin-zashi embroidery — geometric white stitching on indigo fabric, a Tsugaru textile tradition"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Mt. Osore (Osorezan) — one of Japan's three most sacred sites; a volcanic caldera of grey rock and sulphur lakes believed to be the gateway to the afterlife",
+        "Entsuji Temple Festival (late July & October) — itako spirit mediums conduct kuchiyose (calling the dead) ceremonies; pilgrims fill the volcanic grounds",
+        "Lake Usori — a striking jade-green caldera lake surrounding the sacred site; the acidic water shimmers with an otherworldly hue"
+      ],
+      transport: [
+        "From Noheji Station (JR Tohoku Main Line) → JR Ominato Line to Shimokita → local bus to Osorezan (about 1 h total from Noheji)",
+        "Seasonal direct bus from Mutsu City to Osorezan (30 min); Mutsu is reached by express bus from Hachinohe (1 h 30 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Sannai-Maruyama Site — Japan's largest Jomon settlement (ca. 5,900–4,200 years old); giant chestnut-post structures and reconstructed pit houses",
+        "Sannai Maruyama Archaeological Museum — over 1,700 artefacts on display including elaborate pottery, clay figurines, and jade ornaments",
+        "UNESCO World Heritage designation (2021) as part of the Jomon Prehistoric Sites in Northern Japan"
+      ],
+      transport: [
+        "JR Ou Main Line from Hirosaki to Shin-Aomori → city bus No. 14 or 15 direct to the site (about 20 min from the station)",
+        "Free seasonal shuttle operates between the site and Aomori Station on weekends"
+      ]
+    },
   },
   Iwate: {
     en: "Iwate",
@@ -313,7 +364,28 @@ const DATA = {
       "Nambu Tekki — world-renowned cast-iron teapots and cookware from Morioka; excellent heat retention",
       "Joboji urushi lacquerware — Japan's top-quality raw lacquer comes from Iwate",
       "Ichino-Kura sake — premium Iwate nihonshu brewed with the prefecture's pure underground water"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Morioka Castle Ruins (Iwayama Park) — hilltop park with sweeping views of Mt. Iwate; one of Japan's top cherry-blossom and autumn-foliage destinations",
+        "Zaimokucho District — a cluster of sake and craft-beer breweries plus wanko soba restaurants; unlimited small servings of soba in lively eating competitions",
+        "Hoon-ji Temple — a Zen complex with a striking vermilion five-storey pagoda overlooking the Kitakami River"
+      ],
+      transport: [
+        "JR Tohoku Shinkansen to Morioka Station (2 h 20 min from Tokyo)",
+        "Denden-mushi — a popular ¥100 loop bus that circles all main sightseeing spots in Morioka"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Ryusendo Cave — one of Japan's top three limestone caves; an underground river forms lakes of exceptional transparency (visibility up to 41.5 m)",
+        "Cave Museum — showcases the geology and the extinct Ryusendo cavefish unique to this limestone system",
+        "Ryusui-no-oka Aquarium — on-site aquarium featuring cavefish and local freshwater species"
+      ],
+      transport: [
+        "From Morioka Station, JR Yamada Line to Iwaizumi Station (1 h 30 min) → local bus 10 min, or express bus direct from Morioka (about 1 h 40 min)"
+      ]
+    },
   },
   Miyagi: {
     en: "Miyagi",
@@ -337,7 +409,28 @@ const DATA = {
       "Gyutan jerky and vacuum-packed grilled tongue sets for taking home",
       "Zunda confections — zunda mochi, zunda roll cake, and zunda Kit Kats",
       "Kokeshi dolls — simple, elegant wooden dolls from the Tohoku craft tradition"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Matsushima Bay — one of Japan's 'Three Views'; 260 pine-covered islands best seen from pleasure boats or scenic hilltop teahouses",
+        "Zuiganji Temple — a 9th-century Zen temple with a cedar-lined path and cave corridors carved by generations of ascetics",
+        "Fukuurajima Island — a 3-minute footbridge walk to a nature reserve with a panoramic walking trail around the island's forested edge"
+      ],
+      transport: [
+        "JR Senseki Line from Sendai to Matsushima-kaigan Station (40 min) or scenic JR Tohoku Main Line to Matsushima Station",
+        "Pleasure boats depart from Matsushima Pier for a 50-minute island-hopping cruise (¥1,500)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Zao Onsen — a volcanic hot-spring resort renowned for its milky-green sulphur baths, Japan's most acidic publicly accessible onsen",
+        "Zao Juhyo (Snow Monsters) — heavy rime-ice formations coating fir trees on the mountain ridgeline; illuminated at night from mid-January to mid-March",
+        "Zao Ropeway — three-stage cable car ascending to the volcanic Okama crater lake, which changes colour with weather and season"
+      ],
+      transport: [
+        "From Yamagata Station, Yamagata Bus to Zao Onsen (40 min); Yamagata is on the JR Yamagata Shinkansen from Tokyo (2 h 30 min)"
+      ]
+    },
   },
   Akita: {
     en: "Akita",
@@ -361,7 +454,29 @@ const DATA = {
       "Inaniwa udon (dried noodle gift sets) — the ultimate Akita pantry souvenir",
       "Magewappa bentō boxes — steam-bent cedar lunchboxes from Odate; UNESCO-designated traditional craft",
       "Akita sake — brewed with the prefecture's ultra-soft water; look for Shinpou, Kariho, or Dewatsuru labels"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Shirakami-Sanchi — UNESCO World Heritage beech forest straddling Akita and Aomori; the largest intact primeval Siebold's beech forest in East Asia",
+        "Anmon Falls — a three-tiered waterfall deep in the Shirakami mountains; vivid red and orange in autumn",
+        "Juniko (Twelve Lakes) — a cluster of 33 forest ponds, including the cobalt-blue Aoike (Blue Pond) formed by a 1704 earthquake"
+      ],
+      transport: [
+        "From Hirosaki Station, bus to Shirakami-Sanchi Nishimeguri Gate (about 1 h) — easiest approach from the Aomori side",
+        "From Akita, JR Gono Line to Juniko Station (3 h) → 10-minute walk to the trailhead"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kakunodate Bukeyashiki — a preserved samurai district with six open-to-the-public warrior residences and centuries-old weeping cherry trees",
+        "Hirafuku Memorial Museum — Edo-period samurai armour, swords, and documents from the Satake clan retainers on display",
+        "Kabazaiku craft workshop — artisans apply wild cherry bark to tea canisters and writing instruments; a Kakunodate tradition since the 18th century"
+      ],
+      transport: [
+        "JR Akita Shinkansen from Tokyo to Tazawako Station (3 h) → JR Tazawako Line 10 min to Kakunodate Station",
+        "Alternatively, JR limited express from Akita to Kakunodate (45 min)"
+      ]
+    },
   },
   Yamagata: {
     en: "Yamagata",
@@ -385,7 +500,28 @@ const DATA = {
       "Hand-carved shogi pieces from Tendo — the city produces 95% of Japan's professional shogi sets",
       "Yamagata cherries (Sato Nishiki variety) in season June–July; also available as jams and sweets",
       "Beni-hana (safflower) dyed fabrics and cosmetics — Yamagata was historically Japan's safflower capital"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Mt. Haguro — the most accessible of the Three Mountains of Dewa Sanzan; the 2,446 stone steps flanked by cedars over 500 years old lead to the Five-Storey Pagoda",
+        "Saikan Shukubo — overnight at a lodging temple on the mountain summit and experience Shojin Ryori (Buddhist temple cooking)",
+        "Ideha Cultural Museum at the mountain base — exhibits on Yamabushi mountain ascetic practice and local Shugendo religious history"
+      ],
+      transport: [
+        "Shonai Kotsu bus from Tsuruoka Station to Mt. Haguro (30 min); Tsuruoka is on the JR Uetsu Main Line",
+        "Rental car recommended for visiting all three Dewa Sanzan mountains in a single day"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Risshakuji (Yamadera) — over 1,000 stone steps carved into a volcanic cliff; the summit viewpoint is where Matsuo Basho wrote his most famous haiku about the cicada's cry",
+        "Konponchudo Main Hall — one of Japan's oldest wooden structures in continuous use; candles lit from a flame preserved since 860 AD",
+        "Basho Memorial Museum at the mountain base — tribute to the haiku master who visited in 1689 and immortalised the scene"
+      ],
+      transport: [
+        "JR Senzan Line from Yamagata City to Yamadera Station (20 min) — the station is directly at the temple entrance path"
+      ]
+    },
   },
   Fukushima: {
     en: "Fukushima",
@@ -408,7 +544,27 @@ const DATA = {
       "Aizu lacquerware (Aizu-nuri) — red-and-black lacquer bowls and trays with a 400-year craft tradition",
       "Akabeko — the iconic red papier-mâché bobblehead cow, a talisman of good health and the symbol of Aizu",
       "Aizu sake — local brands like Suehiro and Eikan, brewed with water from the Bandai mountain range"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Spa Resort Hawaiians — a large Polynesian-themed hot-spring resort opened in 1966 to revitalise a closed coalfield; the hula show is a beloved Japanese cultural institution",
+        "Aquamarine Fukushima — an acclaimed marine aquarium; the giant 'Sea of Kuroshio and Oyashio' exhibit recreates the entire Pacific tidal ecosystem",
+        "Shiramizu Amidado — a rare surviving Pure Land temple from 1160 AD, a National Treasure set in a reflective pond garden"
+      ],
+      transport: [
+        "JR Joban Line limited express from Ueno (Tokyo) to Iwaki Station (2 h); or from Fukushima City via JR Ban-Etsu East Line (1 h 30 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kitakata Ramen — the town is famous for thick flat noodles in a mild soy-pork broth; over 120 ramen shops serve a dedicated food-pilgrimage circuit",
+        "Kura Dori (Storehouse Street) — Kitakata has the highest density of traditional earthen-walled kura storehouses in Japan; over 4,200 survive",
+        "Kai Honke Residence — a National Important Cultural Property merchant estate with a grand storehouse complex open to visitors"
+      ],
+      transport: [
+        "JR Ban-Etsu West Line from Koriyama to Kitakata (1 h 20 min); or limited express from Aizu-Wakamatsu to Kitakata (15 min)"
+      ]
+    },
   },
   Ibaraki: {
     en: "Ibaraki",
@@ -432,7 +588,28 @@ const DATA = {
       "Natto gift sets — Ibaraki produces more natto (fermented soybeans) than any other prefecture; try the Mito Tengu brand",
       "Hitachi sweet potato products — the region's Beniharuka variety has exceptional sweetness",
       "Kuji amber accessories — the Kuji coast has yielded amber fossils for centuries; crafted into jewellery locally"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Hitachi Seaside Park — 350 hectares of seasonal flowers; 4.5 million nemophila (baby blue eyes) create a sea of blue in late April; kochia shrubs turn vivid red in October",
+        "Pleasure Garden — a retro funfair at the park's centre including a Ferris wheel with ocean views",
+        "Seaside cycling and walking trails — 17 km of paved paths through dunes, prairie, and flower fields"
+      ],
+      transport: [
+        "JR Joban Line to Katsuta Station → Ibaraki Transport Seaside Line to Uminokoen-nishi or Chuo exit (15 min); shuttle buses run during peak flower season"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kairakuen Garden — one of Japan's 'Three Great Gardens'; 3,000 plum trees bloom in late February–March in a garden designed by Mito's 9th feudal lord",
+        "Kodokan — the largest surviving domain school in Japan; samurai studied Confucianism and swordsmanship here under the Mito clan",
+        "Ibaraki Prefectural Museum of History — archaeological finds from Jomon to Edo periods displayed in a branch of the Kairakuen garden grounds"
+      ],
+      transport: [
+        "JR Joban Line limited express from Ueno (Tokyo) to Mito Station (1 h); suburban trains take 1 h 20 min",
+        "Kairakuen Station (JR Joban Line) opens seasonally during plum-blossom season (late Feb–late Mar)"
+      ]
+    },
   },
   Tochigi: {
     en: "Tochigi",
@@ -456,7 +633,27 @@ const DATA = {
       "Nikko carved woodwork — decorative items inspired by the intricate Toshogu carvings",
       "Yuba products — freeze-dried yuba sheets and yuba snacks are easy to carry home",
       "Futarasan Shrine sake — ceremonially brewed spring water sold in small bottles as a sacred gift"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Nasu Animal Kingdom — walk-through safari park with capybara, flamingos, and giant anteaters in a natural hillside setting",
+        "Nasukogen (Nasu Highland) — a cool-summer resort plateau popular for cycling, fishing, and hiking among 1,900 m volcanic peaks",
+        "Nasu Onsen — clustered hot-spring inns around Mt. Nasu; Tsutsumi-no-yu and Takayu Onsen are famous for their sulphuric waters"
+      ],
+      transport: [
+        "JR Tohoku Shinkansen to Nasu-Shiobara Station (1 h from Tokyo) → Nasukogen Express Bus or rental car (30 min to the highland)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Senjogahara Marshland — a vast highland marsh at 1,400 m in Nikko National Park; wooden boardwalks traverse sedge meadows with views of Mt. Nantai",
+        "Yudaki Falls — a powerful cascade on the Yukawa River at the marshland's southern edge; red leaves frame the waterfall in mid-October",
+        "Ryuzu Falls — a wide fan-shaped waterfall 20 minutes' walk from Senjogahara; the surrounding maples are among the most photographed in Nikko"
+      ],
+      transport: [
+        "From Tobu Nikko Station or JR Nikko Station, take the Tobu bus to Senjogahara-iriguchi stop (50 min)"
+      ]
+    },
   },
   Gumma: {
     en: "Gunma",
@@ -479,7 +676,28 @@ const DATA = {
       "Kusatsu onsen bath salts and 'yuno-hana' (sulfur crystals) for home bathing",
       "Konnyaku products — flavoured konnyaku chips, jelly, and konnyaku noodle kits",
       "Gunma silk scarves and fabrics — the prefecture was historically Japan's silk heartland"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Oze Marshland — Japan's largest high-moor wetland at 1,400–1,800 m; celebrated for Asian skunk cabbage (mizubasho) blooms in May–June and golden autumn colours",
+        "Mt. Shibutsu — a 2,228 m peak on the eastern edge of the Oze basin; the summit trail offers panoramic views over the entire marsh",
+        "Oze Ryokan cluster at Tokura and Hatomachi — rustic mountain inns near the trailheads; book well ahead for golden-week and autumn-leaf weekends"
+      ],
+      transport: [
+        "JR Joetsu Shinkansen to Jomo-Kogen Station → direct seasonal bus to Tokura trailhead (1 h 30 min)",
+        "Private car access is restricted during peak season; park-and-ride bus services operate"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Takasaki Daruma Doll Market (January 6–7) — the largest daruma market in Japan; Daruma-ji Temple and surrounding stalls sell thousands of papier-mâché good-luck figurines",
+        "Takasaki Kannon (Byakue Daikannon) — a 41.8 m white Kannon statue visible across the plain; stairs inside lead to a shoulder-level observation deck",
+        "Gunma Prefectural Museum of History — comprehensive exhibits on regional history from the Jomon period through to the Edo silk industry"
+      ],
+      transport: [
+        "JR Joetsu/Hokuriku Shinkansen to Takasaki Station (50 min from Tokyo)"
+      ]
+    },
   },
   Saitama: {
     en: "Saitama",
@@ -503,7 +721,28 @@ const DATA = {
       "Ichiro's Malt whisky — the globally acclaimed Chichibu Distillery produces some of Japan's most sought-after single malts",
       "Chichibu Night Festival goods — traditional lacquered sake cups and miniature float ornaments",
       "Chichibu tsumugi — hand-woven silk fabric with a subtle rustic texture, crafted in the region for centuries"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Kurazukuri Street — a 400-metre boulevard of Edo-period black-plaster kura storehouses; the most photographed streetscape in Saitama",
+        "Toki no Kane (Bell Tower) — a 16th-century belltower that still rings four times daily; an enduring symbol of Kawagoe",
+        "Kashi-ya Yokocho (Penny Candy Lane) — a narrow alley of old-fashioned sweet shops selling traditional Japanese candy and nostalgic snacks"
+      ],
+      transport: [
+        "Tobu Tojo Line limited express from Ikebukuro (Tokyo) to Kawagoe Station (30 min); also JR Kawagoe Line from Shinjuku (50 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Omiya Bonsai Village — a cluster of five professional nurseries open to the public; the Omiya Bonsai Art Museum displays masterworks from the Meiji era",
+        "Musashi Ichinomiya Hikawa Shrine — one of the Kanto region's oldest and most important shrines; a 2 km zelkova-tree approach lined with stone lanterns",
+        "Saitama Super Arena area — a world-record arena capacity venue surrounded by museums and shopping"
+      ],
+      transport: [
+        "JR Utsunomiya or Takasaki Line from Ueno (Tokyo) to Omiya Station (30 min)",
+        "From Omiya Station, the Bonsai Village is a 10-min bus or 20-min walk"
+      ]
+    },
   },
   Chiba: {
     en: "Chiba",
@@ -527,7 +766,28 @@ const DATA = {
       "Japan-exclusive Disney merchandise — seasonal and character items unavailable outside the resort",
       "Chiba peanut confectionery — peanut crackers, peanut brittle, and peanut butter from local producers",
       "Narita-san Shinsho-ji Temple charms — cedar prayer amulets from one of Japan's most visited temples"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Cape Shirahama — dramatic white cliffs at the tip of the Boso Peninsula; a scenic lighthouse trail and winter whale-watching tours",
+        "Tateyama Castle (Shirohama Park) — hilltop reconstruction with panoramic Sagami Bay views and cherry blossoms in April",
+        "Nokogiriyama (Saw Mountain) — eroded sandstone ridge with a colossal 31 m stone Buddha and 1,500 Rakan (arhat) statues"
+      ],
+      transport: [
+        "JR Uchibo Line limited express from Tokyo Station to Tateyama (1 h 40 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Naritasan Shinshoji Temple — one of Japan's most visited temples; a sprawling Shingon-sect complex with a tiered pagoda, park, and year-round festivals",
+        "Narita Gion Festival (July) — a spectacular three-day matsuri with ornate floats and traditional music",
+        "Omotesando Shopping Street — the stone-paved approach to Naritasan temple lined with eel restaurants, craft shops, and traditional sweet stalls"
+      ],
+      transport: [
+        "Narita Express (N'EX) from Tokyo Station to Narita Station (55 min); Keisei Skyliner from Ueno to Keisei-Narita (50 min)",
+        "Naritasan temple is a 15-minute walk from either Narita Station or Keisei-Narita Station"
+      ]
+    },
   },
   Tokyo: {
     en: "Tokyo",
@@ -551,7 +811,28 @@ const DATA = {
       "Tokyo Banana — the city's most popular souvenir; banana-cream filled sponge cakes in seasonal flavours",
       "Asakusa Nakamise crafts — tenugui hand towels, ningyo-yaki temple cakes, and traditional accessories",
       "High-end Ginza goods — flagship boutiques for Itoya stationery, Akomeya pantry products, and Japanese design"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Senso-ji Temple — Tokyo's oldest temple (7th century); the Kaminarimon thunder gate and Nakamise shopping street are among the city's most iconic images",
+        "Asakusa Shrine and Sanja Matsuri (mid-May) — one of Tokyo's three great festivals; over 100 mikoshi portable shrines parade through the streets",
+        "Sumida River waterbus — hop on at Asakusa Pier for a scenic 40-min ride to Hamarikyu Garden or Odaiba"
+      ],
+      transport: [
+        "Tokyo Metro Ginza Line to Asakusa Station (15 min from Shibuya)",
+        "Tokyo Skytree (634 m, world's tallest broadcasting tower) is a 10-min walk from Asakusa"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Shibuya Crossing — up to 3,000 pedestrians cross simultaneously in the famous scramble; view from the Starbucks or Mag's Park terrace above",
+        "Shibuya Sky Observation Deck (230 m) — roof-level platform atop Shibuya Scramble Square; open until 10:30 pm for panoramic night views",
+        "Meiji Jingu Shrine — a serene forested shrine dedicated to Emperor Meiji; the forested approach is a peaceful contrast to the surrounding urban energy"
+      ],
+      transport: [
+        "Shibuya Station is served by 9 rail and subway lines (JR Yamanote, Ginza, Hanzomon, Denentoshi, Fukutoshin, Tokyu Toyoko, Keio Inokashira, and others)"
+      ]
+    },
   },
   Kanagawa: {
     en: "Kanagawa",
@@ -575,7 +856,28 @@ const DATA = {
       "Kiyoken Shumai (chilled or frozen) — take the classic Yokohama dumpling home in its iconic yellow box",
       "Yokohama sweets — Chinatown egg tarts, Hamakko cream puffs, and harbour-themed confectionery",
       "Craft sake and beer from the Minato Mirai breweries"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Mikasa Park — a park surrounding the preserved Meiji-era battleship Mikasa, flagship of Admiral Togo's decisive victory at the Battle of Tsushima (1905)",
+        "Dobuita Street — Yokosuka's iconic American-influenced shopping street with US Navy culture and Yokosuka Navy burgers",
+        "Cape Kannonzaki — the easternmost tip of Kanagawa with a lighthouse museum and clear views across the Uraga Channel to Chiba"
+      ],
+      transport: [
+        "Keikyu Kurihama Line to Heian-Yokosuka Station (65 min from Shinagawa); or JR Yokosuka Line from Tokyo Station (1 h)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kotoku-in Kamakura Daibutsu — a 13.35 m seated bronze Great Buddha cast in 1252; visitors can enter the hollow interior of the statue",
+        "Tsurugaoka Hachimangu Shrine — Kamakura's most important shrine at the end of a 1.8 km tree-lined approach (Wakamiya Oji)",
+        "Engakuji and Kenchoji Temples — two of Kamakura's 'five great Zen temples' on the wooded Kita-Kamakura temple-hopping trail"
+      ],
+      transport: [
+        "JR Yokosuka Line from Tokyo Station to Kita-Kamakura (55 min) or Kamakura Station (1 h)",
+        "Enoden (Enoshima Electric Railway) — a charming narrow-gauge tram from Kamakura to Enoshima (27 min)"
+      ]
+    },
   },
   Niigata: {
     en: "Niigata",
@@ -598,7 +900,28 @@ const DATA = {
       "Niigata sake selection (Koshi no Kanbai, Kubota, Hakkaisan — all world-class labels)",
       "Koshihikari rice gift packs — vacuum-sealed 2 kg bags travel well",
       "Tochio abura-age — exceptionally thick, flavourful fried tofu pouches, a local speciality"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Sado Kinzan Gold Mine — a 400-year-old gold mine; underground tours through rock-cut galleries with animatronic miner displays",
+        "Earth Celebration — Kodo Drum Group's annual outdoor festival (mid-August) draws world-music fans to remote Ogi on the island's south coast",
+        "Ogi Traditional Wooden Basin Boat (Taraibune) — a round tub boat unique to Sado; tourists paddle it in a sheltered cove as fisherwomen once used it for seaweed harvesting"
+      ],
+      transport: [
+        "Jetfoil from Niigata Port to Ryotsu Port on Sado (67 min); regular car ferry (2 h 30 min)",
+        "Sado Kisen bus routes cover the main island sights; a car rental or 'My Plan' tour bus is recommended for the full circuit"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Naeba Ski Resort — Niigata's largest and most international ski resort; 27 courses served by the Dragondola, the longest gondola in Asia (5.5 km)",
+        "Fuji Rock Festival — Japan's largest outdoor music festival held at Naeba every late July; three days of international headliners",
+        "Stoneham Course moguls — Naeba hosted FIS World Cup mogul events; off-season trekking follows the same ridgeline trails with stunning views"
+      ],
+      transport: [
+        "JR Joetsu Shinkansen to Echigo-Yuzawa Station (1 h 20 min from Tokyo) → direct bus to Naeba (30 min)"
+      ]
+    },
   },
   Toyama: {
     en: "Toyama",
@@ -622,7 +945,28 @@ const DATA = {
       "Masu-no-sushi (vacuum-packed) — the most iconic Toyama gift, available at Toyama Station",
       "Takaoka bronze and copper crafts — wind chimes, decorative bells, and Buddhist altar pieces",
       "Kireiko glasswork — Toyama City is Japan's glass art capital; the museum shop has striking pieces"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Takaoka Daibutsu — one of Japan's 'Three Great Buddha Statues'; a 16 m bronze seated Buddha remarkable for its exquisite casting craftsmanship",
+        "Zuiryuji Temple — one of Japan's finest surviving Edo-period Zen temple complexes; the long moss-covered approach and main hall are National Treasures",
+        "Takaoka Traditional Craft Centre — demonstrations of Takaoka copperware and lacquerware, crafts produced here for over 400 years"
+      ],
+      transport: [
+        "Hokuriku Shinkansen to Shin-Takaoka Station (2 h from Tokyo); or Ainokaze Toyama Railway from Toyama (15 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Toyama Glass Art Museum — a stunning timber-lattice building by Kengo Kuma housing the world's largest collection of Dale Chihuly glass sculptures",
+        "Toyama Municipal Folk Museum (Toyama Castle) — a 16th-century castle site with exhibits on the domain and Toyama's famous travelling medicine dealers",
+        "Toyama Bay sushi circuit — the deep bay creates year-round upwelling; try white shrimp (shiro ebi), firefly squid (hotaruika), and yellowtail sashimi"
+      ],
+      transport: [
+        "Hokuriku Shinkansen to Toyama Station (2 h 10 min from Tokyo)",
+        "Toyama Light Rail and Portram tram network serves the central city and Bay Area"
+      ]
+    },
   },
   Ishikawa: {
     en: "Ishikawa",
@@ -646,7 +990,27 @@ const DATA = {
       "Gold leaf products — Kanazawa produces 99% of Japan's gold leaf; buy gold-dusted chocolates, cosmetics, or decorative sheets",
       "Kutani-yaki porcelain — bold five-colour overglaze painting on fine porcelain; a 350-year Ishikawa craft tradition",
       "Kaga-yuzen fabric — hand-painted silk kimono fabric in soft, natural colours; scarves and pouches make practical gifts"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Yamanaka Onsen Gorge — a steep river gorge with a suspension bridge and riverside promenade; Yamanaka is considered one of Japan's top three spa towns",
+        "Yamashiro Onsen — renowned for Kutani-ware ceramics; watch potters paint distinctive five-coloured overglaze patterns at local workshops",
+        "Katayamazu Onsen lakeside evening stroll — lantern-lit lakeside path with rowing boat hire on Lake Shibayama"
+      ],
+      transport: [
+        "JR Hokuriku Shinkansen to Kaga-Onsen Station (2 h 30 min from Tokyo); shuttle buses connect the four Kaga Onsen resort towns"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Mt. Hakusan (2,702 m) — a sacred Three Holy Mountains peak; the alpine hiking route from Betto-deai trailhead is one of Chubu's most rewarding full-day climbs",
+        "Shirayama Hime Shrine (Shiramine) — the main shrine of the Hakusan worship cult at the mountain's base; brilliantly coloured in autumn",
+        "Hakusan National Park wildflowers — over 800 alpine plant species; mid-July blankets the subalpine meadows in Hakusan gentian and arnica"
+      ],
+      transport: [
+        "JR Hokuriku Shinkansen to Kanazawa Station → Hokuriku Railroad bus to Shiramine (1 h 30 min) → seasonal shuttle to Betto-deai trailhead"
+      ]
+    },
   },
   Fukui: {
     en: "Fukui",
@@ -670,7 +1034,27 @@ const DATA = {
       "Echizen lacquerware — Fukui's 1,500-year lacquer tradition; fine bowls, trays, and chopsticks with a distinctive warmth",
       "Echizen washi paper goods — notebooks, envelopes, and cards made from hand-pressed Japanese paper",
       "Fukui eyewear — the city of Sabae makes 95% of Japan's spectacle frames; factory-outlet shops sell designer glasses at cost"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Kehi-no-Matsubara — a pine grove on a white-sand beach listed as one of Japan's top three most beautiful pine-grove beaches",
+        "Tsuruga Castle Ruins — a hilltop castle park; the foundation stones and views over Tsuruga Bay reward a short climb",
+        "Kanegasaki Shrine — a 500-year-old shrine flanked by weeping cherry trees; one of Fukui's finest spring blossom destinations"
+      ],
+      transport: [
+        "JR Hokuriku Shinkansen to Tsuruga Station (extended spring 2024); previously via conventional line from Fukui (20 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Tojinbo Cliffs — 25 m columns of volcanic andesite pounded by Sea of Japan waves; a 1 km coastal walk with dramatic sea-stack formations",
+        "Oshima Island boat tour — 10-min boat ride around the offshore rock columns with cave entry and seagull feeding",
+        "Maruoka Castle (Kasumi-ga-jo) — one of Japan's 12 original keeps and likely the oldest surviving tenshu (keep); built 1576, a 10-min drive from Tojinbo"
+      ],
+      transport: [
+        "From Fukui Station, Echizen Railway to Mikuni-Minatoguchi Station → bus to Tojinbo (about 55 min total)"
+      ]
+    },
   },
   Yamnashi: {
     en: "Yamanashi",
@@ -694,7 +1078,27 @@ const DATA = {
       "Yamanashi wine (Koshu variety) — pick up bottles directly from wineries in the Katsunuma district",
       "Shingen-mochi — soft rice cakes with kinako and black syrup; a hugely popular Yamanashi sweet",
       "Crystal glass crafts — Kofu has been a crystal-cutting centre for 1,400 years; gemstone accessories and decorative pieces"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Shosenkyo Gorge — a 4 km gorge of granite pinnacles and polished boulders in the Chichibu-Tama-Kai National Park; vivid autumn foliage in late October",
+        "Takeda Shrine (Kofu) — built on the site of the Takeda clan's fortress; dedicated to Shingen Takeda, the most famous warlord of the Warring States period",
+        "Katsunuma wine tasting — Yamanashi produces over 40% of Japan's wine; vineyard tours and tastings cluster around Katsunuma, 15 min by rail from Kofu"
+      ],
+      transport: [
+        "JR Chuo Line limited express Azusa from Shinjuku to Kofu (1 h 30 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Fujisan Hongu Sengen Taisha Shrine — head shrine of 1,300 Sengen shrines across Japan and the starting point of the Fujinomiya Trail up Mt. Fuji",
+        "Shiraito Falls — a 150-m-wide horseshoe of hundreds of thin water threads over a lava ledge; a UNESCO World Heritage site in Mt. Fuji's cultural landscape",
+        "Asagiri Highland — a wide plateau at 800 m on Mt. Fuji's southwest flank; horse-trekking, paragliding, and dairy farm tours with a clear Fuji backdrop"
+      ],
+      transport: [
+        "JR Tokaido Shinkansen to Shin-Fuji → JR Minobu Line to Fujinomiya Station (20 min); or direct highway bus from Shinjuku (2 h)"
+      ]
+    },
   },
   Nagano: {
     en: "Nagano",
@@ -718,7 +1122,28 @@ const DATA = {
       "Wasabi products from Azumino — the largest wasabi farm in Japan produces fresh paste, dried flakes, and wasabi-soy crackers",
       "Shinshu miso — Nagano is Japan's biggest miso producer; the mild, pale variety is excellent for everyday cooking",
       "Apple confectionery — apple jam, dried apple chips, and apple-brandy bonbons from the orchard districts"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Zenkoji Temple — one of Japan's most important Buddhist temples; the interior tunnel walk (Okaicho) in complete darkness past a sacred key is a uniquely spiritual experience",
+        "Nagano Toro Nagashi (August) — paper lanterns float down the Chikuma River past temple lights in a mesmerising evening event",
+        "1998 Winter Olympics venues — the speed-skating oval and biathlon range at Aqua Wing remain open to the public"
+      ],
+      transport: [
+        "JR Hokuriku Shinkansen to Nagano Station (1 h 40 min from Tokyo)",
+        "Zenkoji is a 30-min walk or 5-min bus from Nagano Station along a shopping arcade promenade"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Nozawa Onsen village — one of Japan's best-preserved onsen towns; 13 free public bathhouses (soto-yu) maintained by local families are scattered throughout the village",
+        "Nozawa Onsen Snow Resort — a vast ski area with a village ski-in/ski-out lifestyle; consistent deep powder (average 8 m season)",
+        "Dosonsha Shrine Fire Festival (January 15) — one of Japan's most dramatic festivals; village men defend a shrine tower against torch-wielding attackers in a cathartic ritual"
+      ],
+      transport: [
+        "JR Hokuriku Shinkansen to Iiyama Station → Nozawa Onsen Line Bus (25 min)"
+      ]
+    },
   },
   Gifu: {
     en: "Gifu",
@@ -742,7 +1167,27 @@ const DATA = {
       "Sarubobo — the red cloth monkey doll of Hida; a fertility and good-luck charm that makes a charming, compact gift",
       "Hida lacquerware (Shunkei-nuri) — translucent amber lacquer over fine-grained woodgrain; elegant and light",
       "Doburoku — a cloudy, unfiltered sake brewed in Shirakawa-go; legally made only at certified rural breweries"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Hida-Furukawa Old Town — whitewashed kurazukuri storehouses beside a koi-filled canal; less crowded than Takayama and often considered more authentic",
+        "Matsuri Museum (Hida-Furukawa) — houses the spectacular festival floats (yatai) used in April's Furukawa Festival, with a float-making workshop",
+        "Kita-Alps Viewpoint at Minamizawa — a farmhouse plateau offering a classic thatched-roof landscape against snow-capped peaks"
+      ],
+      transport: [
+        "JR Takayama Main Line from Nagoya to Hida-Furukawa Station (2 h 30 min) or from Takayama to Hida-Furukawa (15 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Gifu Castle — a mountain-top castle perched on Mt. Kinka (329 m) and accessible by ropeway; stunning views over the Nagara River bend",
+        "Ukai (Cormorant Fishing) — from May 11 to October 15, licensed fishermen use trained cormorants on the Nagara River by firelight; watch from a hired boat",
+        "Gifu Nobunaga Festival — a celebration of Oda Nobunaga who made Gifu his castle city; samurai parades and elaborate period costumes"
+      ],
+      transport: [
+        "JR Tokaido Shinkansen to Nagoya → JR Takayama Main Line to Gifu Station (20 min); or Meitetsu from Nagoya (30 min)"
+      ]
+    },
   },
   Shizuoka: {
     en: "Shizuoka",
@@ -765,7 +1210,27 @@ const DATA = {
       "Shizuoka green tea (shincha first-flush, deep-steamed fukamushi varieties) — the prefecture produces 40% of Japan's tea",
       "Wasabi-zuke — grated wasabi stem pickled in sake lees; the quintessential Shizuoka souvenir",
       "Mt. Fuji-themed goods — Fujinomiya and Gotemba outlets carry every conceivable Fuji souvenir"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Fujisan Hongu Sengen Taisha Shrine — head shrine of 1,300 Sengen shrines; the Fujinomiya Trail to Mt. Fuji's summit starts here (5th Station bus access available)",
+        "Shiraito Falls — a 150-m-wide curtain waterfall over a lava ledge; part of the UNESCO World Cultural Heritage Mt. Fuji region",
+        "Asagiri Highland — a working dairy plateau at 1,200 m with cheese-making workshops and panoramic Mt. Fuji views"
+      ],
+      transport: [
+        "JR Tokaido Shinkansen to Shin-Fuji → JR Minobu Line to Fujinomiya (20 min); or direct highway bus from Shinjuku (2 h)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Hamamatsu Festival (May 3–5) — one of Japan's biggest kite-flying and float festivals; thousands gather in the lake district for the Battle of Kites",
+        "Lake Hamana and eel cuisine — Japan's finest unagi is farmed in the warm brackish waters; try eel kabayaki (grilled with soy-mirin sauce) at lakeside restaurants",
+        "Hamanako Ropeway and Garden Park — panoramic views over the 65 km² lake and Pacific Ocean; garden park and concerts on weekends"
+      ],
+      transport: [
+        "JR Tokaido Shinkansen to Hamamatsu Station (1 h 30 min from Tokyo, 50 min from Nagoya)"
+      ]
+    },
   },
   Aichi: {
     en: "Aichi",
@@ -789,7 +1254,27 @@ const DATA = {
       "Uiro — a chewy, subtly sweet steamed rice cake; Nagoya's most traditional confectionery, available in matcha, sakura, and azuki flavours",
       "Noritake porcelain — tableware from Nagoya's world-famous china manufacturer; the Noritake Garden outlet has excellent prices",
       "Hatcho miso — the bold, aged red miso paste from Okazaki; intensely savoury and perfect for soups and marinades"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Inuyama Castle — Japan's oldest surviving original castle keep (built 1537); perched above the Kiso River gorge with panoramic views; one of only five National Treasure castles",
+        "Ukai (Cormorant Fishing) on the Kiso River — nightly May–October from hired boats; the oldest cormorant fishing tradition in Japan (1,300 years)",
+        "Japan Monkey Park — one of Japan's largest primate parks with 1,000 animals of 60 species; adjacent to Inuyama Castle"
+      ],
+      transport: [
+        "Meitetsu Inuyama Line from Meitetsu Nagoya Station to Inuyama-Yuen Station (30 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Himakajima Island — a small island famous for octopus (tako) and turban shell dishes; accessible only by ferry, with an unhurried fishing-village atmosphere",
+        "Gamagori Marine Resort — a beach resort with a lighthouse island (Takeshima) reachable by a 387 m causeway walk",
+        "Irago Cape — the southernmost point of the Atsumi Peninsula; a migrating hawk-watching platform draws ornithologists every autumn"
+      ],
+      transport: [
+        "Meitetsu Chita New Line to Utsumi Station (55 min from Nagoya) for the northern Chita coast; JR Tokaido Line to Gamagori for the east coast"
+      ]
+    },
   },
   Mie: {
     en: "Mie",
@@ -813,7 +1298,27 @@ const DATA = {
       "Akafuku mochi — available at the shrine-front shop only; shelf life 2–3 days, so plan accordingly",
       "Mikimoto pearl jewellery — the modern pearl industry was invented at Toba by Mikimoto Kokichi; the museum shop has authentic cultured pearls",
       "Matsusaka beef products — premium Wagyu from Mie's Matsusaka district, available as jerky or vacuum-packed sukiyaki sets"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Ago Bay pearl cultivation — Kokichi Mikimoto pioneered cultured pearl farming here in 1893; Mikimoto Pearl Island museum and live ama diving demonstrations run daily",
+        "Goza White Beach — the widest natural white-sand beach on the Shima Peninsula; sea kayaking and snorkeling in the sheltered bay",
+        "Ago Bay island cruise — the maze of pine-covered islets in Ago Bay is best seen from a sightseeing boat around the pearl oyster rafts"
+      ],
+      transport: [
+        "Kintetsu Limited Express from Nagoya to Shima-Isobe Station (1 h 40 min); from Osaka-Namba (1 h 50 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kumano Hongu Taisha Grand Shrine — the central shrine of the Kumano Sanzan; the Otorii, one of Japan's largest torii gates, marks the ancient Kumano Kodo pilgrimage terminus",
+        "Doro-kyo Gorge boat tour — a narrow river gorge with 100 m sheer cliffs; flat-bottomed boats navigate the emerald water",
+        "Nachi Falls — Japan's tallest uninterrupted waterfall (133 m) beside a crimson pagoda and Kumano Nachi Taisha shrine; an iconic image of pilgrimage Japan"
+      ],
+      transport: [
+        "From Shingu Station (JR Kisei Main Line from Nagoya 3 h or from Osaka 2 h), local bus to Kumano Hongu Taisha (1 h 20 min)"
+      ]
+    },
   },
   Shiga: {
     en: "Shiga",
@@ -836,7 +1341,27 @@ const DATA = {
       "Shigaraki-yaki pottery — home of Japan's most beloved tanuki (raccoon dog) statues; also elegant tea bowls and platters",
       "Omi linen fabric — light, naturally breathable summer fabric woven around Lake Biwa for centuries",
       "Baumkuchen from Clef des Champs or Taneya — Shiga's most coveted take-home confectionery"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Koka Ninja House (Koka Ninja Yashiki) — the only surviving genuine ninja house in Japan; secret doors, hidden escape routes, and contraband compartments in a real Edo farmhouse",
+        "Miho Museum — a world-class art museum accessed by a 250 m tunnel through a mountain; the I. M. Pei building integrates into a cedar forest above a reservoir",
+        "Koka Pharmacology Research Museum — Koka ninja were also noted herbalists; a museum of traditional medicine and ninja herbal techniques"
+      ],
+      transport: [
+        "JR Kusatsu Line from Kusatsu Station to Koka Station (35 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Omihachiman Hachimanyama — a 283 m hilltop park with views over reed-edged waterways and historic merchant townscape; accessible by ropeway",
+        "Suigo Canal boat tours — flat-bottomed boats drift through the Hachiman-bori moat canals lined with whiteplaster walls of Edo-period merchant houses",
+        "St. Xavier Memorial Church — a historic Catholic church built by missionary William Merrell Vories, who designed dozens of buildings across the Omi region"
+      ],
+      transport: [
+        "JR Biwako Line from Kyoto to Omi-Hachiman Station (30 min)"
+      ]
+    },
   },
   Kyoto: {
     en: "Kyoto",
@@ -860,7 +1385,27 @@ const DATA = {
       "Yatsuhashi — the unbeatable Kyoto souvenir: crispy cinnamon wafers or soft ('nama') triangles filled with seasonal pastes like sakura or matcha",
       "Nishijin-ori textile goods — woven silk made on traditional Jacquard looms; look for pouches, bookmarks, and obidome clips",
       "Kyo-yuzen silk — hand-painted resist-dye fabric in soft, nature-inspired colours; available as small accessories or full kimono"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Byodoin Temple — a 1053 AD Phoenix Hall reflected in a lotus pond; the image on the 10-yen coin; a UNESCO World Heritage Site surrounded by matcha tea fields",
+        "Uji tea plantation walking trail — Japan's oldest tea growing region; matcha soft serve, matcha noodles, and tea farm tours in a scenic river-valley landscape",
+        "Ujigami Shrine — Japan's oldest surviving Shinto shrine building (late Heian period, ca. 1060 AD); also a UNESCO World Heritage Site"
+      ],
+      transport: [
+        "JR Nara Line from Kyoto Station to Uji Station (17 min); or Kintetsu Kyoto Line to Kintetsu-Uji Station (25 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Amanohashidate Sand Bar — one of Japan's 'Three Views'; a 3.6 km pine-covered sand spit that spans the mouth of a bay; best seen through your legs (matanozoki) from the hilltop viewpoint",
+        "Manai Shrine on Amanohashidate — a venerable shrine at the tip of the sandbar dedicated to Izanagi no Mikoto, a Shinto creation deity",
+        "Chionji Temple — a beloved temple to the god of wisdom (Monju Bosatsu) at the south end; rub the Monju statue for academic success"
+      ],
+      transport: [
+        "Kyoto Tango Railway from Nishi-Maizuru to Amanohashidate Station (30 min); Maizuru is on the JR Maizuru Line from Kyoto (1 h)"
+      ]
+    },
   },
   Osaka: {
     en: "Osaka",
@@ -884,7 +1429,27 @@ const DATA = {
       "551 Horai pork buns (nikuman) — Osaka's most beloved chain; buy frozen to take on the train or ship home",
       "Takoyaki and okonomiyaki batter kit sets — the real mixes used by Osaka restaurants",
       "Dotonbori-edition Glico and Pocky sets — Japan-only flavours sold in giant gift boxes near the famous sign"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Nintoku-ryo Tumulus (Daisen Kofun) — the world's largest burial mound by area (486,000 m²); a UNESCO World Heritage keyhole-shaped mound surrounded by moats and forest",
+        "Sakai Traditional Crafts and knife-making demonstrations — Sakai-bocho kitchen knives have been a benchmark of Japanese cutlery for 600 years; visit forges and select premium blades",
+        "Sakai City Museum — displays artefacts from the 100+ kofun burial mounds of the UNESCO Mozu-Furuichi Kofun Group"
+      ],
+      transport: [
+        "Nankai Line from Namba (Osaka) to Sakai Station (15 min); or JR Hanwa Line to Mozu Station for the tumulus (25 min from Tennoji)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Hirakata Park — one of Japan's oldest amusement parks (opened 1910); tree-lined grounds, roller coasters, and seasonal flower festivals",
+        "Katano Karakami — workshops producing karakami (hand-printed Japanese paper) used in traditional rooms; demonstrations and workshops available",
+        "Makino Botanical Garden — a 24-hectare garden with 3,000 species; the Japanese garden section is exceptional in late November"
+      ],
+      transport: [
+        "Keihan Kyoto Line from Kyobashi (Osaka) to Hirakata-shi Station (30 min)"
+      ]
+    },
   },
   Hyogo: {
     en: "Hyogo",
@@ -908,7 +1473,27 @@ const DATA = {
       "Morozoff and Goncharoff chocolates — Kobe's two most famous European-style confectionery brands, both founded by Russian immigrants in the 1920s",
       "Nada sake — the Nada district produces 30% of Japan's sake; the breweries along 'Sake Street' offer tastings and bottled gifts",
       "Kobe leather goods — the Higashinada area has craft leather workshops producing quality wallets, bags, and belts"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Akashi Kaikyo Bridge — the world's longest suspension bridge (3,911 m); a bridge science museum underneath the anchorage features a tower-top walkway tour",
+        "Akashi Astronomical Science Museum — situated on Japan's standard time meridian (135°E); the tower acts as a sundial",
+        "Akashi sea bream (tai) — the Akashi Strait's powerful tidal currents produce firm, prized sea bream; sashimi and tai-meshi (sea bream rice) are celebrated local specialties"
+      ],
+      transport: [
+        "JR San'yo Main Line from Kobe Sannomiya to Akashi Station (25 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kinosaki Onsen — a row of seven public bathhouses (soto-yu) along a willow-draped canal; the traditional footbath-hopping yumepa pass covers all seven",
+        "Kinosaki Marine World — an aquarium and marine performance park with resident sea lions, dolphins, and penguins perched on a Japan Sea peninsula",
+        "Genbudo Cave Park — basaltic columnar-jointed caves formed by Hyonozan lava flow; the hexagonal columns were described by naturalists in the Edo period"
+      ],
+      transport: [
+        "JR San'in Main Line from Kyoto to Kinosaki-Onsen Station (2 h 20 min on limited express)"
+      ]
+    },
   },
   Nara: {
     en: "Nara",
@@ -931,7 +1516,28 @@ const DATA = {
       "Narazuke — vegetables (cucumber, watermelon rind, ginger) pickled in sake lees; Nara's oldest and most distinctive preserved food",
       "Shika (deer) goods — everything from leather deer-key-rings to ceramic deer figurines; quality ranges from kitsch to elegant",
       "Akahada-yaki pottery — a soft, warm-toned Nara pottery style that pairs beautifully with tea ceremony aesthetics"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Muro-ji Temple — a remote mountain temple in a cedar forest; the five-storey pagoda is the smallest national-treasure pagoda in Japan; renowned for hydrangeas in June",
+        "Uda City cycling trail — a rural cycling route through tea fields, persimmon orchards, and old samurai village districts",
+        "Yoshino-Kumano National Park border — the Uda highlands form the northern gateway to the UNESCO-listed Yoshino pilgrimage landscape"
+      ],
+      transport: [
+        "Kintetsu Osaka Line from Kintetsu-Namba (Osaka) to Muroguchi-Ono Station (1 h) → local bus to Muroji (25 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Yoshino Mountain sakura — Japan's most famous cherry-blossom viewing site; 30,000 trees in four zones bloom over two weeks from early April to early May",
+        "Kinpusenji Temple — a colossal Yamabushi mountain temple on the Yoshino ridge; the Zao-do hall houses three secret 7 m statues of Zao Gongen, revealed only every 7 years",
+        "Yoshino Mikumari Shrine — a hilltop shrine to the water-distribution deity; has protected Yoshino's sacred cedar forest since the Nara period"
+      ],
+      transport: [
+        "Kintetsu Yoshino Line from Abeno-bashi (Osaka) to Yoshino Station (1 h 30 min)",
+        "Yoshino Ropeway — a short cable car up to the lower temple gates (3 min)"
+      ]
+    },
   },
   Wakayama: {
     en: "Wakayama",
@@ -954,7 +1560,27 @@ const DATA = {
       "Nachi black stone — polished jet-black pebbles from the riverbed near the falls; sold as worry stones and decorative pieces",
       "Arita mikan (mandarin oranges) — Wakayama is Japan's top mikan-producing prefecture; also available as juice, jelly, and ponzu",
       "Yuzu kosho — a punchy citrus-chili paste made from Totsukawa yuzu; one jar transforms any dish"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Wakayama Castle — a reconstructed hilltop castle with a 17th-century stone-wall base; a free zoo on the grounds with polar bears is an unexpected bonus",
+        "Kimiidera Temple — a hilltop temple with a 231-step stone staircase; the main hall commands sweeping views of Wakayama City and the Kii Channel",
+        "Kada Area tuna auction — Kada Port's morning tuna auction is open to visitors; fresh kaisen-don (sashimi rice bowls) at the harbor-front market"
+      ],
+      transport: [
+        "JR Kinokuni Line from Osaka to Wakayama Station (1 h); Nankai from Namba also possible"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Hashigui-iwa Rock Formations — a 850-metre row of 40 sea-weathered rock pillars extending into the Pacific; most dramatic at sunset or low tide",
+        "Kushimoto Marine Park — Japan's northernmost coral reef visible via glass-bottom boats or a submerged aquarium tunnel",
+        "Kii-Katsuura Tuna Fishing Port — Japan's largest landing port for bluefin tuna; the waterfront morning tuna auction is open to observation"
+      ],
+      transport: [
+        "JR Kisei Main Line limited express Kuroshio from Shin-Osaka to Shirahama or Kii-Katsuura (2–3 h)"
+      ]
+    },
   },
   Tottori: {
     en: "Tottori",
@@ -978,7 +1604,27 @@ const DATA = {
       "Nijisseiki pear products — fresh pears (seasonal), pear jelly, pear cider, and pear vinegar dressing",
       "Matsuba-gani (flash-frozen whole crab) — available at the fish market or department stores for shipping home",
       "Tottori Mingei folk crafts — simple, well-made toys and textiles from the San'in 'Mingei' (Folk Art) movement"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Mt. Daisen (1,729 m) — the highest peak in the Chugoku region; the Daisen-ji Temple complex at the base has a 1,300-year history and giant sugi cedar groves",
+        "Daisen North Wall panoramic view from Kagikake Pass — the jagged north face is unique in Japan for its alpine vertical relief",
+        "Daisen Ski Resort — Chugoku and Sanin's largest ski area; reliable snow from December with views to the Oki Islands on clear days"
+      ],
+      transport: [
+        "JR San'in Main Line from Yonago Station → bus to Daisen-ji area (50 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Mizuki Shigeru Road — an 800 m shopping street with 177 bronze statues from Shigeru Mizuki's GeGeGe no Kitaro manga; detailed figures are free to see and photograph",
+        "Mizuki Shigeru Museum — the definitive museum on the manga master's life, his ghostly Yokai characters, and the history of post-war manga culture",
+        "Sakaiminato Port fugu tasting — the town is Japan's top landing site for tiger pufferfish; specialised restaurants offer safe fugu cuisine year-round"
+      ],
+      transport: [
+        "JR Sakaiminato Line from Yonago Station to Sakaiminato Station (45 min)"
+      ]
+    },
   },
   Shimane: {
     en: "Shimane",
@@ -1001,7 +1647,27 @@ const DATA = {
       "Izumo enmusubi charms — marriage and relationship-connecting good-luck charms from the shrine of the deity of ties",
       "Tatara ironwork items — Shimane's ancient iron-smelting tradition (tatara-buki) produces quality knives, scissors, and decorative ironware",
       "Shijimi clam extract products — health supplements, instant miso soup packets, and shijimi tsukudani"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Matsue Castle — one of Japan's 12 remaining original keeps; nicknamed 'Black Castle' for its dark exterior; the moat is navigated by flat-bottomed sightseeing boats",
+        "Lafcadio Hearn (Koizumi Yakumo) Memorial Museum — the Greek-Irish writer who became Japanese is celebrated in Matsue, the city he loved most; his samurai garden survives intact",
+        "Adachi Museum of Art garden — voted Japan's most beautiful garden by the Journal of Japanese Gardening for 18 consecutive years; living paintings framed through shoji windows"
+      ],
+      transport: [
+        "JR Yakumo limited express from Okayama to Matsue Station (2 h 30 min); or JR Super Matsukaze from Tottori (1 h 15 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Tsuwano Tonomachi Street — a white-plastered samurai-district street with a crystal-clear koi-filled canal; the district is virtually unchanged since the Edo period",
+        "Taikodani Inari Shrine — 1,000 vermilion torii gates wind up the wooded hillside above Tsuwano; a quieter, more atmospheric setting than Fushimi Inari in Kyoto",
+        "Mori Ogai Birthplace and Memorial Museum — the Meiji-era novelist and army surgeon was born in Tsuwano; his childhood home and literary legacy are celebrated here"
+      ],
+      transport: [
+        "JR Yamaguchi Line from Shin-Yamaguchi Station to Tsuwano Station (1 h 10 min); SL Yamaguchi steam locomotive runs on weekends"
+      ]
+    },
   },
   Okayama: {
     en: "Okayama",
@@ -1024,7 +1690,27 @@ const DATA = {
       "Kibidango mochi — the Momotaro-branded sweet, sold at every station shop in Okayama; buy the soft fresh variety",
       "Bizen-yaki pottery — unglazed, wood-fired stoneware with a natural russet-and-gray finish; one of Japan's six oldest kiln traditions",
       "Okayama white peach and Muscat of Alexandria grapes — Japan's most prestigious fruit, in season July–September"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Kurashiki Bikan Historical Quarter — a 400-m stretch of white-walled Edo-period warehouses reflected in a willow-shaded canal; a stately atmosphere unique in Japan",
+        "Ohara Museum of Art — Japan's first Western-art museum (opened 1930); a neoclassical building housing El Greco, Monet, and Matisse alongside Japanese modern masters",
+        "Kurashiki Ivy Square — a former Meiji-era cotton mill converted into a cultural complex with hotels, museums, and outdoor concerts"
+      ],
+      transport: [
+        "JR Sanyo Main Line from Okayama to Kurashiki Station (15 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Bitchu Matsuyama Castle — Japan's highest surviving original castle keep (430 m); the stone walls emerging from morning clouds create one of Japan's most breathtaking 'sea of clouds' views (October–March)",
+        "Raikyuji Temple (National Special Scenic Garden) — a Zen dry-landscape garden by Kobori Enshu incorporating Mt. Atago as borrowed scenery; among Japan's 10 most beautiful gardens",
+        "Takahashi Buke-Yashiki — a preserved samurai residential district with several open estates and Edo-period earthen walls"
+      ],
+      transport: [
+        "JR Hakubi Line from Okayama or Kurashiki to Bitchu-Takahashi Station (50 min)"
+      ]
+    },
   },
   Hiroshima: {
     en: "Hiroshima",
@@ -1048,7 +1734,28 @@ const DATA = {
       "Momiji-manju — maple-leaf-shaped cakes filled with red bean, custard, chocolate, or matcha; the definitive Hiroshima/Miyajima souvenir",
       "Oyster products — bottled oyster sauce (kaki-soy), dried oysters, and kaki-no-ha crackers ship well",
       "Setouchi lemon products — the Seto Inland Sea produces Japan's best lemons; lemon curd, lemon cake, and lemon liqueur are excellent"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Itsukushima Shrine — a UNESCO World Heritage Site; the vermilion torii gate appears to float over the sea at high tide, and the shrine corridors hover above the water on stilts",
+        "Mt. Misen (530 m) — a sacred peak accessible by ropeway; trails through primeval forest lead to panoramic views of the Seto Inland Sea archipelago",
+        "Senjokaku Pavilion — a massive unfinished temple pavilion built by Toyotomi Hideyoshi in 1587; the wooden ceiling is hung with donated wooden shovels"
+      ],
+      transport: [
+        "JR San'yo Main Line to Miyajimaguchi Station (30 min from Hiroshima) → JR Miyajima Ferry (10 min; covered by JR Pass)",
+        "Hiroshima Electric Railway (streetcar) Line 2 to Miyajimaguchi also stops at the ferry terminal"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Temple-hopping trail — Onomichi's hillside is dotted with 25 temples connected by a 'Cat Street' walkway; steep stone paths lead to hidden gardens",
+        "Onomichi Cat Alley — a stone-paved lane famous for its resident cats; a Cat Museum and cat-themed shops draw feline enthusiasts",
+        "Shimanami Kaido cycling — one of the world's great cycling routes; a 70 km island-hopping course across the Seto Inland Sea from Onomichi to Imabari (Ehime)"
+      ],
+      transport: [
+        "JR San'yo Main Line from Hiroshima to Onomichi Station (1 h)"
+      ]
+    },
   },
   Yamaguchi: {
     en: "Yamaguchi",
@@ -1071,7 +1778,27 @@ const DATA = {
       "Hagi-yaki pottery — prized above almost all other Japanese ceramics for tea ceremony; the porous clay transforms with use, changing colour over years of tea staining",
       "Fugu products — processed fugu hirezake (sake with a toasted fugu fin dropped in) or fugu tsukudani are easy to carry home",
       "Natsumikan (summer orange) preserves — Hagi's distinctive bitter-sweet citrus made into marmalade, jelly, and candied peel"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Karato Market — the most atmospheric fish market in western Japan; on weekends, sushi and sashimi stalls open for an outdoor 'sushi festival' beside the Kanmon Strait",
+        "Kanmon Straits Pedestrian Tunnel — a free 780 m underwater walkway beneath the straits connecting Honshu to Kyushu",
+        "Akama Shrine — a Heian-period shrine famous as the burial site of child emperor Antoku; the Mimi Nashi Hoichi story (Kwaidan) is set here"
+      ],
+      transport: [
+        "JR San'yo Shinkansen to Shin-Shimonoseki → JR Sanyo Main Line to Shimonoseki Station (5 min from Shin-Shimonoseki)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kintaikyo Bridge — a 5-arch wooden bridge built in 1673 using an interlocking, unpinned timber technique that withstands floods; one of Japan's three most beautiful bridges",
+        "Iwakuni Castle and ropeway — a reconstructed hilltop castle accessible by ropeway with views over the Nishiki River and bridge below",
+        "Iwakuni White Snake Museum (Shirohebi) — albino Japanese rat snakes are found only in Iwakuni; a small museum dedicated to this rare local natural phenomenon"
+      ],
+      transport: [
+        "JR Sanyo Main Line from Hiroshima to Iwakuni Station (40 min); JR San'yo Shinkansen to Shin-Iwakuni (30 min, then local bus)"
+      ]
+    },
   },
   Tokushima: {
     en: "Tokushima",
@@ -1094,7 +1821,27 @@ const DATA = {
       "Sudachi products — ponzu sauce, sudachi juice, sudachi-flavoured confectionery; the citrus is unlike anything outside Japan",
       "Awa-ai indigo goods — Tokushima's awa-ai (Japanese indigo) dyed textiles: scarves, tenugui hand towels, and pouch bags",
       "Naruto sea bream kamaboko (fish cake) and processed products"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Naruto Whirlpools boat tour — tidal whirlpools up to 20 m in diameter form twice daily; Aqua Eddy glass-bottomed boats offer the closest view",
+        "Onaruto Bridge observation walkway (Eddy Road) — a glass floor walkway 45 m above the swirling tidal straits; peer straight down at the whirlpools",
+        "Uzushio Aquarium — a small but excellent aquarium at the observation centre focused on the biology of the Naruto Strait tidal ecosystem"
+      ],
+      transport: [
+        "Highway bus from Tokushima Station to Naruto (50 min); or JR Naruto Line to Naruto Station → local bus 10 min"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Oboke and Koboke Gorges — marble gorges on the Yoshino River with rafting, line fishing, and scenic boat tours between pale-blue striated cliffs",
+        "Kazurabashi Vine Bridge — a suspension bridge of wild mountain vine (shibakazu) rebuilt every 3 years; one of three remaining vine bridges in Japan",
+        "Awa Odori Festival (August 12–15) — one of Japan's three greatest summer festivals; 1.3 million visitors watch or join the joyful chain-dance processions"
+      ],
+      transport: [
+        "JR Dosan Line from Tokushima Station to Awa-Ikeda Station (50 min) for Oboke Gorge; local bus to the Kazurabashi bridge"
+      ]
+    },
   },
   Kagawa: {
     en: "Kagawa",
@@ -1118,7 +1865,27 @@ const DATA = {
       "Sanuki udon noodle kits — half-dried or dried noodle packets with authentic dashi sachets; the real thing, easy to cook at home",
       "Shodoshima olive oil and soap — small-batch extra-virgin olive oil from Japan's premier olive island",
       "Marugame uchiwa (round fans) — Kagawa produces 90% of Japan's uchiwa; decorated paper fans make lightweight, elegant gifts"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Konpira-san (Kotohira-gu Shrine) — a mountain shrine reached by 785 stone steps to the main shrine (1,368 steps to the inner shrine); panoramic Sanuki Plain views await at the top",
+        "Kanamaru-za Kabuki Theater — Japan's oldest surviving kabuki theater (1835); still hosts performances and open to backstage tours year-round",
+        "Golden Age of Kotohira — a rich heritage of votive ship paintings (ema) donated by sailors seeking safe passage; the treasure house displays hundreds"
+      ],
+      transport: [
+        "JR Dosan Line or Kotoden Kotohira Line from Takamatsu to Kotohira Station (1 h)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Zentsuji Temple — the birthplace of Kobo Daishi (Kukai), founder of Shingon Buddhism; the largest temple on the Shikoku 88-Temple Pilgrimage, with a subterranean tunnel walk in darkness",
+        "Zentsuji cultural quarter — surrounding the vast temple complex is a heritage townscape of sake breweries and traditional machiya townhouses",
+        "Zentsuji Five-story Pagoda — one of the tallest temple pagodas in Shikoku at 43 m; recently repainted in brilliant cinnabar red"
+      ],
+      transport: [
+        "Kotoden Kotohira Line from Kotohira to Zentsuji Station (15 min); or JR Dosan Line from Takamatsu (45 min)"
+      ]
+    },
   },
   Ehime: {
     en: "Ehime",
@@ -1142,7 +1909,27 @@ const DATA = {
       "Tobe-yaki pottery — Ehime's signature white porcelain with indigo-blue painted motifs; made in Tobe town since the 18th century",
       "Mikan (mandarin) products — fresh fruit in season (November–February), or year-round juice, mikan beer, and mikan curd",
       "Iyo-kasuri cotton — a centuries-old indigo splash-dyed fabric tradition; bags, aprons, and cushion covers"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Ozu Castle — one of the 'Four Castles of Iyo'; the castle and the Garyu-so riverside villa with its elegant stroll garden create a well-preserved castle-town atmosphere",
+        "Hijikawa River scenic area — the river meanders through a sandstone cliff valley; known for a spectacular sea-of-clouds phenomenon on autumn mornings",
+        "Ozu Ukai (cormorant fishing) — one of the few remaining river-based ukai traditions in Shikoku; evening boat excursions from May to September"
+      ],
+      transport: [
+        "JR Yosan Line from Matsuyama to Iyo-Ozu Station (40 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Uwajima Castle — one of Japan's 12 original keeps; a small graceful three-story tower on a hilltop above the city",
+        "Bullfighting (Togyu) — Uwajima holds one of Japan's only traditional bull-versus-bull ring fights; events held five times per year at a dedicated arena",
+        "Taga Shrine — a historic shrine with an extraordinary collection of fertility art objects; a frank and famous exhibition of Japanese folk traditions"
+      ],
+      transport: [
+        "JR Yosan Line from Matsuyama to Uwajima Station (1 h 30 min on limited express)"
+      ]
+    },
   },
   Kochi: {
     en: "Kochi",
@@ -1165,7 +1952,27 @@ const DATA = {
       "Katsuo no tataki packs — vacuum-sealed half-block of seared bonito, ready to slice and dress at home",
       "Kochi sake — Kochi is one of Japan's top sake regions; the local style is 'tanrei karakuchi,' perfect with seafood",
       "Tosa washi paper crafts — Kochi has produced hand-made Japanese paper since the 8th century; notebooks, fans, and card sets"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Harimayabashi Bridge — a famous red bridge immortalised in the folk song Yosakoi Bushi; one of Kochi's 'three famous things'; the canal area is a pleasant strolling precinct",
+        "Yosakoi Festival (August 9–12) — 20,000 dancers in 200 teams perform energetic choreographed dances with naruko clappers across 17 stages around the city",
+        "Hirome Ichiba — a popular indoor market hall with stalls serving Kochi's best street food: katsuo no tataki, motoyaki gyoza, and local sake"
+      ],
+      transport: [
+        "Tosa Electric Railway tram loops around Kochi city centre; JR Nankai limited express from Okayama to Kochi (2 h 30 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Ioki River hot-spring rotenburo — a tidal river-edge outdoor bath where soaking times are dictated by the tides",
+        "Seikenji Temple (Temple 26 on the Shikoku Pilgrimage) — a dramatic cliff-face temple with a rope climb and coastal Pacific Ocean panorama",
+        "Ryugado Cave — a large limestone cave 1 km from the coast with prehistoric Yayoi-period pottery deposits; a 4 km exploration route leads through the chambers"
+      ],
+      transport: [
+        "JR Tosa Kuroshio Railway from Kochi to Aki Station (25 min)"
+      ]
+    },
   },
   Fukuoka: {
     en: "Fukuoka",
@@ -1189,7 +1996,27 @@ const DATA = {
       "Mentaiko (fresh or frozen) — top brands include Fukuya, Yamaya, and Chikae; gift boxes available at Hakata Station",
       "Hakata dolls — hand-painted unglazed clay figurines in traditional and theatrical poses; the most classical Fukuoka souvenir",
       "Hakata-ori silk textile — densely woven obi and accessories with a characteristic ribbed surface; robust enough to use daily"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Dazaifu Tenmangu Shrine — one of Japan's most important shrines dedicated to Sugawara no Michizane, the god of scholarship; plum blossoms in February are exceptional",
+        "Kyushu National Museum — Japan's fourth national museum (opened 2005); the Kengo Kuma building traces Japan's 2,000-year cultural exchange with Asia",
+        "Komyozenji Temple — a Zen temple with a mossy stone garden beside the cedar approach to Dazaifu Tenmangu; serene even during crowded periods"
+      ],
+      transport: [
+        "Nishitetsu Omuta Line from Nishitetsu-Fukuoka Station to Nishitetsu-Dazaifu (30 min, transfer at Nishitetsu-Futsukaichi)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Kokura Castle — a reconstructed castle in a central park; the surrounding Kokura Old Town (Tanga Market) is one of Kyushu's liveliest traditional markets",
+        "Mojiko Retro district — a preserved Meiji and Taisho-era harbor town; the old Customs House and railway station are popular destinations for Yaki Curry (Kitakyushu's signature dish)",
+        "Hibikinada Green Park — a coastal park with the Kitakyushu Wildlife Park; the botanical garden's rose garden peaks in May and October"
+      ],
+      transport: [
+        "JR San'yo Shinkansen to Kokura Station (3 h from Tokyo via Nozomi; 1 h from Hakata)"
+      ]
+    },
   },
   Saga: {
     en: "Saga",
@@ -1212,7 +2039,27 @@ const DATA = {
       "Karatsu-yaki pottery — rough, unassuming tea bowls prized since the 16th century; Japanese tea masters ranked it 'first Ido, second Raku, third Karatsu'",
       "Arita and Imari porcelain — some of the world's most recognisable blue-and-white and overglaze-enamel ceramics, produced here since 1616",
       "Saga seaweed (nori) — Ariake Sea's calm shallow waters produce exceptionally thin, aromatic sheets"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Arita Porcelain Park (Saga Ceramics Cultural Museum) — a replica Dutch town celebrating the history of Arita-yaki, Japan's oldest porcelain tradition (since 1616); hands-on pottery workshops",
+        "Kakiemon-style kiln sites at Nishiyama — the birthplace of the distinctive red-green overglaze Kakiemon style, once exported via the Dutch East India Company and copied by Meissen",
+        "Imari-Okawachi Kinrande Fair — outdoor antique sales on specific Sundays where dealers sell antique Imari and Nabeshima ware at reasonable prices"
+      ],
+      transport: [
+        "JR Karatsu Line to Arita (1 h 20 min from Hakata); Matsuura Railway from Imari connects the porcelain towns"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Saga Castle History Museum — a full-scale reconstruction of the 'Hall of 61.5-Tatami' council chamber; exhibits on the Nabeshima clan and the remarkable Meiji-era modernizers from Saga",
+        "Yutoku Inari Shrine — the third largest Inari shrine in Japan; a riot of red-lacquer pavilions and corridors clinging to a forested hillside above the Kashima lowlands",
+        "Yoshinogari Archaeological Park — Japan's largest Yayoi-period site (ca. 200 BC–200 AD); a massive reconstructed moated settlement with watchtowers and pit houses"
+      ],
+      transport: [
+        "JR Nagasaki Main Line limited express from Hakata (Fukuoka) to Saga Station (35 min)"
+      ]
+    },
   },
   Nagasaki: {
     en: "Nagasaki",
@@ -1236,7 +2083,27 @@ const DATA = {
       "Castella (Fukusaya or Bunmeido) — a long golden bar of honey sponge cake in a distinctive wooden box; the most celebrated Nagasaki gift",
       "Kakuni-manju — steamed bao bun stuffed with braised pork belly; best eaten fresh at Hamakatsu near the Nagasaki Chinatown",
       "Biidoro glasswork — traditional mouth-blown glass ornaments in delicate pastel colours, a Nagasaki craft since the Dutch trading era"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Hirado Castle (Kame-oka Castle) — a striking white castle on a hilltop above the harbor; Hirado was an important trading port for Dutch and Chinese merchants in the 17th century",
+        "Hidden Christian Heritage — Hirado has the highest density of Hidden Christian churches in Japan; several buildings are part of the UNESCO 'Hidden Christian Sites' inscription",
+        "Kawachi Pass scenic road — a narrow mountain road above Hirado Island offering views of the castle and bridge together in one sweep"
+      ],
+      transport: [
+        "Matsuura Railway West-Kyushu Line from Sasebo to Tabira-Hiradoguchi Station (1 h 10 min); Hirado Bridge connects the island to the mainland"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Huis Ten Bosch — a 152-hectare Dutch-themed resort with a canal system, tulip gardens, windmills, and summer fireworks; Japan's largest theme park by area",
+        "Kujukushima Pearl Sea Resort — glass-bottom boat and kayak tours among 208 named and unnamed islands of the Kujukushima Archipelago; sunset cruises are especially popular",
+        "Sasebo Burgers — Sasebo's US naval base heritage spawned Japan's own 'handmade burger' culture; the dense Yonkabori block has over 30 independent burger restaurants"
+      ],
+      transport: [
+        "JR Sasebo Line limited express from Hakata (Fukuoka) to Sasebo Station (1 h 50 min)"
+      ]
+    },
   },
   Kumamoto: {
     en: "Kumamoto",
@@ -1259,7 +2126,27 @@ const DATA = {
       "Karashi-renkon (vacuum-packed) — the lotus root stuffed with mustard is Kumamoto's most distinctive edible souvenir",
       "Kumamon goods — Kumamoto's bear mascot is one of Japan's top-grossing characters; every conceivable item is available at the Kumamon Square shop",
       "Kumamoto shochu and sake — Hitoyoshi-Kuma region produces excellent kome (rice) shochu from mountain-spring-water rice"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Mt. Aso Nakadake Crater — one of the world's largest active calderas; ropeway access to the crater rim depends on eruption alerts; a turquoise lava lake is awe-inspiring when accessible",
+        "Aso Kuju National Park highland trekking — a 1,000 m grassland plateau with horseback trails, wildflowers, and views across the caldera's farmsteads",
+        "Uchinomaki Onsen — a traditional hot-spring town inside the Aso caldera; mineral-rich baths and local Kumamoto specialties at small family inns"
+      ],
+      transport: [
+        "Aso Station is on the JR Houhi Main Line from Kumamoto (1 h on limited express); from Aso Station, bus to the volcano crater (40 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Hitoyoshi Kuma area river rafting — the Kuma River is rated Japan's top Class 5 whitewater; guided half-day and full-day raft trips (May–October)",
+        "Aoi Aso Shrine — a forest shrine with 240 designated National Cultural Properties; one of the four major shrines of ancient Kumamoto",
+        "Hitoyoshi Castle Ruins — a hilltop castle site on the Kuma River bend; the Sagari-matsuri festival illuminates the ruins in October"
+      ],
+      transport: [
+        "JR Kuma River Tourist Railway (Kawasemi Yamasemi) from Kumamoto to Hitoyoshi (1 h 30 min) — the most scenic river-gorge train ride in Kyushu"
+      ]
+    },
   },
   Oita: {
     en: "Oita",
@@ -1283,7 +2170,27 @@ const DATA = {
       "Beppu bamboo basketry — the finest Japanese bamboo weaving tradition; from market baskets to decorative display pieces, all made in Beppu workshops",
       "Kabosu citrus products — Oita's signature sour citrus used in ponzu, dressings, and drinks; kabosu juice and kabosu marmalade travel well",
       "Beppu onsen bath salts and 'yu-no-hana' mineral crystals — bottled from the sulphur springs for home bathing"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Yufuin Kinrin Lake — a calm lake shrouded in morning mist with Mt. Yufu behind; the lakeside is lined with art museums, craft shops, and cheesecake bakeries",
+        "Yufuin no Mori Train — a forest-green retro express from Hakata or Oita; the observation lounge car through the forested Kyushu mountains is a highlight",
+        "Shitanyu Communal Bath — a tiny free wooden bathhouse on the Yufu River; the simplest and most authentic onsen experience in Yufuin"
+      ],
+      transport: [
+        "JR Kyudai Main Line limited express from Hakata (Fukuoka) to Yufuin Station (2 h); or from Oita Station (45 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Nakatsu Castle — the original keep of the Kuroda clan (1588); now houses a history museum with artefacts from the Boshin War; a quiet, uncrowded original castle",
+        "Keiyo Park Aoshima reef — the small shrine-island on the Nakatsu coast is surrounded by a distinctive wavy reef (Oni no Sentakuita) that resembles a laundry board",
+        "Fukuzawa Yukichi Birthplace — the founder of Keio University and the face of the ¥10,000 note was born in Nakatsu; his birthplace and an adjacent museum are open to visitors"
+      ],
+      transport: [
+        "JR Nippō Main Line from Oita to Nakatsu Station (50 min on limited express); or JR San'yo Shinkansen to Kokura → limited express to Nakatsu (30 min)"
+      ]
+    },
   },
   Miyazaki: {
     en: "Miyazaki",
@@ -1306,7 +2213,27 @@ const DATA = {
       "Miyazaki mango — Japan's most prestigious mango (Taiyo no Tamago); harvested from May to July when the fruit falls naturally into a net",
       "Hyuga-natsu products — citrus jam, ponzu, and Hyuga-natsu marmalade from local producers",
       "Takachiho sake — clean, rice-forward junmai sake brewed with mountain spring water from the Gokase river basin"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Aoshima Island — a small tropical-looking island accessible via a causeway; surrounded by 'devil's washboard' layered rock platforms and a vermilion torii shrine",
+        "Miyazaki Prefectural Museum of Nature and History — a comprehensive natural history and archaeology museum with detailed exhibits on ancient Hyuga Province",
+        "Heiwadai Park and Haniwa Garden — a peaceful park with hundreds of replica clay Haniwa figures lining the forest paths; a complete reference collection of Kofun-era forms"
+      ],
+      transport: [
+        "JR Nichiran Main Line from Miyazaki to Aoshima Station (25 min)"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Udo Shrine — a cave shrine embedded in an ochre coastal cliff above the Pacific; throwing fukidama clay balls into a rock basin is said to bring good luck",
+        "Nichinan Coast National Road 448 drive — a winding cliff-top highway above a dramatic wave-carved coastline; one of Kyushu's great scenic drives",
+        "Sun-Messe Nichinan — a cliffside park with authorised replica moai statues (the only site outside Easter Island permitted to display full-size official replicas)"
+      ],
+      transport: [
+        "Nichinan Line bus from Miyazaki Station to Udo Shrine and the Nichinan Coast (1 h 30 min to 2 h)"
+      ]
+    },
   },
   Kagoshima: {
     en: "Kagoshima",
@@ -1330,7 +2257,27 @@ const DATA = {
       "Imo-shochu (sweet potato shochu) — Kagoshima is Japan's top shochu producer; look for Kuro Kirishima, Mori Izo, and Murao as premium labels",
       "Satsuma Kiriko cut glass — brilliantly coloured crystal with geometric Edo-era patterns; one of Japan's most sophisticated craft traditions",
       "Satsuma-age fish cake — Kagoshima's fried fish cake is thicker and sweeter than other regions'; the mixed variety pack makes an excellent gift"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Kirishima Jingu Shrine — a spectacular Shinto shrine rebuilt in 1715 deep in a camphor-tree forest on the flank of Mt. Kirishima; dedicated to Ninigi-no-Mikoto",
+        "Kirishima Mountains hiking — the volcanic chain of 23 peaks includes Karakuni-dake (1,700 m), the highest in northwest Kyushu; one of Japan's top multi-day ridge walks",
+        "Kirishima Onsen — numerous hot-spring inns cluster in the highland resort; the sulphuric Maruo Onsen baths are particularly prized for skin benefits"
+      ],
+      transport: [
+        "JR Kirishima Jingu Station (Nippo Main Line) from Kagoshima-Chuo (35 min); shuttle bus from the station to the shrine and hiking trailheads"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Izumi Crane Park — 10,000+ Nabes and White-naped Cranes winter at the Izumi plain from November to March; the observation centre allows close-up photography of the feeding flocks",
+        "Izumi Samurai Residences (Fumoto-machi) — a remarkably preserved feudal-era cluster of 150 samurai houses, earthen walls, and gate arches; Kagoshima's quietest heritage district",
+        "Komenotsu Port historical area — a former fishing harbor with a cluster of 19th-century merchant buildings"
+      ],
+      transport: [
+        "JR Shinkansen to Shin-Minamata → Hisatsu Orange Railway to Izumi (30 min); or JR Main Line from Kagoshima-Chuo (55 min)"
+      ]
+    },
   },
   Okinawa: {
     en: "Okinawa",
@@ -1354,7 +2301,27 @@ const DATA = {
       "Beniimo tarts — purple sweet potato custard tarts; Okinawa's most popular souvenir, available from Gyokudo and other bakeries at the airport",
       "Ryukyu glass — hand-blown from recycled glass bottles in vivid tropical colours; each cup and bowl is unique",
       "Awamori — Okinawa's indigenous rice spirit, distilled with black koji and aged in clay pots; look for aged (koshu) varieties from Zuisen or Helios"
-    ]
+    ],
+    spot2: {
+      attractions: [
+        "Kabira Bay — a UNESCO-designated landscape; the turquoise lagoon is enclosed by pine-covered islands; glass-bottom boat tours reveal the rare black pearl oysters below",
+        "Mt. Omoto (526 m) — the highest peak in Okinawa Prefecture; subtropical jungle trekking through ancient Yaeyama palm groves",
+        "Taketomi Island day trip — a 10-min ferry from Ishigaki to a flat island of traditional red-roof Ryukyu houses, hibiscus flowers, and water buffalo cart tours"
+      ],
+      transport: [
+        "Fly to Ishigaki Airport from Naha (50 min) or direct from Tokyo (3 h); island buses and rental cycles or cars cover the island"
+      ]
+    },
+    spot3: {
+      attractions: [
+        "Maehama (Yonaha Maehama) Beach — consistently rated Japan's most beautiful beach; 7 km of pure white sand and turquoise shallows",
+        "Ikema Island bridge drive — the 1.4 km bridge to Ikema Island cuts through an emerald lagoon; mangrove forest on the island's east coast is walkable at low tide",
+        "Miyako Island diving — Toriike (Bird Pond) connects sea to a landlocked marine pool; crystal winter visibility makes it one of Japan's top dive sites"
+      ],
+      transport: [
+        "Fly to Miyako Airport from Naha (45 min) or direct from Tokyo/Osaka (3 h); rental cars are the main transport option on the flat island"
+      ]
+    },
   }
 };
 
@@ -1390,6 +2357,10 @@ function render() {
     const li = n === 1 ? ' class="no1-item"' : '';
     const label = n === 1
       ? `<a class="no1-link" href="#no1-article">${spot} — Read full article ↓</a>`
+      : n === 2
+      ? `<a class="no2-link" href="#no2-article">${spot} — Read full article ↓</a>`
+      : n === 3
+      ? `<a class="no3-link" href="#no3-article">${spot} — Read full article ↓</a>`
       : spot;
     return `<li${li}><span class="rank-badge ${bc}">${n}</span>${label}</li>`;
   }).join('');
@@ -1417,7 +2388,27 @@ function render() {
 
       <div class="section-head"><span class="icon">🛍️</span> Souvenirs</div>
       <ul>${mkList(d.souvenirs)}</ul>
-    </article>`;
+    </article>
+
+    ${d.spot2 ? `
+    <article id="no2-article">
+      <span class="label no2-label">No.2 Spot</span>
+      <h2>${d.en} No.2 — ${d.top5[1]}</h2>
+      <div class="section-head"><span class="icon">🏯</span> Attractions</div>
+      <ul>${mkList(d.spot2.attractions)}</ul>
+      <div class="section-head"><span class="icon">🚃</span> Getting There</div>
+      <ul>${mkList(d.spot2.transport)}</ul>
+    </article>` : ''}
+
+    ${d.spot3 ? `
+    <article id="no3-article">
+      <span class="label no3-label">No.3 Spot</span>
+      <h2>${d.en} No.3 — ${d.top5[2]}</h2>
+      <div class="section-head"><span class="icon">🏯</span> Attractions</div>
+      <ul>${mkList(d.spot3.attractions)}</ul>
+      <div class="section-head"><span class="icon">🚃</span> Getting There</div>
+      <ul>${mkList(d.spot3.transport)}</ul>
+    </article>` : ''}`;
 }
 
 render();
