@@ -92,59 +92,65 @@
       margin-bottom: 1.5rem;
     }
 
-    .japan-map {
-      display: grid;
-      grid-template-columns: repeat(11, 1fr);
-      grid-template-rows: repeat(13, 52px);
-      gap: 3px;
-      width: 100%;
+    .map-wrapper {
+      overflow-x: auto;
+      padding-bottom: 8px;
     }
 
-    .pref-btn {
+    .japan-map {
+      display: grid;
+      grid-template-columns: repeat(15, 62px);
+      grid-template-rows: repeat(9, 46px);
+      gap: 4px;
+    }
+
+    .pref {
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 0.58rem;
-      font-weight: 600;
-      line-height: 1.2;
-      border-radius: 4px;
-      text-decoration: none;
+      border-radius: 7px;
+      font-size: 10.5px;
+      font-weight: 700;
       color: #fff;
-      cursor: pointer;
-      transition: filter 0.15s, transform 0.1s;
-      padding: 2px;
-    }
-
-    .pref-btn:hover {
-      filter: brightness(1.15);
-      transform: scale(1.06);
-      z-index: 10;
+      text-decoration: none;
+      line-height: 1.25;
+      padding: 2px 3px;
+      word-break: break-word;
+      transition: filter 0.15s, transform 0.12s;
       position: relative;
     }
 
-    .r-hokkaido { background: #2980b9; }
-    .r-tohoku   { background: #27ae60; }
-    .r-kanto    { background: #e67e22; }
-    .r-chubu    { background: #8e44ad; }
-    .r-kinki    { background: #c0392b; }
-    .r-chugoku  { background: #16a085; }
-    .r-shikoku  { background: #d35400; }
-    .r-kyushu   { background: #2c3e50; }
-    .r-okinawa  { background: #1abc9c; }
+    .pref:hover {
+      filter: brightness(1.18);
+      transform: scale(1.07);
+      z-index: 20;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    }
+
+    .pref:active { transform: scale(0.97); }
+
+    .hokkaido { background: #8880cc; }
+    .tohoku   { background: #4fa8bc; }
+    .kanto    { background: #3aaa8e; }
+    .chubu    { background: #96ab3c; }
+    .kinki    { background: #3b8f4c; }
+    .chugoku  { background: #d88840; }
+    .shikoku  { background: #9a7d38; }
+    .kyushu   { background: #e06070; }
 
     .legend {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem 1.2rem;
-      margin-top: 1.2rem;
+      gap: 10px 18px;
+      margin-top: 16px;
       font-size: 0.82rem;
     }
 
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 5px;
     }
 
     .legend-dot {
@@ -177,14 +183,7 @@
     footer a { color: #c0392b; }
 
     @media (max-width: 680px) {
-      .japan-map { grid-template-rows: repeat(13, 40px); gap: 2px; }
-      .pref-btn { font-size: 0.48rem; }
       .map-section { padding: 1rem; }
-    }
-
-    @media (max-width: 420px) {
-      .japan-map { grid-template-rows: repeat(13, 32px); gap: 2px; }
-      .pref-btn { font-size: 0.4rem; border-radius: 2px; }
     }
   </style>
 </head>
@@ -207,8 +206,84 @@
   <section class="map-section">
     <h2>Choose a Prefecture</h2>
     <p class="subtitle">Click any prefecture to see the No.1 spot article and the full Top 5 list</p>
-    <div class="japan-map" id="japanMap"></div>
-    <div class="legend" id="legend"></div>
+    <div class="map-wrapper">
+      <div class="japan-map">
+
+        <!-- HOKKAIDO -->
+        <a href="prefecture.html?pref=Hokkaido" class="pref hokkaido" style="grid-column:13/span 2; grid-row:1">Hokkaido</a>
+
+        <!-- TOHOKU -->
+        <a href="prefecture.html?pref=Aomori"    class="pref tohoku" style="grid-column:14; grid-row:2">Aomori</a>
+        <a href="prefecture.html?pref=Akita"     class="pref tohoku" style="grid-column:13; grid-row:3">Akita</a>
+        <a href="prefecture.html?pref=Iwate"     class="pref tohoku" style="grid-column:14; grid-row:3">Iwate</a>
+        <a href="prefecture.html?pref=Yamagata"  class="pref tohoku" style="grid-column:13; grid-row:4">Yamagata</a>
+        <a href="prefecture.html?pref=Miyagi"    class="pref tohoku" style="grid-column:14; grid-row:4">Miyagi</a>
+        <a href="prefecture.html?pref=Fukushima" class="pref tohoku" style="grid-column:14; grid-row:5">Fukushima</a>
+
+        <!-- KANTO -->
+        <a href="prefecture.html?pref=Niigata"  class="pref kanto" style="grid-column:13; grid-row:5">Niigata</a>
+        <a href="prefecture.html?pref=Gumma"    class="pref kanto" style="grid-column:13; grid-row:6">Gunma</a>
+        <a href="prefecture.html?pref=Tochigi"  class="pref kanto" style="grid-column:14; grid-row:6">Tochigi</a>
+        <a href="prefecture.html?pref=Ibaraki"  class="pref kanto" style="grid-column:15; grid-row:6/span 2">Ibaraki</a>
+        <a href="prefecture.html?pref=Saitama"  class="pref kanto" style="grid-column:13; grid-row:7">Saitama</a>
+        <a href="prefecture.html?pref=Tokyo"    class="pref kanto" style="grid-column:14; grid-row:7">Tokyo</a>
+        <a href="prefecture.html?pref=Kanagawa" class="pref kanto" style="grid-column:13; grid-row:8">Kanagawa</a>
+        <a href="prefecture.html?pref=Chiba"    class="pref kanto" style="grid-column:14; grid-row:8">Chiba</a>
+
+        <!-- CHUBU -->
+        <a href="prefecture.html?pref=Fukui"    class="pref chubu" style="grid-column:10; grid-row:5">Fukui</a>
+        <a href="prefecture.html?pref=Ishikawa" class="pref chubu" style="grid-column:11; grid-row:5">Ishikawa</a>
+        <a href="prefecture.html?pref=Toyama"   class="pref chubu" style="grid-column:12; grid-row:5">Toyama</a>
+        <a href="prefecture.html?pref=Gifu"     class="pref chubu" style="grid-column:11; grid-row:6">Gifu</a>
+        <a href="prefecture.html?pref=Nagano"   class="pref chubu" style="grid-column:12; grid-row:6">Nagano</a>
+        <a href="prefecture.html?pref=Aichi"    class="pref chubu" style="grid-column:11; grid-row:7">Aichi</a>
+        <a href="prefecture.html?pref=Yamnashi" class="pref chubu" style="grid-column:12; grid-row:7">Yamanashi</a>
+        <a href="prefecture.html?pref=Shizuoka" class="pref chubu" style="grid-column:11/span 2; grid-row:8">Shizuoka</a>
+
+        <!-- KINKI -->
+        <a href="prefecture.html?pref=Hyogo"    class="pref kinki" style="grid-column:8;        grid-row:5">Hyogo</a>
+        <a href="prefecture.html?pref=Kyoto"    class="pref kinki" style="grid-column:9;        grid-row:5">Kyoto</a>
+        <a href="prefecture.html?pref=Osaka"    class="pref kinki" style="grid-column:9;        grid-row:6">Osaka</a>
+        <a href="prefecture.html?pref=Shiga"    class="pref kinki" style="grid-column:10;       grid-row:6">Shiga</a>
+        <a href="prefecture.html?pref=Nara"     class="pref kinki" style="grid-column:9;        grid-row:7">Nara</a>
+        <a href="prefecture.html?pref=Mie"      class="pref kinki" style="grid-column:10;       grid-row:7">Mie</a>
+        <a href="prefecture.html?pref=Wakayama" class="pref kinki" style="grid-column:9/span 2; grid-row:8">Wakayama</a>
+
+        <!-- CHUGOKU -->
+        <a href="prefecture.html?pref=Yamaguchi" class="pref chugoku" style="grid-column:5; grid-row:5">Yamaguchi</a>
+        <a href="prefecture.html?pref=Shimane"   class="pref chugoku" style="grid-column:6; grid-row:5">Shimane</a>
+        <a href="prefecture.html?pref=Tottori"   class="pref chugoku" style="grid-column:7; grid-row:5">Tottori</a>
+        <a href="prefecture.html?pref=Hiroshima" class="pref chugoku" style="grid-column:6; grid-row:6">Hiroshima</a>
+        <a href="prefecture.html?pref=Okayama"   class="pref chugoku" style="grid-column:7; grid-row:6">Okayama</a>
+
+        <!-- SHIKOKU -->
+        <a href="prefecture.html?pref=Ehime"     class="pref shikoku" style="grid-column:6; grid-row:7">Ehime</a>
+        <a href="prefecture.html?pref=Kagawa"    class="pref shikoku" style="grid-column:7; grid-row:7">Kagawa</a>
+        <a href="prefecture.html?pref=Kochi"     class="pref shikoku" style="grid-column:6; grid-row:8">Kochi</a>
+        <a href="prefecture.html?pref=Tokushima" class="pref shikoku" style="grid-column:7; grid-row:8">Tokushima</a>
+
+        <!-- KYUSHU + OKINAWA -->
+        <a href="prefecture.html?pref=Nagasaki"  class="pref kyushu" style="grid-column:1; grid-row:5">Nagasaki</a>
+        <a href="prefecture.html?pref=Saga"       class="pref kyushu" style="grid-column:2; grid-row:5">Saga</a>
+        <a href="prefecture.html?pref=Fukuoka"    class="pref kyushu" style="grid-column:3; grid-row:5">Fukuoka</a>
+        <a href="prefecture.html?pref=Kumamoto"   class="pref kyushu" style="grid-column:2; grid-row:6">Kumamoto</a>
+        <a href="prefecture.html?pref=Oita"       class="pref kyushu" style="grid-column:3; grid-row:6">Oita</a>
+        <a href="prefecture.html?pref=Kagoshima"  class="pref kyushu" style="grid-column:2; grid-row:7">Kagoshima</a>
+        <a href="prefecture.html?pref=Miyazaki"   class="pref kyushu" style="grid-column:3; grid-row:7">Miyazaki</a>
+        <a href="prefecture.html?pref=Okinawa"    class="pref kyushu" style="grid-column:1; grid-row:8">Okinawa</a>
+
+      </div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#8880cc"></div>Hokkaido</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#4fa8bc"></div>Tohoku</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#3aaa8e"></div>Kanto</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#96ab3c"></div>Chubu</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#3b8f4c"></div>Kinki / Kansai</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#d88840"></div>Chugoku</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#9a7d38"></div>Shikoku</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#e06070"></div>Kyushu / Okinawa</div>
+    </div>
   </section>
 
   <div class="ad-slot" style="min-height:250px;"></div>
@@ -229,89 +304,6 @@
   </p>
 </footer>
 
-<script>
-  const PREFS = [
-    { key:"Hokkaido",  en:"Hokkaido",  col:11, row:1,  r:"hokkaido" },
-    { key:"Aomori",    en:"Aomori",    col:10, row:2,  r:"tohoku" },
-    { key:"Iwate",     en:"Iwate",     col:11, row:2,  r:"tohoku" },
-    { key:"Akita",     en:"Akita",     col:10, row:3,  r:"tohoku" },
-    { key:"Miyagi",    en:"Miyagi",    col:11, row:3,  r:"tohoku" },
-    { key:"Niigata",   en:"Niigata",   col:9,  row:4,  r:"chubu" },
-    { key:"Yamagata",  en:"Yamagata",  col:10, row:4,  r:"tohoku" },
-    { key:"Fukushima", en:"Fukushima", col:11, row:4,  r:"tohoku" },
-    { key:"Toyama",    en:"Toyama",    col:7,  row:5,  r:"chubu" },
-    { key:"Nagano",    en:"Nagano",    col:8,  row:5,  r:"chubu" },
-    { key:"Gumma",     en:"Gunma",     col:9,  row:5,  r:"kanto" },
-    { key:"Tochigi",   en:"Tochigi",   col:10, row:5,  r:"kanto" },
-    { key:"Ibaraki",   en:"Ibaraki",   col:11, row:5,  r:"kanto" },
-    { key:"Ishikawa",  en:"Ishikawa",  col:6,  row:6,  r:"chubu" },
-    { key:"Gifu",      en:"Gifu",      col:7,  row:6,  r:"chubu" },
-    { key:"Yamnashi",  en:"Yamanashi", col:8,  row:6,  r:"chubu" },
-    { key:"Saitama",   en:"Saitama",   col:9,  row:6,  r:"kanto" },
-    { key:"Chiba",     en:"Chiba",     col:10, row:6,  r:"kanto" },
-    { key:"Tottori",   en:"Tottori",   col:4,  row:7,  r:"chugoku" },
-    { key:"Fukui",     en:"Fukui",     col:5,  row:7,  r:"chubu" },
-    { key:"Shiga",     en:"Shiga",     col:6,  row:7,  r:"kinki" },
-    { key:"Aichi",     en:"Aichi",     col:7,  row:7,  r:"chubu" },
-    { key:"Shizuoka",  en:"Shizuoka",  col:8,  row:7,  r:"chubu" },
-    { key:"Tokyo",     en:"Tokyo",     col:9,  row:7,  r:"kanto" },
-    { key:"Shimane",   en:"Shimane",   col:3,  row:8,  r:"chugoku" },
-    { key:"Hyogo",     en:"Hyogo",     col:4,  row:8,  r:"kinki" },
-    { key:"Kyoto",     en:"Kyoto",     col:5,  row:8,  r:"kinki" },
-    { key:"Mie",       en:"Mie",       col:6,  row:8,  r:"kinki" },
-    { key:"Kanagawa",  en:"Kanagawa",  col:8,  row:8,  r:"kanto" },
-    { key:"Yamaguchi", en:"Yamaguchi", col:2,  row:9,  r:"chugoku" },
-    { key:"Hiroshima", en:"Hiroshima", col:3,  row:9,  r:"chugoku" },
-    { key:"Okayama",   en:"Okayama",   col:4,  row:9,  r:"chugoku" },
-    { key:"Osaka",     en:"Osaka",     col:5,  row:9,  r:"kinki" },
-    { key:"Nara",      en:"Nara",      col:6,  row:9,  r:"kinki" },
-    { key:"Saga",      en:"Saga",      col:1,  row:10, r:"kyushu" },
-    { key:"Fukuoka",   en:"Fukuoka",   col:2,  row:10, r:"kyushu" },
-    { key:"Ehime",     en:"Ehime",     col:3,  row:10, r:"shikoku" },
-    { key:"Kagawa",    en:"Kagawa",    col:4,  row:10, r:"shikoku" },
-    { key:"Tokushima", en:"Tokushima", col:5,  row:10, r:"shikoku" },
-    { key:"Wakayama",  en:"Wakayama",  col:6,  row:10, r:"kinki" },
-    { key:"Nagasaki",  en:"Nagasaki",  col:1,  row:11, r:"kyushu" },
-    { key:"Kumamoto",  en:"Kumamoto",  col:2,  row:11, r:"kyushu" },
-    { key:"Oita",      en:"Oita",      col:3,  row:11, r:"kyushu" },
-    { key:"Kochi",     en:"Kochi",     col:4,  row:11, r:"shikoku" },
-    { key:"Kagoshima", en:"Kagoshima", col:2,  row:12, r:"kyushu" },
-    { key:"Miyazaki",  en:"Miyazaki",  col:3,  row:12, r:"kyushu" },
-    { key:"Okinawa",   en:"Okinawa",   col:1,  row:13, r:"okinawa" },
-  ];
-
-  const REGION_LABELS = [
-    { r:"hokkaido", label:"Hokkaido" },
-    { r:"tohoku",   label:"Tohoku" },
-    { r:"kanto",    label:"Kanto" },
-    { r:"chubu",    label:"Chubu" },
-    { r:"kinki",    label:"Kinki / Kansai" },
-    { r:"chugoku",  label:"Chugoku" },
-    { r:"shikoku",  label:"Shikoku" },
-    { r:"kyushu",   label:"Kyushu" },
-    { r:"okinawa",  label:"Okinawa" },
-  ];
-
-  const map = document.getElementById('japanMap');
-  PREFS.forEach(p => {
-    const a = document.createElement('a');
-    a.href = `prefecture.html?pref=${encodeURIComponent(p.key)}`;
-    a.className = `pref-btn r-${p.r}`;
-    a.style.gridColumn = p.col;
-    a.style.gridRow = p.row;
-    a.textContent = p.en;
-    a.title = `${p.en} — See Top 5 spots`;
-    map.appendChild(a);
-  });
-
-  const legend = document.getElementById('legend');
-  REGION_LABELS.forEach(rl => {
-    const el = document.createElement('div');
-    el.className = 'legend-item';
-    el.innerHTML = `<span class="legend-dot r-${rl.r}"></span><span>${rl.label}</span>`;
-    legend.appendChild(el);
-  });
-</script>
 
 </body>
 </html>
