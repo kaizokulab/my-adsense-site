@@ -406,6 +406,14 @@
         .call(prefHandlers);
     }
 
+    // Attribution
+    svg.append('text')
+      .attr('x', W - 4).attr('y', H - 4)
+      .attr('text-anchor', 'end')
+      .attr('font-size', 9)
+      .attr('fill', '#889')
+      .text('© Geospatial Information Authority of Japan');
+
     // Legend
     const legend = document.getElementById('legend');
     REGION_LABELS.forEach(rl => {
