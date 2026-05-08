@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tokyo Travel Tips – Your Complete Guide to Visiting Tokyo</title>
-  <meta name="description" content="Discover the best Tokyo travel tips: transport, food, neighbourhoods, budgeting, and cultural etiquette for first-time visitors." />
-  <meta property="og:title" content="Tokyo Travel Tips – Your Complete Guide to Visiting Tokyo" />
-  <meta property="og:description" content="Discover the best Tokyo travel tips: transport, food, neighbourhoods, budgeting, and cultural etiquette for first-time visitors." />
+  <title>Japan Travel Guide — Top 5 Spots for All 47 Prefectures</title>
+  <meta name="description" content="Discover the top 5 travel spots in every Japanese prefecture. Click a prefecture on the map to explore attractions, food, transport, and souvenirs." />
+  <meta property="og:title" content="Japan Travel Guide — Top 5 Spots for All 47 Prefectures" />
+  <meta property="og:description" content="Click any prefecture on the Japan map to explore its top 5 travel recommendations." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/tokyo-travel-tips" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tokyo Travel Tips" />
-  <meta name="twitter:description" content="Everything you need to know before visiting Tokyo." />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-75K003XC9N"></script>
   <script>
@@ -27,37 +24,41 @@
       font-family: 'Segoe UI', system-ui, sans-serif;
       background: #f5f5f5;
       color: #222;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
-    /* ── Header ── */
     header {
       background: #c0392b;
       color: #fff;
       text-align: center;
-      padding: 3rem 1rem 2.5rem;
+      padding: 2.5rem 1rem 2rem;
     }
 
-    header h1 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
+    header h1 { font-size: clamp(1.5rem, 4vw, 2.6rem); font-weight: 800; }
+    header p { margin-top: 0.5rem; opacity: 0.88; font-size: 1rem; }
+
+    nav {
+      background: #a93226;
+      text-align: center;
+      padding: 0.6rem 1rem;
     }
 
-    header p {
-      margin-top: 0.6rem;
-      font-size: 1.05rem;
-      opacity: 0.88;
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin: 0 1rem;
+      opacity: 0.85;
     }
 
-    /* ── Layout ── */
+    nav a:hover { opacity: 1; }
+
     .wrapper {
-      max-width: 860px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 1rem;
     }
 
-    /* ── Ad slot ── */
     .ad-slot {
       background: #e8e8e8;
       border: 1px dashed #bbb;
@@ -71,74 +72,99 @@
 
     .ad-slot::before { content: 'Advertisement'; display: block; }
 
-    /* ── Article card ── */
-    article {
+    .map-section {
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      padding: 2rem 2rem 1.75rem;
+      padding: 2rem;
       margin: 2rem 0;
     }
 
-    article .label {
-      display: inline-block;
-      background: #c0392b;
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.65rem;
-      border-radius: 50px;
-      margin-bottom: 0.75rem;
-    }
-
-    article h2 {
-      font-size: 1.45rem;
-      font-weight: 700;
+    .map-section h2 {
+      font-size: 1.3rem;
       color: #1a1a1a;
-      margin-bottom: 0.9rem;
-      line-height: 1.3;
+      margin-bottom: 0.4rem;
     }
 
-    article p {
-      color: #444;
-      margin-bottom: 0.85rem;
-    }
-
-    article ul {
-      list-style: none;
-      padding: 0;
-      margin: 0.5rem 0 0.85rem;
-    }
-
-    article ul li {
-      padding: 0.35rem 0 0.35rem 1.4rem;
-      position: relative;
-      color: #444;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    article ul li:last-child { border-bottom: none; }
-
-    article ul li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: #c0392b;
-    }
-
-    .tip-box {
-      background: #fff8e1;
-      border-left: 4px solid #f9a825;
-      border-radius: 0 6px 6px 0;
-      padding: 0.75rem 1rem;
-      margin: 1rem 0;
+    .map-section .subtitle {
+      color: #666;
       font-size: 0.9rem;
-      color: #555;
+      margin-bottom: 1.5rem;
     }
 
-    /* ── Footer ── */
+    .japan-map {
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      grid-template-rows: repeat(13, 52px);
+      gap: 3px;
+      width: 100%;
+    }
+
+    .pref-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.58rem;
+      font-weight: 600;
+      line-height: 1.2;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+      transition: filter 0.15s, transform 0.1s;
+      padding: 2px;
+    }
+
+    .pref-btn:hover {
+      filter: brightness(1.15);
+      transform: scale(1.06);
+      z-index: 10;
+      position: relative;
+    }
+
+    .r-hokkaido { background: #2980b9; }
+    .r-tohoku   { background: #27ae60; }
+    .r-kanto    { background: #e67e22; }
+    .r-chubu    { background: #8e44ad; }
+    .r-kinki    { background: #c0392b; }
+    .r-chugoku  { background: #16a085; }
+    .r-shikoku  { background: #d35400; }
+    .r-kyushu   { background: #2c3e50; }
+    .r-okinawa  { background: #1abc9c; }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.2rem;
+      margin-top: 1.2rem;
+      font-size: 0.82rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .intro-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      color: #444;
+    }
+
+    .intro-card h3 { color: #c0392b; margin-bottom: 0.5rem; font-size: 1.1rem; }
+
     footer {
       text-align: center;
       padding: 2.5rem 1rem;
@@ -148,244 +174,144 @@
       margin-top: 3rem;
     }
 
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      article { padding: 1.25rem 1.1rem; }
+    footer a { color: #c0392b; }
+
+    @media (max-width: 680px) {
+      .japan-map { grid-template-rows: repeat(13, 40px); gap: 2px; }
+      .pref-btn { font-size: 0.48rem; }
+      .map-section { padding: 1rem; }
+    }
+
+    @media (max-width: 420px) {
+      .japan-map { grid-template-rows: repeat(13, 32px); gap: 2px; }
+      .pref-btn { font-size: 0.4rem; border-radius: 2px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Tokyo Travel Tips</h1>
-  <p>Everything you need to know before your first trip to Japan's capital</p>
+  <h1>Japan Travel Guide</h1>
+  <p>Top 5 Travel Spots in All 47 Prefectures — Click a Prefecture on the Map!</p>
 </header>
-<nav style="background:#a93226;text-align:center;padding:0.6rem 1rem;">
-  <a href="index.html" style="color:#fff;text-decoration:none;font-size:0.9rem;margin:0 1rem;opacity:0.85;">Home</a>
-  <a href="about.html" style="color:#fff;text-decoration:none;font-size:0.9rem;margin:0 1rem;opacity:0.85;">About</a>
-  <a href="privacy-policy.html" style="color:#fff;text-decoration:none;font-size:0.9rem;margin:0 1rem;opacity:0.85;">Privacy Policy</a>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
 </nav>
 
 <div class="wrapper">
 
-  <!-- Top ad -->
   <div class="ad-slot" style="min-height:90px;"></div>
 
-  <!-- Article 1 -->
-  <article>
-    <span class="label">Getting Around</span>
-    <h2>1. How to Navigate Tokyo's Transport System</h2>
-    <p>Tokyo's public transport is one of the best in the world — punctual, clean, and comprehensive. With 13 metro lines and dozens of JR and private railway lines, you can reach virtually any destination without a taxi.</p>
-    <ul>
-      <li>Buy a <strong>Suica or Pasmo IC card</strong> at any airport or major station. Load money and tap in/out — no ticket purchase needed.</li>
-      <li>The <strong>JR Yamanote Line</strong> loops around central Tokyo, connecting Shinjuku, Shibuya, Harajuku, Akihabara, and Ueno.</li>
-      <li>Use <strong>Google Maps</strong> in transit mode for real-time routing — it's accurate to the minute.</li>
-      <li>Trains run from about <strong>5 am to midnight</strong>. Last-train times vary; check before a late night out.</li>
-      <li>A <strong>day pass</strong> (¥600–800) is worth it if you plan 4+ rides in a day on the Tokyo Metro network.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Your Suica card also works at convenience stores, vending machines, and even some restaurants — no extra setup needed.
-    </div>
-  </article>
+  <section class="map-section">
+    <h2>Choose a Prefecture</h2>
+    <p class="subtitle">Click any prefecture to see the No.1 spot article and the full Top 5 list</p>
+    <div class="japan-map" id="japanMap"></div>
+    <div class="legend" id="legend"></div>
+  </section>
 
-  <!-- Mid ad -->
   <div class="ad-slot" style="min-height:250px;"></div>
 
-  <!-- Article 2 -->
-  <article>
-    <span class="label">Food &amp; Drink</span>
-    <h2>2. What and Where to Eat in Tokyo</h2>
-    <p>Tokyo holds more Michelin stars than any other city on Earth — and yet some of the best meals cost under ¥1,000. Here's how to eat well at every budget level.</p>
-    <ul>
-      <li><strong>Convenience stores</strong> (7-Eleven, FamilyMart, Lawson) sell genuinely excellent onigiri, sandwiches, and hot food 24/7.</li>
-      <li><strong>Ramen</strong>: Queue at Ichiran (Shinjuku) for rich tonkotsu in a solo booth, or try Fuunji in Yoyogi for tsukemen.</li>
-      <li><strong>Sushi</strong>: Tsukiji Outer Market for fresh standing-counter sushi; book an omakase counter for a special dinner.</li>
-      <li><strong>Izakaya</strong>: Japanese gastropubs open from 6 pm — order edamame, karaage, sashimi, and cold beer.</li>
-      <li><strong>Depachika</strong>: Department store basements have extraordinary food halls — perfect for picnic supplies.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Never tip in Japan. Excellent service is the baseline expectation, and leaving extra money can cause confusion or offence.
-    </div>
-  </article>
+  <div class="intro-card">
+    <h3>About This Guide</h3>
+    <p>A travel guide covering the <strong>Top 5 sightseeing spots</strong> in all 47 Japanese prefectures. Every No.1 ranked spot includes a detailed article with <strong>attractions, food, transport, and souvenir</strong> recommendations. Use it to plan your next trip to Japan!</p>
+  </div>
 
-  <!-- Article 3 -->
-  <article>
-    <span class="label">Neighbourhoods</span>
-    <h2>3. Best Neighbourhoods to Explore</h2>
-    <p>Tokyo is really a collection of distinct villages. Each area has its own character — picking the right ones for your interests makes a huge difference.</p>
-    <ul>
-      <li><strong>Asakusa</strong>: Old Tokyo atmosphere, Senso-ji temple, rickshaws, and traditional crafts on Nakamise Street.</li>
-      <li><strong>Shibuya</strong>: The famous scramble crossing, youth fashion, rooftop bars, and the start of the Yamanote line crawl.</li>
-      <li><strong>Shinjuku</strong>: Skyscrapers by day, Golden Gai's tiny bars and Kabukicho neon by night.</li>
-      <li><strong>Harajuku</strong>: Takeshita Street's cosplay chaos, then elegant Omotesando boutiques a five-minute walk away.</li>
-      <li><strong>Yanaka</strong>: Tokyo's most intact Edo-era neighbourhood — cats, ceramics studios, and zero tourists.</li>
-      <li><strong>Shimokitazawa</strong>: Vinyl record shops, vintage fashion, indie live music, and the best coffee in Tokyo.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Walk between adjacent stations where possible — the street-level view is half the Tokyo experience, and many "different neighbourhoods" are only 10 minutes apart on foot.
-    </div>
-  </article>
-
-  <!-- Mid ad -->
-  <div class="ad-slot" style="min-height:250px;"></div>
-
-  <!-- Article 4 -->
-  <article>
-    <span class="label">Budget</span>
-    <h2>4. How to Budget Your Tokyo Trip</h2>
-    <p>Tokyo can be surprisingly affordable if you know where to look. Here's a realistic daily spend breakdown per person:</p>
-    <ul>
-      <li><strong>Budget (¥7,000–11,000/day ~$50–75)</strong>: Capsule hotel or hostel, conbini meals, ramen, free temples and parks.</li>
-      <li><strong>Mid-range (¥20,000–35,000/day ~$135–235)</strong>: Business hotel, sit-down restaurants, paid attractions like teamLab or Skytree.</li>
-      <li><strong>Splurge (¥75,000+/day)</strong>: Boutique hotel, omakase sushi counter, taxi rides, high-end shopping in Ginza.</li>
-    </ul>
-    <p>Key money-saving tips:</p>
-    <ul>
-      <li>ATMs at <strong>7-Eleven and Japan Post</strong> reliably accept foreign cards with low fees.</li>
-      <li>Many shrines and parks are <strong>free to enter</strong> — Meiji Jingu, Shinjuku Gyoen (¥500), and Yoyogi Park cost almost nothing.</li>
-      <li>The <strong>Tokyo Metropolitan Government Building</strong> observation deck is free and offers nearly the same view as the Skytree.</li>
-      <li>Lunch sets (ranchi setto) at sit-down restaurants are often <strong>40–50% cheaper</strong> than the same dishes at dinner.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Japan is largely a cash society. Many small ramen shops, izakayas, and market stalls are cash-only — carry ¥5,000–10,000 at all times.
-    </div>
-  </article>
-
-  <!-- Article 5 -->
-  <article>
-    <span class="label">Culture &amp; Etiquette</span>
-    <h2>5. Essential Cultural Etiquette for Tokyo</h2>
-    <p>A little cultural awareness goes a long way in Japan. Locals are forgiving of tourists, but these basics will earn you genuine warmth.</p>
-    <ul>
-      <li><strong>Bow slightly</strong> when greeting, thanking, or apologising — even a small nod counts.</li>
-      <li><strong>No eating while walking</strong>: Eat street food at the stall or find a bench. Convenience store eating outside is fine.</li>
-      <li><strong>Trains are quiet zones</strong>: Voices low, phone on silent, no speakerphone. Priority seats are for elderly and pregnant passengers.</li>
-      <li><strong>Remove shoes</strong> when entering a home, many ryokan, and some traditional restaurants (look for the raised floor).</li>
-      <li><strong>Tattoos</strong>: Still restricted in many onsen (hot spring baths). Check before visiting, or seek tattoo-friendly facilities.</li>
-      <li><strong>Rubbish bins are rare</strong>: Carry a small bag for litter — never leave it on benches or the street.</li>
-      <li><strong>Queuing is sacred</strong>: Always form a line for trains, escalators (stand left, walk right), and restaurant entry.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Learning even three Japanese phrases — <em>sumimasen</em> (excuse me), <em>arigatou gozaimasu</em> (thank you), and <em>eigo ga hanasemasu ka?</em> (do you speak English?) — will be met with genuine delight.
-    </div>
-  </article>
-
-  <!-- Mid ad -->
-  <div class="ad-slot" style="min-height:250px;"></div>
-
-  <!-- Article 6 -->
-  <article>
-    <span class="label">Accommodation</span>
-    <h2>6. Where to Stay in Tokyo: Accommodation Guide</h2>
-    <p>Tokyo offers accommodation at every price point, from ¥2,500 capsule hotels to ¥50,000 luxury ryokan. Choosing the right area matters as much as the hotel itself.</p>
-    <ul>
-      <li><strong>Shinjuku</strong>: Best transport hub in Tokyo — easy access everywhere. Great mix of budget to mid-range hotels.</li>
-      <li><strong>Asakusa</strong>: Traditional atmosphere, affordable options, walking distance to Senso-ji. Popular with first-timers.</li>
-      <li><strong>Shibuya / Harajuku</strong>: Central, stylish, and well-connected. Mid-range to upscale options.</li>
-      <li><strong>Akihabara / Ueno</strong>: Budget-friendly area with excellent train access to the airport (Narita and Haneda).</li>
-      <li><strong>Ginza / Marunouchi</strong>: Premium district for luxury stays — Aman, Palace Hotel, and Park Hyatt nearby.</li>
-    </ul>
-    <ul>
-      <li><strong>Capsule hotels</strong>: Clean, compact, and social — great for solo travellers (¥2,500–4,500/night).</li>
-      <li><strong>Business hotels</strong>: Toyoko Inn, Dormy Inn, APA — reliable, clean, and usually include breakfast (¥7,000–12,000/night).</li>
-      <li><strong>Ryokan</strong>: Traditional inn with futon, yukata, and multi-course kaiseki dinner — a bucket-list experience.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Book accommodation at least 2–3 months ahead for cherry blossom season (late March–early April) and Golden Week (late April–early May) — rooms sell out fast and prices spike.
-    </div>
-  </article>
-
-  <!-- Article 7 -->
-  <article>
-    <span class="label">Day Trips</span>
-    <h2>7. Best Day Trips from Tokyo</h2>
-    <p>Tokyo's excellent rail network puts some of Japan's most iconic destinations within 1–2 hours. These are the best day trips worth your time.</p>
-    <ul>
-      <li><strong>Mt. Fuji / Hakone (1.5–2 hrs)</strong>: Take the Romancecar from Shinjuku to Hakone for hot springs and Fuji views, or the Shinkansen to Shin-Fuji for closer access.</li>
-      <li><strong>Nikko (2 hrs)</strong>: UNESCO World Heritage shrines and temples in a forested mountain setting. Take the Tobu Nikko Line from Asakusa.</li>
-      <li><strong>Kamakura (1 hr)</strong>: The giant Buddha (Kotoku-in), seaside temples, and excellent soba. Take the JR Yokosuka Line from Tokyo Station.</li>
-      <li><strong>Yokohama (30 min)</strong>: Japan's second-largest city — Chinatown, the waterfront Minato Mirai district, and the Cup Noodles Museum.</li>
-      <li><strong>Kyoto / Osaka (2.5 hrs)</strong>: Via Shinkansen — a long day trip but doable for those short on time.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: A JR Pass is worth buying if you plan more than one Shinkansen trip. Purchase before leaving your home country — it cannot be bought in Japan at the same price.
-    </div>
-  </article>
-
-  <!-- Mid ad -->
-  <div class="ad-slot" style="min-height:250px;"></div>
-
-  <!-- Article 8 -->
-  <article>
-    <span class="label">Shopping</span>
-    <h2>8. Shopping in Tokyo: What to Buy and Where</h2>
-    <p>Tokyo is one of the world's great shopping cities. Whether you're after high fashion, electronics, anime goods, or traditional crafts, there is a district made for you.</p>
-    <ul>
-      <li><strong>Akihabara</strong>: Electronics, retro games, anime figures, and manga. Multi-floor stores like Yodobashi Camera and countless specialist shops.</li>
-      <li><strong>Harajuku / Omotesando</strong>: Street fashion on Takeshita Street; luxury brands (Louis Vuitton, Dior, Prada) on Omotesando.</li>
-      <li><strong>Ginza</strong>: Tokyo's most upscale shopping district — flagship stores, Uniqlo's largest outlet, and the Itoya stationery emporium.</li>
-      <li><strong>Nakamise (Asakusa)</strong>: Traditional souvenirs — fans, hair combs, tenugui cloth, and wagashi sweets.</li>
-      <li><strong>Shimokitazawa</strong>: Vintage clothing, vinyl records, and independent boutiques.</li>
-    </ul>
-    <p>Best souvenir categories:</p>
-    <ul>
-      <li>Japanese Kit Kat flavours (matcha, sakura, sake) — available at any convenience store</li>
-      <li>Wagashi (traditional sweets) from department store basements</li>
-      <li>Tenugui hand towels and furoshiki wrapping cloths</li>
-      <li>Kokeshi dolls and ceramics from Asakusa craft shops</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Tourists can claim a consumption tax refund (10%) on purchases over ¥5,000 at stores displaying the "Tax Free" sign — bring your passport.
-    </div>
-  </article>
-
-  <!-- Article 9 -->
-  <article>
-    <span class="label">Seasonal Events</span>
-    <h2>9. Tokyo Festivals and Seasonal Highlights</h2>
-    <p>Tokyo's calendar is packed with festivals (matsuri), seasonal events, and cultural celebrations. Timing your visit around these can transform your trip.</p>
-    <ul>
-      <li><strong>Late March – Early April: Hanami (Cherry Blossom Viewing)</strong> — Picnic under the cherry trees in Ueno, Shinjuku Gyoen, and Yoyogi Park. The most iconic Tokyo experience.</li>
-      <li><strong>Mid-July: Sumida River Fireworks Festival</strong> — One of the largest fireworks displays in Japan, held along the Sumida River near Asakusa.</li>
-      <li><strong>Late July: Mitama Matsuri at Yasukuni Shrine</strong> — 30,000 lanterns illuminate the shrine grounds for four nights.</li>
-      <li><strong>October: Tokyo Grand Tea Ceremony (Hamarikyu Gardens)</strong> — A rare chance to participate in traditional tea ceremony in a historic garden.</li>
-      <li><strong>November – December: Autumn Leaves (Koyo)</strong> — Parks and temple grounds turn vivid red and gold. Rikugien Garden is particularly stunning.</li>
-      <li><strong>December 31: Hatsumode (New Year Shrine Visit)</strong> — Millions visit shrines at midnight. Meiji Jingu sees over 3 million visitors in the first three days of January.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: During Golden Week (late April – early May) and Obon (mid-August), many Japanese travel domestically. Tourist spots are crowded but the energy is electric — and some businesses close.
-    </div>
-  </article>
-
-  <!-- Mid ad -->
-  <div class="ad-slot" style="min-height:250px;"></div>
-
-  <!-- Article 10 -->
-  <article>
-    <span class="label">Safety &amp; Health</span>
-    <h2>10. Safety and Health Tips for Tokyo</h2>
-    <p>Tokyo is consistently ranked one of the safest cities in the world. Violent crime is extremely rare, but there are practical health and safety points worth knowing.</p>
-    <ul>
-      <li><strong>Emergency numbers</strong>: Police — 110 | Ambulance / Fire — 119. Most operators have access to translation services.</li>
-      <li><strong>Tap water is safe</strong> to drink throughout Tokyo — no need to buy bottled water.</li>
-      <li><strong>Pharmacies (Matsumoto Kiyoshi, Sundrug)</strong>: Widely available. Staff may not speak English; bring a photo or written description of what you need.</li>
-      <li><strong>Heat and humidity</strong>: July and August are extremely hot (35°C+). Carry a small towel, stay hydrated, and use convenience store cold drinks freely.</li>
-      <li><strong>Earthquakes</strong>: Japan is seismically active. Your hotel will have evacuation instructions. Download the <strong>Safety tips</strong> app by Japan Tourism Agency for alerts in English.</li>
-      <li><strong>Lost and Found</strong>: Tokyo has extraordinarily high rates of lost-item recovery. Report lost items to the nearest police box (koban) or station's lost and found office.</li>
-    </ul>
-    <div class="tip-box">
-      💡 Tip: Travel insurance is strongly recommended. Medical care in Japan is high-quality but costs can be significant without coverage — especially for hospitalisation.
-    </div>
-  </article>
-
-  <!-- Bottom ad -->
   <div class="ad-slot" style="min-height:90px;"></div>
 
 </div>
 
 <footer>
-  <p>&copy; 2025 Tokyo Travel Tips. All rights reserved. | <a href="about.html" style="color:#c0392b;">About</a> | <a href="privacy-policy.html" style="color:#c0392b;">Privacy Policy</a></p>
+  <p>&copy; 2025 Japan Travel Guide. All rights reserved. |
+    <a href="about.html">About</a> |
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
 </footer>
+
+<script>
+  const PREFS = [
+    { key:"Hokkaido",  en:"Hokkaido",  col:11, row:1,  r:"hokkaido" },
+    { key:"Aomori",    en:"Aomori",    col:10, row:2,  r:"tohoku" },
+    { key:"Iwate",     en:"Iwate",     col:11, row:2,  r:"tohoku" },
+    { key:"Akita",     en:"Akita",     col:10, row:3,  r:"tohoku" },
+    { key:"Miyagi",    en:"Miyagi",    col:11, row:3,  r:"tohoku" },
+    { key:"Niigata",   en:"Niigata",   col:9,  row:4,  r:"chubu" },
+    { key:"Yamagata",  en:"Yamagata",  col:10, row:4,  r:"tohoku" },
+    { key:"Fukushima", en:"Fukushima", col:11, row:4,  r:"tohoku" },
+    { key:"Toyama",    en:"Toyama",    col:7,  row:5,  r:"chubu" },
+    { key:"Nagano",    en:"Nagano",    col:8,  row:5,  r:"chubu" },
+    { key:"Gumma",     en:"Gunma",     col:9,  row:5,  r:"kanto" },
+    { key:"Tochigi",   en:"Tochigi",   col:10, row:5,  r:"kanto" },
+    { key:"Ibaraki",   en:"Ibaraki",   col:11, row:5,  r:"kanto" },
+    { key:"Ishikawa",  en:"Ishikawa",  col:6,  row:6,  r:"chubu" },
+    { key:"Gifu",      en:"Gifu",      col:7,  row:6,  r:"chubu" },
+    { key:"Yamnashi",  en:"Yamanashi", col:8,  row:6,  r:"chubu" },
+    { key:"Saitama",   en:"Saitama",   col:9,  row:6,  r:"kanto" },
+    { key:"Chiba",     en:"Chiba",     col:10, row:6,  r:"kanto" },
+    { key:"Tottori",   en:"Tottori",   col:4,  row:7,  r:"chugoku" },
+    { key:"Fukui",     en:"Fukui",     col:5,  row:7,  r:"chubu" },
+    { key:"Shiga",     en:"Shiga",     col:6,  row:7,  r:"kinki" },
+    { key:"Aichi",     en:"Aichi",     col:7,  row:7,  r:"chubu" },
+    { key:"Shizuoka",  en:"Shizuoka",  col:8,  row:7,  r:"chubu" },
+    { key:"Tokyo",     en:"Tokyo",     col:9,  row:7,  r:"kanto" },
+    { key:"Shimane",   en:"Shimane",   col:3,  row:8,  r:"chugoku" },
+    { key:"Hyogo",     en:"Hyogo",     col:4,  row:8,  r:"kinki" },
+    { key:"Kyoto",     en:"Kyoto",     col:5,  row:8,  r:"kinki" },
+    { key:"Mie",       en:"Mie",       col:6,  row:8,  r:"kinki" },
+    { key:"Kanagawa",  en:"Kanagawa",  col:8,  row:8,  r:"kanto" },
+    { key:"Yamaguchi", en:"Yamaguchi", col:2,  row:9,  r:"chugoku" },
+    { key:"Hiroshima", en:"Hiroshima", col:3,  row:9,  r:"chugoku" },
+    { key:"Okayama",   en:"Okayama",   col:4,  row:9,  r:"chugoku" },
+    { key:"Osaka",     en:"Osaka",     col:5,  row:9,  r:"kinki" },
+    { key:"Nara",      en:"Nara",      col:6,  row:9,  r:"kinki" },
+    { key:"Saga",      en:"Saga",      col:1,  row:10, r:"kyushu" },
+    { key:"Fukuoka",   en:"Fukuoka",   col:2,  row:10, r:"kyushu" },
+    { key:"Ehime",     en:"Ehime",     col:3,  row:10, r:"shikoku" },
+    { key:"Kagawa",    en:"Kagawa",    col:4,  row:10, r:"shikoku" },
+    { key:"Tokushima", en:"Tokushima", col:5,  row:10, r:"shikoku" },
+    { key:"Wakayama",  en:"Wakayama",  col:6,  row:10, r:"kinki" },
+    { key:"Nagasaki",  en:"Nagasaki",  col:1,  row:11, r:"kyushu" },
+    { key:"Kumamoto",  en:"Kumamoto",  col:2,  row:11, r:"kyushu" },
+    { key:"Oita",      en:"Oita",      col:3,  row:11, r:"kyushu" },
+    { key:"Kochi",     en:"Kochi",     col:4,  row:11, r:"shikoku" },
+    { key:"Kagoshima", en:"Kagoshima", col:2,  row:12, r:"kyushu" },
+    { key:"Miyazaki",  en:"Miyazaki",  col:3,  row:12, r:"kyushu" },
+    { key:"Okinawa",   en:"Okinawa",   col:1,  row:13, r:"okinawa" },
+  ];
+
+  const REGION_LABELS = [
+    { r:"hokkaido", label:"Hokkaido" },
+    { r:"tohoku",   label:"Tohoku" },
+    { r:"kanto",    label:"Kanto" },
+    { r:"chubu",    label:"Chubu" },
+    { r:"kinki",    label:"Kinki / Kansai" },
+    { r:"chugoku",  label:"Chugoku" },
+    { r:"shikoku",  label:"Shikoku" },
+    { r:"kyushu",   label:"Kyushu" },
+    { r:"okinawa",  label:"Okinawa" },
+  ];
+
+  const map = document.getElementById('japanMap');
+  PREFS.forEach(p => {
+    const a = document.createElement('a');
+    a.href = `prefecture.html?pref=${encodeURIComponent(p.key)}`;
+    a.className = `pref-btn r-${p.r}`;
+    a.style.gridColumn = p.col;
+    a.style.gridRow = p.row;
+    a.textContent = p.en;
+    a.title = `${p.en} — See Top 5 spots`;
+    map.appendChild(a);
+  });
+
+  const legend = document.getElementById('legend');
+  REGION_LABELS.forEach(rl => {
+    const el = document.createElement('div');
+    el.className = 'legend-item';
+    el.innerHTML = `<span class="legend-dot r-${rl.r}"></span><span>${rl.label}</span>`;
+    legend.appendChild(el);
+  });
+</script>
 
 </body>
 </html>

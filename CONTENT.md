@@ -1,0 +1,7 @@
+-日本の都道府県ごとの旅行先recommend top 5を見られるサイト
+-Web siteは英語で作成
+-1page目に日本地図があり県名が書かれた都道府県の絵をクリックするとrecommend top 5のNo.1の記事が見られる
+-記事にはNo.1の名所、食、交通手段、土産を書く
+-都道府県のtop 5は./todohuken2.csvのColumn AのPrefectureのColumn BのCity nameを参照しその都市の記事を書く
+-todohuken2.csvはgithubのリポジトリに含めない
+-SiteのAboutのcontact先はmanieredeborodine@gmail.comに変更
