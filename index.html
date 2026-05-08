@@ -17,6 +17,8 @@
     gtag('js', new Date());
     gtag('config', 'G-75K003XC9N');
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -93,45 +95,48 @@
     }
 
     .japan-map {
-      display: grid;
-      grid-template-columns: repeat(11, 1fr);
-      grid-template-rows: repeat(13, 52px);
-      gap: 3px;
+      position: relative;
       width: 100%;
     }
 
-    .pref-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 0.58rem;
-      font-weight: 600;
-      line-height: 1.2;
-      border-radius: 4px;
-      text-decoration: none;
-      color: #fff;
+    .japan-map svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .pref-path {
       cursor: pointer;
-      transition: filter 0.15s, transform 0.1s;
-      padding: 2px;
+      stroke: rgba(255,255,255,0.6);
+      stroke-width: 0.5;
+      transition: filter 0.12s, stroke-width 0.12s;
     }
 
-    .pref-btn:hover {
-      filter: brightness(1.15);
-      transform: scale(1.06);
-      z-index: 10;
-      position: relative;
+    .pref-path:hover {
+      filter: brightness(1.25);
+      stroke: #fff;
+      stroke-width: 1.2;
     }
 
-    .r-hokkaido { background: #2980b9; }
-    .r-tohoku   { background: #27ae60; }
-    .r-kanto    { background: #e67e22; }
-    .r-chubu    { background: #8e44ad; }
-    .r-kinki    { background: #c0392b; }
-    .r-chugoku  { background: #16a085; }
-    .r-shikoku  { background: #d35400; }
-    .r-kyushu   { background: #2c3e50; }
-    .r-okinawa  { background: #1abc9c; }
+    .map-loading {
+      text-align: center;
+      color: #999;
+      padding: 3rem;
+      font-size: 0.9rem;
+    }
+
+    .map-tooltip {
+      position: fixed;
+      background: rgba(20,20,20,0.88);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      pointer-events: none;
+      display: none;
+      z-index: 100;
+      white-space: nowrap;
+    }
 
     .legend {
       display: flex;
@@ -175,20 +180,11 @@
     }
 
     footer a { color: #c0392b; }
-
-    @media (max-width: 680px) {
-      .japan-map { grid-template-rows: repeat(13, 40px); gap: 2px; }
-      .pref-btn { font-size: 0.48rem; }
-      .map-section { padding: 1rem; }
-    }
-
-    @media (max-width: 420px) {
-      .japan-map { grid-template-rows: repeat(13, 32px); gap: 2px; }
-      .pref-btn { font-size: 0.4rem; border-radius: 2px; }
-    }
   </style>
 </head>
 <body>
+
+<div class="map-tooltip" id="mapTooltip"></div>
 
 <header>
   <h1>Japan Travel Guide</h1>
@@ -207,7 +203,7 @@
   <section class="map-section">
     <h2>Choose a Prefecture</h2>
     <p class="subtitle">Click any prefecture to see the No.1 spot article and the full Top 5 list</p>
-    <div class="japan-map" id="japanMap"></div>
+    <div class="japan-map" id="japanMap"><div class="map-loading">Loading map…</div></div>
     <div class="legend" id="legend"></div>
   </section>
 
@@ -230,55 +226,67 @@
 </footer>
 
 <script>
-  const PREFS = [
-    { key:"Hokkaido",  en:"Hokkaido",  col:11, row:1,  r:"hokkaido" },
-    { key:"Aomori",    en:"Aomori",    col:10, row:2,  r:"tohoku" },
-    { key:"Iwate",     en:"Iwate",     col:11, row:2,  r:"tohoku" },
-    { key:"Akita",     en:"Akita",     col:10, row:3,  r:"tohoku" },
-    { key:"Miyagi",    en:"Miyagi",    col:11, row:3,  r:"tohoku" },
-    { key:"Niigata",   en:"Niigata",   col:9,  row:4,  r:"chubu" },
-    { key:"Yamagata",  en:"Yamagata",  col:10, row:4,  r:"tohoku" },
-    { key:"Fukushima", en:"Fukushima", col:11, row:4,  r:"tohoku" },
-    { key:"Toyama",    en:"Toyama",    col:7,  row:5,  r:"chubu" },
-    { key:"Nagano",    en:"Nagano",    col:8,  row:5,  r:"chubu" },
-    { key:"Gumma",     en:"Gunma",     col:9,  row:5,  r:"kanto" },
-    { key:"Tochigi",   en:"Tochigi",   col:10, row:5,  r:"kanto" },
-    { key:"Ibaraki",   en:"Ibaraki",   col:11, row:5,  r:"kanto" },
-    { key:"Ishikawa",  en:"Ishikawa",  col:6,  row:6,  r:"chubu" },
-    { key:"Gifu",      en:"Gifu",      col:7,  row:6,  r:"chubu" },
-    { key:"Yamnashi",  en:"Yamanashi", col:8,  row:6,  r:"chubu" },
-    { key:"Saitama",   en:"Saitama",   col:9,  row:6,  r:"kanto" },
-    { key:"Chiba",     en:"Chiba",     col:10, row:6,  r:"kanto" },
-    { key:"Tottori",   en:"Tottori",   col:4,  row:7,  r:"chugoku" },
-    { key:"Fukui",     en:"Fukui",     col:5,  row:7,  r:"chubu" },
-    { key:"Shiga",     en:"Shiga",     col:6,  row:7,  r:"kinki" },
-    { key:"Aichi",     en:"Aichi",     col:7,  row:7,  r:"chubu" },
-    { key:"Shizuoka",  en:"Shizuoka",  col:8,  row:7,  r:"chubu" },
-    { key:"Tokyo",     en:"Tokyo",     col:9,  row:7,  r:"kanto" },
-    { key:"Shimane",   en:"Shimane",   col:3,  row:8,  r:"chugoku" },
-    { key:"Hyogo",     en:"Hyogo",     col:4,  row:8,  r:"kinki" },
-    { key:"Kyoto",     en:"Kyoto",     col:5,  row:8,  r:"kinki" },
-    { key:"Mie",       en:"Mie",       col:6,  row:8,  r:"kinki" },
-    { key:"Kanagawa",  en:"Kanagawa",  col:8,  row:8,  r:"kanto" },
-    { key:"Yamaguchi", en:"Yamaguchi", col:2,  row:9,  r:"chugoku" },
-    { key:"Hiroshima", en:"Hiroshima", col:3,  row:9,  r:"chugoku" },
-    { key:"Okayama",   en:"Okayama",   col:4,  row:9,  r:"chugoku" },
-    { key:"Osaka",     en:"Osaka",     col:5,  row:9,  r:"kinki" },
-    { key:"Nara",      en:"Nara",      col:6,  row:9,  r:"kinki" },
-    { key:"Saga",      en:"Saga",      col:1,  row:10, r:"kyushu" },
-    { key:"Fukuoka",   en:"Fukuoka",   col:2,  row:10, r:"kyushu" },
-    { key:"Ehime",     en:"Ehime",     col:3,  row:10, r:"shikoku" },
-    { key:"Kagawa",    en:"Kagawa",    col:4,  row:10, r:"shikoku" },
-    { key:"Tokushima", en:"Tokushima", col:5,  row:10, r:"shikoku" },
-    { key:"Wakayama",  en:"Wakayama",  col:6,  row:10, r:"kinki" },
-    { key:"Nagasaki",  en:"Nagasaki",  col:1,  row:11, r:"kyushu" },
-    { key:"Kumamoto",  en:"Kumamoto",  col:2,  row:11, r:"kyushu" },
-    { key:"Oita",      en:"Oita",      col:3,  row:11, r:"kyushu" },
-    { key:"Kochi",     en:"Kochi",     col:4,  row:11, r:"shikoku" },
-    { key:"Kagoshima", en:"Kagoshima", col:2,  row:12, r:"kyushu" },
-    { key:"Miyazaki",  en:"Miyazaki",  col:3,  row:12, r:"kyushu" },
-    { key:"Okinawa",   en:"Okinawa",   col:1,  row:13, r:"okinawa" },
-  ];
+  const PREF_BY_CODE = {
+    1:  { key:"Hokkaido",  en:"Hokkaido",  r:"hokkaido" },
+    2:  { key:"Aomori",    en:"Aomori",    r:"tohoku" },
+    3:  { key:"Iwate",     en:"Iwate",     r:"tohoku" },
+    4:  { key:"Miyagi",    en:"Miyagi",    r:"tohoku" },
+    5:  { key:"Akita",     en:"Akita",     r:"tohoku" },
+    6:  { key:"Yamagata",  en:"Yamagata",  r:"tohoku" },
+    7:  { key:"Fukushima", en:"Fukushima", r:"tohoku" },
+    8:  { key:"Ibaraki",   en:"Ibaraki",   r:"kanto" },
+    9:  { key:"Tochigi",   en:"Tochigi",   r:"kanto" },
+    10: { key:"Gumma",     en:"Gunma",     r:"kanto" },
+    11: { key:"Saitama",   en:"Saitama",   r:"kanto" },
+    12: { key:"Chiba",     en:"Chiba",     r:"kanto" },
+    13: { key:"Tokyo",     en:"Tokyo",     r:"kanto" },
+    14: { key:"Kanagawa",  en:"Kanagawa",  r:"kanto" },
+    15: { key:"Niigata",   en:"Niigata",   r:"chubu" },
+    16: { key:"Toyama",    en:"Toyama",    r:"chubu" },
+    17: { key:"Ishikawa",  en:"Ishikawa",  r:"chubu" },
+    18: { key:"Fukui",     en:"Fukui",     r:"chubu" },
+    19: { key:"Yamnashi",  en:"Yamanashi", r:"chubu" },
+    20: { key:"Nagano",    en:"Nagano",    r:"chubu" },
+    21: { key:"Gifu",      en:"Gifu",      r:"chubu" },
+    22: { key:"Shizuoka",  en:"Shizuoka",  r:"chubu" },
+    23: { key:"Aichi",     en:"Aichi",     r:"chubu" },
+    24: { key:"Mie",       en:"Mie",       r:"kinki" },
+    25: { key:"Shiga",     en:"Shiga",     r:"kinki" },
+    26: { key:"Kyoto",     en:"Kyoto",     r:"kinki" },
+    27: { key:"Osaka",     en:"Osaka",     r:"kinki" },
+    28: { key:"Hyogo",     en:"Hyogo",     r:"kinki" },
+    29: { key:"Nara",      en:"Nara",      r:"kinki" },
+    30: { key:"Wakayama",  en:"Wakayama",  r:"kinki" },
+    31: { key:"Tottori",   en:"Tottori",   r:"chugoku" },
+    32: { key:"Shimane",   en:"Shimane",   r:"chugoku" },
+    33: { key:"Okayama",   en:"Okayama",   r:"chugoku" },
+    34: { key:"Hiroshima", en:"Hiroshima", r:"chugoku" },
+    35: { key:"Yamaguchi", en:"Yamaguchi", r:"chugoku" },
+    36: { key:"Tokushima", en:"Tokushima", r:"shikoku" },
+    37: { key:"Kagawa",    en:"Kagawa",    r:"shikoku" },
+    38: { key:"Ehime",     en:"Ehime",     r:"shikoku" },
+    39: { key:"Kochi",     en:"Kochi",     r:"shikoku" },
+    40: { key:"Fukuoka",   en:"Fukuoka",   r:"kyushu" },
+    41: { key:"Saga",      en:"Saga",      r:"kyushu" },
+    42: { key:"Nagasaki",  en:"Nagasaki",  r:"kyushu" },
+    43: { key:"Kumamoto",  en:"Kumamoto",  r:"kyushu" },
+    44: { key:"Oita",      en:"Oita",      r:"kyushu" },
+    45: { key:"Miyazaki",  en:"Miyazaki",  r:"kyushu" },
+    46: { key:"Kagoshima", en:"Kagoshima", r:"kyushu" },
+    47: { key:"Okinawa",   en:"Okinawa",   r:"okinawa" },
+  };
+
+  const REGION_COLORS = {
+    hokkaido: "#2980b9",
+    tohoku:   "#27ae60",
+    kanto:    "#e67e22",
+    chubu:    "#8e44ad",
+    kinki:    "#c0392b",
+    chugoku:  "#16a085",
+    shikoku:  "#d35400",
+    kyushu:   "#2c3e50",
+    okinawa:  "#1abc9c",
+  };
 
   const REGION_LABELS = [
     { r:"hokkaido", label:"Hokkaido" },
@@ -292,25 +300,123 @@
     { r:"okinawa",  label:"Okinawa" },
   ];
 
-  const map = document.getElementById('japanMap');
-  PREFS.forEach(p => {
-    const a = document.createElement('a');
-    a.href = `prefecture.html?pref=${encodeURIComponent(p.key)}`;
-    a.className = `pref-btn r-${p.r}`;
-    a.style.gridColumn = p.col;
-    a.style.gridRow = p.row;
-    a.textContent = p.en;
-    a.title = `${p.en} — See Top 5 spots`;
-    map.appendChild(a);
-  });
+  const W = 700, H = 800;
+  const INSET_W = 170, INSET_H = 100;
+  const INSET_X = 10, INSET_Y = H - INSET_H - 10;
 
-  const legend = document.getElementById('legend');
-  REGION_LABELS.forEach(rl => {
-    const el = document.createElement('div');
-    el.className = 'legend-item';
-    el.innerHTML = `<span class="legend-dot r-${rl.r}"></span><span>${rl.label}</span>`;
-    legend.appendChild(el);
-  });
+  const tooltip = document.getElementById('mapTooltip');
+
+  function prefHandlers(selection) {
+    selection
+      .on('mousemove', (event, d) => {
+        const code = parseInt(d.id, 10);
+        const pref = PREF_BY_CODE[code];
+        if (!pref) return;
+        tooltip.style.display = 'block';
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY - 32) + 'px';
+        tooltip.textContent = pref.en + ' — Top 5 spots';
+      })
+      .on('mouseleave', () => { tooltip.style.display = 'none'; })
+      .on('click', (event, d) => {
+        const code = parseInt(d.id, 10);
+        const pref = PREF_BY_CODE[code];
+        if (pref) window.location.href = `prefecture.html?pref=${encodeURIComponent(pref.key)}`;
+      });
+  }
+
+  async function initMap() {
+    const mapEl = document.getElementById('japanMap');
+    let japan;
+    try {
+      const res = await fetch('https://unpkg.com/jpn-atlas@1/japan/japan.json');
+      japan = await res.json();
+    } catch (e) {
+      mapEl.innerHTML = '<div class="map-loading">Map failed to load. Please refresh the page.</div>';
+      return;
+    }
+
+    mapEl.innerHTML = '';
+
+    const allFeatures = topojson.feature(japan, japan.objects.prefectures);
+    const mainFeatures = {
+      type: "FeatureCollection",
+      features: allFeatures.features.filter(d => parseInt(d.id, 10) !== 47)
+    };
+    const okiFeature = allFeatures.features.find(d => parseInt(d.id, 10) === 47);
+
+    const svg = d3.select(mapEl)
+      .append('svg')
+      .attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('preserveAspectRatio', 'xMidYMid meet');
+
+    // ocean background
+    svg.append('rect')
+      .attr('width', W).attr('height', H)
+      .attr('fill', '#dde8f0');
+
+    // Main map projection fitted to all non-Okinawa prefectures
+    const projection = d3.geoMercator()
+      .fitExtent([[10, 10], [W - 10, INSET_Y - 20]], mainFeatures);
+    const path = d3.geoPath().projection(projection);
+
+    // Main prefectures
+    svg.selectAll('path.pref-main')
+      .data(mainFeatures.features)
+      .enter()
+      .append('path')
+      .attr('class', 'pref-path')
+      .attr('d', path)
+      .attr('fill', d => {
+        const pref = PREF_BY_CODE[parseInt(d.id, 10)];
+        return pref ? REGION_COLORS[pref.r] : '#ccc';
+      })
+      .call(prefHandlers);
+
+    // Okinawa inset
+    if (okiFeature) {
+      const inset = svg.append('g').attr('transform', `translate(${INSET_X},${INSET_Y})`);
+
+      inset.append('rect')
+        .attr('width', INSET_W).attr('height', INSET_H)
+        .attr('rx', 4)
+        .attr('fill', '#dde8f0')
+        .attr('stroke', '#aabbc8')
+        .attr('stroke-width', 1);
+
+      inset.append('text')
+        .attr('x', INSET_W / 2).attr('y', INSET_H - 6)
+        .attr('text-anchor', 'middle')
+        .attr('font-size', 10)
+        .attr('fill', '#667')
+        .text('Okinawa (inset)');
+
+      const okiProj = d3.geoMercator()
+        .fitExtent([[6, 6], [INSET_W - 6, INSET_H - 20]], {
+          type: "FeatureCollection",
+          features: [okiFeature]
+        });
+      const okiPath = d3.geoPath().projection(okiProj);
+
+      inset.append('path')
+        .datum(okiFeature)
+        .attr('class', 'pref-path')
+        .attr('d', okiPath)
+        .attr('fill', REGION_COLORS.okinawa)
+        .call(prefHandlers);
+    }
+
+    // Legend
+    const legend = document.getElementById('legend');
+    REGION_LABELS.forEach(rl => {
+      const el = document.createElement('div');
+      el.className = 'legend-item';
+      el.innerHTML = `<span class="legend-dot" style="background:${REGION_COLORS[rl.r]}"></span><span>${rl.label}</span>`;
+      legend.appendChild(el);
+    });
+  }
+
+  initMap();
 </script>
 
 </body>
