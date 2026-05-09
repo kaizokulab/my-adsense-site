@@ -121,8 +121,11 @@
     .no2-link:hover { text-decoration: underline; }
     .no3-link { color: #7a4820; text-decoration: none; }
     .no3-link:hover { text-decoration: underline; }
+    .no6-link { color: #2980b9; text-decoration: none; }
+    .no6-link:hover { text-decoration: underline; }
     .label.no2-label { background: #888; }
     .label.no3-label { background: #a05a2c; }
+    .label.no6-label { background: #2980b9; }
 
     article {
       background: #fff;
@@ -345,7 +348,7 @@ const DATA = {
   },
   Iwate: {
     en: "Iwate",
-    top5: ["Chusonji (Hiraizumi)", "Morioka", "Ryusendo Cave", "Kitakami Tenshochi", "Mt. Hachimantai"],
+    top5: ["Chusonji (Hiraizumi)", "Morioka", "Ryusendo Cave", "Kitakami Tenshochi", "Mt. Hachimantai", "Oshu City"],
     city: "Chusonji — Hiraizumi",
     attractions: [
       "Konjikido (Golden Hall) at Chusonji — a UNESCO World Heritage treasure; every surface is covered in gold leaf, lacquer, and mother-of-pearl inlay",
@@ -385,6 +388,13 @@ const DATA = {
       ],
       transport: [
         "From Morioka Station, JR Yamada Line to Iwaizumi Station (1 h 30 min) → local bus 10 min, or express bus direct from Morioka (about 1 h 40 min)"
+      ]
+    },
+    spot6: {
+      attractions: [
+        "Isawa Tanbo Art (Rice Paddy Art) — a summer spectacle in which different-coloured rice varieties are planted in precise patterns to form giant pictures visible from a dedicated observation tower; the design changes every year and typically depicts historical heroes or scenic motifs",
+        "Isawa Onsen — one of Iwate's oldest hot-spring resort towns, located within Oshu City; traditional ryokan line the streets near the paddy-art fields, making it an ideal base for combining onsen and the tanbo art season",
+        "Oshu Fujiwara History Museum — tells the story of the Northern Fujiwara clan whose golden culture centred in this region during the 12th century, providing deep context for the nearby UNESCO World Heritage site at Hiraizumi"
       ]
     },
   },
@@ -449,7 +459,8 @@ const DATA = {
     ],
     transport: [
       "Akita Shinkansen (Komachi) from Tokyo direct to Akita Station (approx. 4 hours)",
-      "Rent a car for Kakunodate (45 min) and Lake Tazawa (1 hour) — public transport is limited outside the city"
+      "Rent a car for Kakunodate (45 min) and Lake Tazawa (1 hour) — public transport is limited outside the city",
+      "When driving in winter, snow chains are mandatory on mountain roads; local drivers are notably skilled at counter-steering on icy surfaces"
     ],
     souvenirs: [
       "Inaniwa udon (dried noodle gift sets) — the ultimate Akita pantry souvenir",
@@ -2362,6 +2373,8 @@ function render() {
       ? `<a class="no2-link" href="#no2-article">${spot} — Read full article ↓</a>`
       : n === 3
       ? `<a class="no3-link" href="#no3-article">${spot} — Read full article ↓</a>`
+      : n === 6 && d.spot6
+      ? `<a class="no6-link" href="#no6-article">${spot} — Read full article ↓</a>`
       : spot;
     return `<li${li}><span class="rank-badge ${bc}">${n}</span>${label}</li>`;
   }).join('');
@@ -2409,6 +2422,14 @@ function render() {
       <ul>${mkList(d.spot3.attractions)}</ul>
       <div class="section-head"><span class="icon">🚃</span> Getting There</div>
       <ul>${mkList(d.spot3.transport)}</ul>
+    </article>` : ''}
+
+    ${d.spot6 ? `
+    <article id="no6-article">
+      <span class="label no6-label">No.6 Spot</span>
+      <h2>${d.en} No.6 — ${d.top5[5]}</h2>
+      <div class="section-head"><span class="icon">🏯</span> Attractions</div>
+      <ul>${mkList(d.spot6.attractions)}</ul>
     </article>` : ''}`;
 }
 
