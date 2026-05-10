@@ -5,6 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="pageTitle">Travel Guide — Japan Travel Guide</title>
   <meta name="description" id="pageDesc" content="Top 5 travel spots by prefecture" />
+  <script>
+  (function(){
+    var T={
+      Hokkaido:["Hokkaido","Sapporo — Odori Park"],
+      Aomori:["Aomori","Hirosaki Castle"],
+      Iwate:["Iwate","Chusonji — Hiraizumi"],
+      Miyagi:["Miyagi","Sendai"],
+      Akita:["Akita","Akita City"],
+      Yamagata:["Yamagata","Ginzan Onsen"],
+      Fukushima:["Fukushima","Aizu-Wakamatsu"],
+      Ibaraki:["Ibaraki","Oarai"],
+      Tochigi:["Tochigi","Nikko"],
+      Gumma:["Gunma","Kusatsu Onsen"],
+      Saitama:["Saitama","Chichibu"],
+      Chiba:["Chiba","Urayasu — Tokyo Disney Resort"],
+      Tokyo:["Tokyo","Chiyoda — Imperial Palace District"],
+      Kanagawa:["Kanagawa","Yokohama"],
+      Niigata:["Niigata","Niigata City"],
+      Toyama:["Toyama","Kurobe Gorge"],
+      Ishikawa:["Ishikawa","Kanazawa"],
+      Fukui:["Fukui","Eiheiji Temple & Dinosaur Museum"],
+      Yamnashi:["Yamanashi","Fujikawaguchiko — Mt. Fuji Area"],
+      Nagano:["Nagano","Matsumoto"],
+      Gifu:["Gifu","Shirakawa-go"],
+      Shizuoka:["Shizuoka","Mt. Fuji"],
+      Aichi:["Aichi","Nagoya"],
+      Mie:["Mie","Ise Jingu Grand Shrine"],
+      Shiga:["Shiga","Otsu"],
+      Kyoto:["Kyoto","Kyoto City"],
+      Osaka:["Osaka","Osaka City"],
+      Hyogo:["Hyogo","Kobe"],
+      Nara:["Nara","Nara City"],
+      Wakayama:["Wakayama","Kumano Nachi Taisha & Nachi Falls"],
+      Tottori:["Tottori","Tottori Sand Dunes"],
+      Shimane:["Shimane","Izumo Taisha Grand Shrine"],
+      Okayama:["Okayama","Okayama City"],
+      Hiroshima:["Hiroshima","Hiroshima City"],
+      Yamaguchi:["Yamaguchi","Yamaguchi City"],
+      Tokushima:["Tokushima","Tokushima City"],
+      Kagawa:["Kagawa","Takamatsu"],
+      Ehime:["Ehime","Matsuyama"],
+      Kochi:["Kochi","Cape Ashizuri"],
+      Fukuoka:["Fukuoka","Fukuoka City"],
+      Saga:["Saga","Karatsu"],
+      Nagasaki:["Nagasaki","Nagasaki City"],
+      Kumamoto:["Kumamoto","Kumamoto City"],
+      Oita:["Oita","Beppu"],
+      Miyazaki:["Miyazaki","Takachiho"],
+      Kagoshima:["Kagoshima","Kagoshima City"],
+      Okinawa:["Okinawa","Naha"]
+    };
+    var m=location.search.match(/[?&]pref=([^&]+)/);
+    if(m){var d=T[decodeURIComponent(m[1])];if(d){document.getElementById('pageTitle').textContent=d[0]+' — Top 5 Travel Spots | Japan Travel Guide';document.getElementById('pageDesc').setAttribute('content','Travel guide for '+d[0]+', Japan. Top 5 spots, food, transport, and souvenir recommendations. No.1: '+d[1]+'.'); }}
+  })();
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-75K003XC9N"></script>
   <script>
