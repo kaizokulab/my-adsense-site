@@ -9,6 +9,15 @@
   <meta property="og:description" content="Click any prefecture on the Japan map to explore its top 5 travel recommendations." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Japan Travel Guide",
+    "url": "https://kaizokulab.com/",
+    "description": "Top 5 travel spots for all 47 Japanese prefectures — attractions, food, transport, and souvenirs."
+  }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-75K003XC9N"></script>
   <script>
@@ -185,6 +194,37 @@
     @media (max-width: 680px) {
       .map-section { padding: 1rem; }
     }
+
+    .scroll-hint { display: none; text-align: center; color: #999; font-size: 0.78rem; margin-top: 6px; }
+    @media (max-width: 680px) { .scroll-hint { display: block; } }
+
+    .legend-item { cursor: pointer; transition: opacity 0.2s; user-select: none; }
+    .legend-item:hover { opacity: 0.8; }
+    .pref { transition: filter 0.15s, transform 0.12s, opacity 0.2s; }
+
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 0.82rem;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      z-index: 9999;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    }
+    .cookie-banner a { color: #e87070; }
+    .cookie-banner button {
+      background: #c0392b; color: #fff;
+      border: none; border-radius: 4px;
+      padding: 0.4rem 1.1rem;
+      cursor: pointer; font-size: 0.82rem;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .cookie-banner button:hover { background: #a93226; }
   </style>
 </head>
 <body>
@@ -222,7 +262,7 @@
 
         <!-- KANTO -->
         <a href="prefecture.html?pref=Niigata"  class="pref kanto" style="grid-column:13; grid-row:5">Niigata</a>
-        <a href="prefecture.html?pref=Gumma"    class="pref kanto" style="grid-column:13; grid-row:6">Gunma</a>
+        <a href="prefecture.html?pref=Gunma"    class="pref kanto" style="grid-column:13; grid-row:6">Gunma</a>
         <a href="prefecture.html?pref=Tochigi"  class="pref kanto" style="grid-column:14; grid-row:6">Tochigi</a>
         <a href="prefecture.html?pref=Ibaraki"  class="pref kanto" style="grid-column:15; grid-row:6/span 2">Ibaraki</a>
         <a href="prefecture.html?pref=Saitama"  class="pref kanto" style="grid-column:13; grid-row:7">Saitama</a>
@@ -237,7 +277,7 @@
         <a href="prefecture.html?pref=Gifu"     class="pref chubu" style="grid-column:11; grid-row:6">Gifu</a>
         <a href="prefecture.html?pref=Nagano"   class="pref chubu" style="grid-column:12; grid-row:6">Nagano</a>
         <a href="prefecture.html?pref=Aichi"    class="pref chubu" style="grid-column:11; grid-row:7">Aichi</a>
-        <a href="prefecture.html?pref=Yamnashi" class="pref chubu" style="grid-column:12; grid-row:7">Yamanashi</a>
+        <a href="prefecture.html?pref=Yamanashi" class="pref chubu" style="grid-column:12; grid-row:7">Yamanashi</a>
         <a href="prefecture.html?pref=Shizuoka" class="pref chubu" style="grid-column:11/span 2; grid-row:8">Shizuoka</a>
 
         <!-- KINKI -->
@@ -274,15 +314,16 @@
 
       </div>
     </div>
+    <p class="scroll-hint">← Swipe to explore the map →</p>
     <div class="legend">
-      <div class="legend-item"><div class="legend-dot" style="background:#8880cc"></div>Hokkaido</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#4fa8bc"></div>Tohoku</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#3aaa8e"></div>Kanto</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#96ab3c"></div>Chubu</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#3b8f4c"></div>Kinki / Kansai</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#d88840"></div>Chugoku</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#9a7d38"></div>Shikoku</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#e06070"></div>Kyushu / Okinawa</div>
+      <div class="legend-item" data-region="hokkaido"><div class="legend-dot" style="background:#8880cc"></div>Hokkaido</div>
+      <div class="legend-item" data-region="tohoku"><div class="legend-dot" style="background:#4fa8bc"></div>Tohoku</div>
+      <div class="legend-item" data-region="kanto"><div class="legend-dot" style="background:#3aaa8e"></div>Kanto</div>
+      <div class="legend-item" data-region="chubu"><div class="legend-dot" style="background:#96ab3c"></div>Chubu</div>
+      <div class="legend-item" data-region="kinki"><div class="legend-dot" style="background:#3b8f4c"></div>Kinki / Kansai</div>
+      <div class="legend-item" data-region="chugoku"><div class="legend-dot" style="background:#d88840"></div>Chugoku</div>
+      <div class="legend-item" data-region="shikoku"><div class="legend-dot" style="background:#9a7d38"></div>Shikoku</div>
+      <div class="legend-item" data-region="kyushu"><div class="legend-dot" style="background:#e06070"></div>Kyushu / Okinawa</div>
     </div>
   </section>
 
@@ -304,6 +345,37 @@
   </p>
 </footer>
 
+
+<div id="cookie-banner" class="cookie-banner" style="display:none">
+  <span>This site uses cookies for analytics and personalised ads. <a href="privacy-policy.html">Privacy Policy</a></span>
+  <button onclick="(function(){localStorage.setItem('cookieOk','1');document.getElementById('cookie-banner').style.display='none';})()">Accept</button>
+</div>
+
+<script>
+if(!localStorage.getItem('cookieOk'))document.getElementById('cookie-banner').style.display='flex';
+
+(function(){
+  let active = null;
+  document.querySelectorAll('.legend-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      const r = item.dataset.region;
+      if(active === r){
+        active = null;
+        document.querySelectorAll('.pref').forEach(function(p){ p.style.opacity=''; });
+        document.querySelectorAll('.legend-item').forEach(function(l){ l.style.opacity=''; });
+      } else {
+        active = r;
+        document.querySelectorAll('.pref').forEach(function(p){
+          p.style.opacity = p.classList.contains(r) ? '1' : '0.2';
+        });
+        document.querySelectorAll('.legend-item').forEach(function(l){
+          l.style.opacity = l.dataset.region === r ? '1' : '0.4';
+        });
+      }
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

@@ -41,7 +41,7 @@
 </header>
 <nav>
   <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+  <span style="color:#fff;opacity:0.85;font-size:0.9rem;margin:0 1rem;">About</span>
   <a href="privacy-policy.html">Privacy Policy</a>
 </nav>
 <div class="wrapper">
@@ -87,5 +87,10 @@
 <footer>
   <p>&copy; 2025 Japan Travel Guide. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
 </footer>
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;color:#ccc;font-size:0.82rem;padding:0.75rem 1.5rem;align-items:center;justify-content:space-between;gap:1rem;z-index:9999;box-shadow:0 -2px 8px rgba(0,0,0,0.3);">
+  <span>This site uses cookies for analytics and personalised ads. <a href="privacy-policy.html" style="color:#e87070;">Privacy Policy</a></span>
+  <button onclick="(function(){localStorage.setItem('cookieOk','1');document.getElementById('cookie-banner').style.display='none';})()" style="background:#c0392b;color:#fff;border:none;border-radius:4px;padding:0.4rem 1.1rem;cursor:pointer;font-size:0.82rem;white-space:nowrap;flex-shrink:0;">Accept</button>
+</div>
+<script>if(!localStorage.getItem('cookieOk'))document.getElementById('cookie-banner').style.display='flex';</script>
 </body>
 </html>
