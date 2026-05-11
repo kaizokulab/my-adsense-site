@@ -345,6 +345,16 @@ const COLUMNS = {
       info: "Nagaoka City — JR Joetsu Shinkansen to Nagaoka Station, then 5 minutes by taxi towards Nagaoka Castle ruins."
     }
   },
+  FukushimaMusic: {
+    tag: "Traditional Music",
+    title: "Minyo — The Folk Songs Japan Nearly Forgot",
+    pref: "Fukushima",
+    body: [
+      "Minyo (民謡) are the songs that grew out of the daily lives of ordinary Japanese people — fieldwork chants, lullabies, festival songs, sea shanties. Unlike art music composed for an audience, minyo were functional: they set the rhythm of labour, marked the seasons, and carried local knowledge from one generation to the next entirely by ear. Each region of Japan developed its own repertoire, its own melodic idiom, and its own vocal style, making minyo one of the most geographically diverse bodies of song in the world.",
+      "That living chain of transmission has weakened sharply over the last half-century. As rural communities shrank and agricultural work mechanised, the occasions that once sustained minyo — communal rice-planting, festival processions, communal fishing — became rarer or disappeared. The songs survived in archives, in school curricula, and among specialist practitioners, but the natural, unforced passing of a melody from parent to child in the course of everyday work became increasingly uncommon.",
+      "Against that backdrop, the Tokyo-based collective Minyo Crusaders (民謡クルセイダーズ) found an unexpected route back to relevance. Formed around guitarist Hamada Etsuro, the group began fusing traditional Japanese folk songs with Afro-Latin rhythms — cumbia, salsa, merengue, bossa nova — treating minyo not as museum pieces but as raw material with the same groove potential as any popular song. Their treatment of <i>Aizu Bandaisan</i> (会津磐梯山), a celebrated song from Fukushima's Aizu region that has been performed at festivals for centuries, became a particular favourite: the original melody remains intact, but the rhythmic bed beneath it opens the song to listeners who might never have sought out traditional music. For a first encounter with Japanese minyo, it is an excellent place to start."
+    ]
+  },
   Tottori: {
     tag: "Pop Culture",
     title: "Detective Conan Country — Hokuei Town's Manga Identity",
@@ -408,7 +418,7 @@ function render() {
   const title = `${d.title} | Japan Travel Guide`;
   const desc = `${d.title} — a column on ${d.pref}, Japan.`;
   const canonUrl = `https://kaizokulab.com/column.html?pref=${encodeURIComponent(key)}`;
-  const prefUrl = `prefecture.html?pref=${encodeURIComponent(key)}`;
+  const prefUrl = `prefecture.html?pref=${encodeURIComponent(d.pref)}`;
 
   document.getElementById('pageTitle').textContent = title;
   document.getElementById('pageDesc').setAttribute('content', desc);
@@ -456,10 +466,7 @@ function render() {
       <span class="column-tag">${d.tag}</span>
       <h1>${d.title}</h1>
       ${d.body.map(p => `<p>${p}</p>`).join('')}
-      <div class="column-access">
-        <strong>${d.access.name}</strong>
-        ${d.access.info}
-      </div>
+      ${d.access ? `<div class="column-access"><strong>${d.access.name}</strong> ${d.access.info}</div>` : ''}
     </article>
 
     <a class="back-link" href="column.html">← All Columns</a>
