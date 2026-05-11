@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="pageTitle">Travel Guide — Japan Travel Guide</title>
-  <meta name="description" id="pageDesc" content="Top 5 travel spots by prefecture" />
+  <title id="pageTitle">Japan Travel Guide — Top 5 Spots by Prefecture</title>
+  <meta name="description" id="pageDesc" content="Explore the top 5 travel spots across all 47 Japanese prefectures. Discover attractions, local food, transport tips, and souvenir picks for every region." />
+  <link rel="canonical" id="pageCanonical" href="https://kaizokulab.com/prefecture.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Japan Travel Guide" />
+  <meta property="og:title" id="ogTitle" content="Japan Travel Guide — Top 5 Spots by Prefecture" />
+  <meta property="og:description" id="ogDesc" content="Explore the top 5 travel spots across all 47 Japanese prefectures. Discover attractions, local food, transport tips, and souvenir picks for every region." />
+  <meta property="og:url" id="ogUrl" content="https://kaizokulab.com/prefecture.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" id="twTitle" content="Japan Travel Guide — Top 5 Spots by Prefecture" />
+  <meta name="twitter:description" id="twDesc" content="Explore the top 5 travel spots across all 47 Japanese prefectures. Discover attractions, local food, transport tips, and souvenir picks for every region." />
+  <script type="application/ld+json" id="jsonLd"></script>
   <script>
   (function(){
     var T={
@@ -17,7 +27,7 @@
       Fukushima:["Fukushima","Aizu-Wakamatsu"],
       Ibaraki:["Ibaraki","Oarai"],
       Tochigi:["Tochigi","Nikko"],
-      Gumma:["Gunma","Kusatsu Onsen"],
+      Gunma:["Gunma","Kusatsu Onsen"],
       Saitama:["Saitama","Chichibu"],
       Chiba:["Chiba","Urayasu — Tokyo Disney Resort"],
       Tokyo:["Tokyo","Chiyoda — Imperial Palace District"],
@@ -26,7 +36,7 @@
       Toyama:["Toyama","Kurobe Gorge"],
       Ishikawa:["Ishikawa","Kanazawa"],
       Fukui:["Fukui","Eiheiji Temple & Dinosaur Museum"],
-      Yamnashi:["Yamanashi","Fujikawaguchiko — Mt. Fuji Area"],
+      Yamanashi:["Yamanashi","Fujikawaguchiko — Mt. Fuji Area"],
       Nagano:["Nagano","Matsumoto"],
       Gifu:["Gifu","Shirakawa-go"],
       Shizuoka:["Shizuoka","Mt. Fuji"],
@@ -57,7 +67,19 @@
       Okinawa:["Okinawa","Naha"]
     };
     var m=location.search.match(/[?&]pref=([^&]+)/);
-    if(m){var d=T[decodeURIComponent(m[1])];if(d){document.getElementById('pageTitle').textContent=d[0]+' — Top 5 Travel Spots | Japan Travel Guide';document.getElementById('pageDesc').setAttribute('content','Travel guide for '+d[0]+', Japan. Top 5 spots, food, transport, and souvenir recommendations. No.1: '+d[1]+'.'); }}
+    if(m){var d=T[decodeURIComponent(m[1])];if(d){
+      var _t=d[0]+' — Top 5 Travel Spots | Japan Travel Guide';
+      var _d='Explore the top 5 travel spots in '+d[0]+', Japan. Best attractions, local food, transport tips, and souvenirs. Top pick: '+d[1]+'.';
+      var _u='https://kaizokulab.com/prefecture.html?pref='+m[1];
+      document.getElementById('pageTitle').textContent=_t;
+      document.getElementById('pageDesc').setAttribute('content',_d);
+      document.getElementById('pageCanonical').setAttribute('href',_u);
+      document.getElementById('ogTitle').setAttribute('content',_t);
+      document.getElementById('ogDesc').setAttribute('content',_d);
+      document.getElementById('ogUrl').setAttribute('content',_u);
+      document.getElementById('twTitle').setAttribute('content',_t);
+      document.getElementById('twDesc').setAttribute('content',_d);
+    }}
   })();
   </script>
   <!-- Google tag (gtag.js) -->
@@ -281,6 +303,87 @@
       article { padding: 1.25rem 1.1rem; }
       .top5-card { padding: 1.25rem 1.1rem; }
     }
+
+    .breadcrumb {
+      font-size: 0.82rem;
+      color: #888;
+      padding: 0.6rem 0 0.2rem;
+    }
+    .breadcrumb a { color: #c0392b; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb .sep { margin: 0 0.3rem; }
+
+    .updated-date {
+      font-size: 0.78rem;
+      color: #bbb;
+      text-align: right;
+      margin-top: 1.5rem;
+    }
+
+    .column-tag {
+      display: inline-block;
+      background: #2c7a7b;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.65rem;
+      border-radius: 50px;
+      margin-bottom: 0.6rem;
+    }
+
+    .column-teaser {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-left: 4px solid #2c7a7b;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .column-teaser-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a3a3a;
+    }
+
+    .column-teaser-link {
+      align-self: flex-start;
+      color: #2c7a7b;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .column-teaser-link:hover { text-decoration: underline; }
+
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 0.82rem;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      z-index: 9999;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    }
+    .cookie-banner a { color: #e87070; }
+    .cookie-banner button {
+      background: #c0392b; color: #fff;
+      border: none; border-radius: 4px;
+      padding: 0.4rem 1.1rem;
+      cursor: pointer; font-size: 0.82rem;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .cookie-banner button:hover { background: #a93226; }
   </style>
 </head>
 <body>
@@ -550,6 +653,10 @@ const DATA = {
         "Alternatively, JR limited express from Akita to Kakunodate (45 min)"
       ]
     },
+    column: {
+      tag: "Local Hero",
+      title: "Nobu Shirase — Akita's Polar Explorer"
+    }
   },
   Yamagata: {
     en: "Yamagata",
@@ -595,6 +702,10 @@ const DATA = {
         "JR Senzan Line from Yamagata City to Yamadera Station (20 min) — the station is directly at the temple entrance path"
       ]
     },
+    column: {
+      tag: "Notable Figure",
+      title: "Ken Domon — Japan's Unsparing Eye"
+    }
   },
   Fukushima: {
     en: "Fukushima",
@@ -638,6 +749,10 @@ const DATA = {
         "JR Ban-Etsu West Line from Koriyama to Kitakata (1 h 20 min); or limited express from Aizu-Wakamatsu to Kitakata (15 min)"
       ]
     },
+    column: {
+      tag: "Notable Figure",
+      title: "Hideyo Noguchi — From Inawashiro to the Rockefeller Institute"
+    }
   },
   Ibaraki: {
     en: "Ibaraki",
@@ -728,7 +843,7 @@ const DATA = {
       ]
     },
   },
-  Gumma: {
+  Gunma: {
     en: "Gunma",
     top5: ["Kusatsu Onsen", "Oze Marshland", "Takasaki", "Maebashi", "Ikaho Onsen"],
     city: "Kusatsu Onsen",
@@ -995,6 +1110,10 @@ const DATA = {
         "JR Joetsu Shinkansen to Echigo-Yuzawa Station (1 h 20 min from Tokyo) → direct bus to Naeba (30 min)"
       ]
     },
+    column: {
+      tag: "Historical Figure",
+      title: "Kawai Tsuginosuke — The Last Strategist of Nagaoka"
+    }
   },
   Toyama: {
     en: "Toyama",
@@ -1129,7 +1248,7 @@ const DATA = {
       ]
     },
   },
-  Yamnashi: {
+  Yamanashi: {
     en: "Yamanashi",
     top5: ["Fujikawaguchiko (Mt. Fuji views)", "Kofu", "Fujinomiya", "Koshu (Wine Country)", "Minamitsuru (Oshino Hakkai)"],
     city: "Fujikawaguchiko — Mt. Fuji Area",
@@ -1698,6 +1817,10 @@ const DATA = {
         "JR Sakaiminato Line from Yonago Station to Sakaiminato Station (45 min)"
       ]
     },
+    column: {
+      tag: "Pop Culture",
+      title: "Detective Conan Country — Hokuei Town's Manga Identity"
+    }
   },
   Shimane: {
     en: "Shimane",
@@ -3532,6 +3655,17 @@ Object.keys(SPOT45).forEach(function(k) {
   if (DATA[k]) Object.assign(DATA[k], SPOT45[k]);
 });
 
+const REGION = {
+  Hokkaido: 'Hokkaido',
+  Aomori: 'Tohoku', Iwate: 'Tohoku', Miyagi: 'Tohoku', Akita: 'Tohoku', Yamagata: 'Tohoku', Fukushima: 'Tohoku',
+  Ibaraki: 'Kanto', Tochigi: 'Kanto', Gunma: 'Kanto', Saitama: 'Kanto', Chiba: 'Kanto', Tokyo: 'Kanto', Kanagawa: 'Kanto', Niigata: 'Kanto',
+  Toyama: 'Chubu', Ishikawa: 'Chubu', Fukui: 'Chubu', Yamanashi: 'Chubu', Nagano: 'Chubu', Gifu: 'Chubu', Shizuoka: 'Chubu', Aichi: 'Chubu',
+  Mie: 'Kinki', Shiga: 'Kinki', Kyoto: 'Kinki', Osaka: 'Kinki', Hyogo: 'Kinki', Nara: 'Kinki', Wakayama: 'Kinki',
+  Tottori: 'Chugoku', Shimane: 'Chugoku', Okayama: 'Chugoku', Hiroshima: 'Chugoku', Yamaguchi: 'Chugoku',
+  Tokushima: 'Shikoku', Kagawa: 'Shikoku', Ehime: 'Shikoku', Kochi: 'Shikoku',
+  Fukuoka: 'Kyushu', Saga: 'Kyushu', Nagasaki: 'Kyushu', Kumamoto: 'Kyushu', Oita: 'Kyushu', Miyazaki: 'Kyushu', Kagoshima: 'Kyushu', Okinawa: 'Kyushu'
+};
+
 function getPref() {
   return new URLSearchParams(location.search).get('pref') || '';
 }
@@ -3551,12 +3685,42 @@ function render() {
     return;
   }
 
-  document.getElementById('pageTitle').textContent =
-    `${d.en} — Top 5 Travel Spots | Japan Travel Guide`;
-  document.getElementById('pageDesc').content =
-    `Travel guide for ${d.en}, Japan. Top 5 spots, food, transport, and souvenir recommendations. No.1: ${d.city}.`;
+  const title = `${d.en} — Top 5 Travel Spots | Japan Travel Guide`;
+  const desc = `Explore the top 5 travel spots in ${d.en}, Japan. Best attractions, local food, transport tips, and souvenirs. Top pick: ${d.city}.`;
+  const canonUrl = `https://kaizokulab.com/prefecture.html?pref=${encodeURIComponent(key)}`;
+  const region = REGION[key] || '';
+
+  document.getElementById('pageTitle').textContent = title;
+  document.getElementById('pageDesc').setAttribute('content', desc);
+  document.getElementById('pageCanonical').setAttribute('href', canonUrl);
+  document.getElementById('ogTitle').setAttribute('content', title);
+  document.getElementById('ogDesc').setAttribute('content', desc);
+  document.getElementById('ogUrl').setAttribute('content', canonUrl);
+  document.getElementById('twTitle').setAttribute('content', title);
+  document.getElementById('twDesc').setAttribute('content', desc);
   document.getElementById('headerTitle').textContent = `${d.en} Travel Guide`;
   document.getElementById('headerSub').textContent = 'Top 5 Recommended Spots';
+
+  document.getElementById('jsonLd').textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": canonUrl,
+        "url": canonUrl,
+        "name": title,
+        "description": desc,
+        "isPartOf": {"@id": "https://kaizokulab.com/"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaizokulab.com/"},
+          {"@type": "ListItem", "position": 2, "name": d.en}
+        ]
+      }
+    ]
+  });
 
   const rankItems = d.top5.map((spot, i) => {
     const n = i + 1;
@@ -3581,6 +3745,13 @@ function render() {
   const mkList = arr => arr.map(s => `<li>${s}</li>`).join('');
 
   content.innerHTML = `
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep" aria-hidden="true">›</span>
+      ${region ? `<span>${region}</span><span class="sep" aria-hidden="true">›</span>` : ''}
+      <span>${d.en}</span>
+    </nav>
+
     <div class="top5-card">
       <h2>${d.en} — Top 5 Recommended Spots</h2>
       <ul class="rank-list">${rankItems}</ul>
@@ -3649,11 +3820,26 @@ function render() {
       <h2>${d.en} No.6 — ${d.top5[5]}</h2>
       <div class="section-head"><span class="icon">🏯</span> Attractions</div>
       <ul>${mkList(d.spot6.attractions)}</ul>
-    </article>` : ''}`;
+    </article>` : ''}
+
+    ${d.column ? `
+    <div class="column-teaser">
+      <span class="column-tag">${d.column.tag}</span>
+      <p class="column-teaser-title">${d.column.title}</p>
+      <a class="column-teaser-link" href="column.html?pref=${key}">Read Column →</a>
+    </div>` : ''}
+
+    <p class="updated-date">Last updated: May 2025</p>`;
 }
 
 render();
 </script>
+
+<div id="cookie-banner" class="cookie-banner" style="display:none">
+  <span>This site uses cookies for analytics and personalised ads. <a href="privacy-policy.html">Privacy Policy</a></span>
+  <button onclick="(function(){localStorage.setItem('cookieOk','1');document.getElementById('cookie-banner').style.display='none';})()">Accept</button>
+</div>
+<script>if(!localStorage.getItem('cookieOk'))document.getElementById('cookie-banner').style.display='flex';</script>
 
 </body>
 </html>

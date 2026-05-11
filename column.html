@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Japan Travel Column | Japan Travel Guide</title>
+  <meta name="description" id="pageDesc" content="In-depth columns on Japanese history, culture, and notable figures connected to Japan's prefectures." />
+  <link rel="canonical" id="pageCanonical" href="https://kaizokulab.com/column.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Japan Travel Guide" />
+  <meta property="og:title" id="ogTitle" content="Japan Travel Column | Japan Travel Guide" />
+  <meta property="og:description" id="ogDesc" content="In-depth columns on Japanese history, culture, and notable figures connected to Japan's prefectures." />
+  <meta property="og:url" id="ogUrl" content="https://kaizokulab.com/column.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" id="twTitle" content="Japan Travel Column | Japan Travel Guide" />
+  <meta name="twitter:description" id="twDesc" content="In-depth columns on Japanese history, culture, and notable figures connected to Japan's prefectures." />
+  <script type="application/ld+json" id="jsonLd"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-75K003XC9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-75K003XC9N');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #2c7a7b;
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem 2rem;
+    }
+
+    header h1 { font-size: clamp(1.4rem, 4vw, 2.4rem); font-weight: 800; }
+    header p { margin-top: 0.4rem; opacity: 0.88; font-size: 0.95rem; }
+
+    nav {
+      background: #245f60;
+      text-align: center;
+      padding: 0.6rem 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin: 0 1rem;
+      opacity: 0.85;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    .wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .breadcrumb {
+      font-size: 0.82rem;
+      color: #888;
+      padding: 0.6rem 0 0.2rem;
+    }
+
+    .breadcrumb a { color: #2c7a7b; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb .sep { margin: 0 0.3rem; }
+
+    .column-tag {
+      display: inline-block;
+      background: #2c7a7b;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.65rem;
+      border-radius: 50px;
+      margin-bottom: 0.75rem;
+    }
+
+    article {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 2rem 2rem 1.75rem;
+      margin: 2rem 0;
+      border-left: 4px solid #2c7a7b;
+    }
+
+    article h1 {
+      font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+      font-weight: 800;
+      color: #1a3a3a;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    article p {
+      color: #444;
+      font-size: 0.97rem;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    article p:last-of-type { margin-bottom: 0; }
+
+    .column-access {
+      background: #f0f7f7;
+      border-radius: 6px;
+      padding: 0.85rem 1.1rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .column-access strong {
+      display: block;
+      color: #1a3a3a;
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 0.5rem 0 2.5rem;
+      color: #2c7a7b;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .not-found {
+      background: #fff;
+      border-radius: 10px;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.82rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
+    }
+
+    footer a { color: #2c7a7b; }
+
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #1a1a1a;
+      color: #ccc;
+      font-size: 0.82rem;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      z-index: 999;
+    }
+
+    .cookie-banner button {
+      background: #2c7a7b;
+      color: #fff;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      article { padding: 1.25rem 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 id="headerTitle">Japan Travel Column</h1>
+  <p id="headerSub">In-depth stories behind the destinations</p>
+</header>
+
+<nav>
+  <a href="index.html">← Back to Map</a>
+  <a href="about.html">About</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+</nav>
+
+<div class="wrapper">
+  <div id="content"></div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Japan Travel Guide &nbsp;|&nbsp;
+    <a href="about.html">About</a> |
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner" style="display:none">
+  <span>This site uses cookies for analytics and personalised ads. <a href="privacy-policy.html">Privacy Policy</a></span>
+  <button onclick="(function(){localStorage.setItem('cookieOk','1');document.getElementById('cookie-banner').style.display='none';})()">Accept</button>
+</div>
+<script>if(!localStorage.getItem('cookieOk'))document.getElementById('cookie-banner').style.display='flex';</script>
+
+<script>
+const COLUMNS = {
+  Akita: {
+    tag: "Local Hero",
+    title: "Nobu Shirase — Akita's Polar Explorer",
+    pref: "Akita",
+    body: [
+      "Shirase Nobuichi (白瀬矗, 1861–1946) was born in what is now Nikaho City on Akita's southern coast. As a young man, he developed an intense ambition for polar exploration. To harden himself for the cold he intended to face, he reportedly gave up drinking tea as a disciplinary practice in his boyhood — and pushed his endurance further by sleeping without bedding through Akita's brutal winters and walking barefoot on snow.",
+      "Shirase originally planned to reach the North Pole, but when Robert Peary claimed it in 1909, he pivoted south. In 1910, with funding scraped together from private donors and a wooden vessel called the <i>Kainan Maru</i>, he departed Japan with a crew of 27. Arriving in Antarctica in 1912, his advance party pushed inland and reached 80°05' South latitude, planting Japan's flag and naming the region the Yamato Snow Plain (大和雪原).",
+      "The expedition returned to a hero's welcome — and a mountain of debt. Shirase had borrowed heavily to finance the voyage, and for years afterwards he toured Japan giving public lectures and selling his memoir to repay every creditor. He succeeded. Shirase died in 1946 at age 84, his debts cleared and his name inscribed in the polar record alongside Amundsen and Scott."
+    ],
+    access: {
+      name: "Shirase Antarctic Expedition Memorial Museum (白瀬南極探検隊記念館)",
+      info: "Nikaho City — JR Uetsu Main Line to Nikaho Station, then a 15-minute walk north."
+    }
+  },
+  Yamagata: {
+    tag: "Notable Figure",
+    title: "Ken Domon — Japan's Unsparing Eye",
+    pref: "Yamagata",
+    body: [
+      "Ken Domon (土門拳, 1909–1990) was born in Sakata, a port city on Yamagata's Sea of Japan coast. He became Japan's most consequential realist documentary photographer, declaring that the camera must show the world as it is — stripped of artifice. His landmark series include <i>Hiroshima</i> (1958), a devastating record of atomic bomb survivors living with disfigurement two decades after the war, and <i>Chikuho</i> (1959–61), portraits of coal-mining families in Fukuoka — children playing beside black slag heaps, mothers with worn hands and empty eyes.",
+      "Among his most beloved images is one taken far from Yamagata, at Muroji Temple deep in the mountains of Nara Prefecture. Domon made several winter visits and in 1954 captured the scene that would define his legacy: the temple's weathered five-storey pagoda half-buried in fresh snow, utterly still, surrounded by white silence. The photograph is widely regarded as the finest ever made of Japanese Buddhist architecture.",
+      "In 1968, Domon suffered a severe stroke that left him partially paralysed. He did not retire. With modified equipment and the help of assistants, he continued photographing Japan's ancient temples from a wheelchair for more than a decade — pushing deeper into Nara, Kyoto, and Fukuoka than many photographers manage on foot. He died in 1990. The Domon Ken Museum of Photography (土門拳記念館) in Sakata, designed by architect Taniguchi Yoshio, holds the definitive collection of his prints."
+    ],
+    access: {
+      name: "Domon Ken Museum of Photography (土門拳記念館)",
+      info: "Sakata City — JR Uetsu Main Line to Sakata Station, then a 10-minute taxi ride."
+    }
+  },
+  Fukushima: {
+    tag: "Notable Figure",
+    title: "Hideyo Noguchi — From Inawashiro to the Rockefeller Institute",
+    pref: "Fukushima",
+    body: [
+      "Hideyo Noguchi (野口英世, 1876–1928) was born in Inawashiro, Fukushima, into a family so impoverished that when the toddler Noguchi fell into the open hearth and severely burned his left hand, neighbours had to pool money to fund surgery that partially restored its function. That act of collective generosity left a permanent impression — and a permanent scar. Noguchi vowed to repay the community's faith by excelling in medicine.",
+      "Working his way up through sheer determination, Noguchi learned English, moved to Tokyo, and emigrated to the United States, joining the Rockefeller Institute for Medical Research in New York. He earned an international reputation for work on syphilis, snake venom, and tropical diseases, and was nominated for the Nobel Prize in Physiology or Medicine three times. His face appeared on the Japanese ¥1,000 banknote from 2004 to 2024.",
+      "In 1927, Noguchi travelled to Accra, in what is now Ghana, to investigate a yellow fever outbreak. He contracted the disease himself and died on 21 May 1928, aged 51 — consumed by the same illness he had gone to combat. His preserved notebooks, photographs, and personal effects are on display at the Noguchi Hideyo Memorial Museum in his home village of Inawashiro."
+    ],
+    access: {
+      name: "Noguchi Hideyo Memorial Museum (野口英世記念館)",
+      info: "Inawashiro Town — JR Ban-Etsu West Line to Inawashiro Station, then a 10-minute walk."
+    }
+  },
+  Niigata: {
+    tag: "Historical Figure",
+    title: "Kawai Tsuginosuke — The Last Strategist of Nagaoka",
+    pref: "Niigata",
+    body: [
+      "Kawai Tsuginosuke (河井継之助, 1827–1868) was the chief administrator of the Nagaoka Domain in Echigo Province (present-day Niigata). In the spring of 1868, as the Boshin War tore Japan apart, Kawai attempted something unprecedented: genuine armed neutrality. He believed Nagaoka should fight for neither the old Tokugawa shogunate nor the new Meiji imperial government. To make this credible, he had procured one of the first Gatling guns to arrive in Japan — a weapon that gave Nagaoka's small force a decisive edge in close combat.",
+      "Neutrality failed. After negotiations at Zenigata collapsed, Nagaoka was swept into the conflict and branded one of eleven 'rebel' domains (賊軍, zokugun) by the imperial government. The resulting Hokuetsu War (北越戦争, summer 1868) was one of the bloodiest regional campaigns of the Boshin period. Kawai directed Nagaoka's defence with extraordinary tactical skill — retaking the castle town once after its fall — but the numerical imbalance was overwhelming.",
+      "Wounded severely in the thigh during the final fighting, Kawai retreated north into present-day Fukushima and died at Yanagiminato on 16 September 1868, aged 41. The ruined Nagaoka eventually rebuilt — and the city's famous spirit of resilience, expressed in its annual fireworks festival, is sometimes traced back to the dignified determination Kawai showed in those final months."
+    ],
+    access: {
+      name: "Kawai Tsuginosuke Memorial Museum (河井継之助記念館)",
+      info: "Nagaoka City — JR Joetsu Shinkansen to Nagaoka Station, then 5 minutes by taxi towards Nagaoka Castle ruins."
+    }
+  },
+  Tottori: {
+    tag: "Pop Culture",
+    title: "Detective Conan Country — Hokuei Town's Manga Identity",
+    pref: "Tottori",
+    body: [
+      "Gosho Aoyama, creator of the manga series <i>Detective Conan</i> (名探偵コナン, internationally known as <i>Case Closed</i>), was born in 1963 in what is now Hokuei Town (北栄町) in central Tottori Prefecture. His series — in which a brilliant teenage detective is shrunk to child size by a mysterious poison — has been published continuously since 1994. With over 270 million copies sold worldwide and an annual theatrical film that regularly tops Japan's box-office charts, it is one of the longest-running manga franchises in history.",
+      "Hokuei Town has built its identity almost entirely around the connection. More than 150 manhole covers across the town feature illustrated characters from the series. Bronze statues of Conan, Ran, Kogoro Mori, and other regulars appear at street corners and along station approaches. The local train station — Yura Station on the JR San'in Main Line — was officially renamed 'Conan Station' (コナン駅) in 1997, one of the few stations in Japan to carry a fictional character's name on its official signage.",
+      "The Gosho Aoyama Manga Factory (青山剛昌ふるさと館) in Hokuei Town displays original manuscript pages, character design sketches, and props including an oversized recreation of Conan's signature bow-tie voice changer and detective badge. The annual Conan Festival (コナンまつり) draws tens of thousands of fans to what is, at any other time of year, a quiet rural town — one of Japan's more earnest pop-culture pilgrimages."
+    ],
+    access: {
+      name: "Gosho Aoyama Manga Factory (青山剛昌ふるさと館)",
+      info: "Hokuei Town — JR San'in Main Line to Yura Station (Conan Station), then a 5-minute walk. From Tottori Station, approx. 30 minutes by limited express."
+    }
+  }
+};
+
+function render() {
+  const key = new URLSearchParams(location.search).get('pref') || '';
+  const d = COLUMNS[key];
+  const content = document.getElementById('content');
+
+  if (!d) {
+    content.innerHTML = `
+      <div class="not-found">
+        <h2>Column Not Found</h2>
+        <p style="margin-top:1rem;color:#666;">Please check the URL and try again.</p>
+        <a href="index.html" style="display:inline-block;margin-top:1.5rem;color:#2c7a7b;font-weight:700;">← Back to Map</a>
+      </div>`;
+    return;
+  }
+
+  const title = `${d.title} | Japan Travel Guide`;
+  const desc = `${d.title} — a column on ${d.pref}, Japan.`;
+  const canonUrl = `https://kaizokulab.com/column.html?pref=${encodeURIComponent(key)}`;
+  const prefUrl = `prefecture.html?pref=${encodeURIComponent(key)}`;
+
+  document.getElementById('pageTitle').textContent = title;
+  document.getElementById('pageDesc').setAttribute('content', desc);
+  document.getElementById('pageCanonical').setAttribute('href', canonUrl);
+  document.getElementById('ogTitle').setAttribute('content', title);
+  document.getElementById('ogDesc').setAttribute('content', desc);
+  document.getElementById('ogUrl').setAttribute('content', canonUrl);
+  document.getElementById('twTitle').setAttribute('content', title);
+  document.getElementById('twDesc').setAttribute('content', desc);
+  document.getElementById('headerTitle').textContent = 'Japan Travel Column';
+  document.getElementById('headerSub').textContent = d.pref;
+
+  document.getElementById('jsonLd').textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": canonUrl,
+        "url": canonUrl,
+        "name": title,
+        "description": desc,
+        "isPartOf": {"@id": "https://kaizokulab.com/"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kaizokulab.com/"},
+          {"@type": "ListItem", "position": 2, "name": d.pref, "item": `https://kaizokulab.com/${prefUrl}`},
+          {"@type": "ListItem", "position": 3, "name": "Column"}
+        ]
+      }
+    ]
+  });
+
+  content.innerHTML = `
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <a href="${prefUrl}">${d.pref}</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span>Column</span>
+    </nav>
+
+    <article>
+      <span class="column-tag">${d.tag}</span>
+      <h1>${d.title}</h1>
+      ${d.body.map(p => `<p>${p}</p>`).join('')}
+      <div class="column-access">
+        <strong>${d.access.name}</strong>
+        ${d.access.info}
+      </div>
+    </article>
+
+    <a class="back-link" href="${prefUrl}">← Back to ${d.pref} Travel Guide</a>`;
+}
+
+render();
+</script>
+
+</body>
+</html>
