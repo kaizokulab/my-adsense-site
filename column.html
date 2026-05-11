@@ -142,6 +142,69 @@
 
     .back-link:hover { text-decoration: underline; }
 
+    .column-index-header {
+      padding: 1.5rem 0 0.5rem;
+    }
+
+    .column-index-header h2 {
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-weight: 800;
+      color: #1a3a3a;
+      margin-bottom: 0.3rem;
+    }
+
+    .column-index-header p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .column-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0 3rem;
+    }
+
+    .column-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid #2c7a7b;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s;
+    }
+
+    .column-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.13);
+    }
+
+    .column-card-pref {
+      font-size: 0.78rem;
+      color: #888;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .column-card-title {
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: #1a3a3a;
+      line-height: 1.4;
+    }
+
+    .column-card-link {
+      font-size: 0.85rem;
+      color: #2c7a7b;
+      font-weight: 700;
+      margin-top: 0.25rem;
+    }
+
     .not-found {
       background: #fff;
       border-radius: 10px;
@@ -201,6 +264,7 @@
 
 <nav>
   <a href="index.html">← Back to Map</a>
+  <a href="column.html">Column</a>
   <a href="about.html">About</a>
   <a href="privacy-policy.html">Privacy Policy</a>
 </nav>
@@ -296,17 +360,46 @@ const COLUMNS = {
   }
 };
 
+function renderIndex(content) {
+  document.getElementById('pageTitle').textContent = 'Japan Travel Column | Japan Travel Guide';
+  document.getElementById('headerTitle').textContent = 'Japan Travel Column';
+  document.getElementById('headerSub').textContent = 'In-depth stories behind the destinations';
+
+  const cards = Object.keys(COLUMNS).map(k => {
+    const c = COLUMNS[k];
+    return `
+    <a class="column-card" href="column.html?pref=${encodeURIComponent(k)}">
+      <span class="column-card-pref">${c.pref}</span>
+      <span class="column-tag">${c.tag}</span>
+      <p class="column-card-title">${c.title}</p>
+      <span class="column-card-link">Read Column →</span>
+    </a>`;
+  }).join('');
+
+  content.innerHTML = `
+    <div class="column-index-header">
+      <h2>All Columns</h2>
+      <p>${Object.keys(COLUMNS).length} columns available</p>
+    </div>
+    <div class="column-list">${cards}</div>`;
+}
+
 function render() {
   const key = new URLSearchParams(location.search).get('pref') || '';
   const d = COLUMNS[key];
   const content = document.getElementById('content');
+
+  if (!key) {
+    renderIndex(content);
+    return;
+  }
 
   if (!d) {
     content.innerHTML = `
       <div class="not-found">
         <h2>Column Not Found</h2>
         <p style="margin-top:1rem;color:#666;">Please check the URL and try again.</p>
-        <a href="index.html" style="display:inline-block;margin-top:1.5rem;color:#2c7a7b;font-weight:700;">← Back to Map</a>
+        <a href="column.html" style="display:inline-block;margin-top:1.5rem;color:#2c7a7b;font-weight:700;">← All Columns</a>
       </div>`;
     return;
   }
@@ -368,7 +461,8 @@ function render() {
       </div>
     </article>
 
-    <a class="back-link" href="${prefUrl}">← Back to ${d.pref} Travel Guide</a>`;
+    <a class="back-link" href="column.html">← All Columns</a>
+    <a class="back-link" href="${prefUrl}" style="margin-left:1.5rem;">← Back to ${d.pref} Travel Guide</a>`;
 }
 
 render();
