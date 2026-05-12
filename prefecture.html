@@ -69,7 +69,7 @@
     var m=location.search.match(/[?&]pref=([^&]+)/);
     if(m){var d=T[decodeURIComponent(m[1])];if(d){
       var _t=d[0]+' — Top 5 Travel Spots | Japan Travel Guide';
-      var _d='Explore the top 5 travel spots in '+d[0]+', Japan. Best attractions, local food, transport tips, and souvenirs. Top pick: '+d[1]+'.';
+      var _d='The top 5 must-see spots in '+d[0]+', Japan: attractions, local food, transport tips, and souvenir picks — starting with '+d[1]+'.';
       var _u='https://kaizokulab.com/prefecture.html?pref='+m[1];
       document.getElementById('pageTitle').textContent=_t;
       document.getElementById('pageDesc').setAttribute('content',_d);

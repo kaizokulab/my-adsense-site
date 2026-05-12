@@ -6,7 +6,7 @@
   <title>Japan Travel Guide — Top 5 Spots for All 47 Prefectures</title>
   <meta name="description" content="Discover the top 5 travel spots in every Japanese prefecture. Click a prefecture on the map to explore attractions, food, transport, and souvenirs." />
   <meta property="og:title" content="Japan Travel Guide — Top 5 Spots for All 47 Prefectures" />
-  <meta property="og:description" content="Click any prefecture on the Japan map to explore its top 5 travel recommendations." />
+  <meta property="og:description" content="An interactive map of Japan's 47 prefectures — click any to explore the top 5 travel spots, local food, transport tips, and souvenir picks." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <script type="application/ld+json">
@@ -202,6 +202,12 @@
     .legend-item:hover { opacity: 0.8; }
     .pref { transition: filter 0.15s, transform 0.12s, opacity 0.2s; }
 
+    .region-guide { margin: 2rem 0; }
+    .region-guide-title { font-size: 1.3rem; font-weight: 800; color: #1a1a1a; margin-bottom: 1rem; }
+    .region-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 1.5rem 2rem; margin-bottom: 1rem; }
+    .region-card h3 { color: #c0392b; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .region-card p { color: #444; font-size: 0.95rem; line-height: 1.75; }
+
     .cookie-banner {
       position: fixed;
       bottom: 0; left: 0; right: 0;
@@ -332,8 +338,47 @@
 
   <div class="intro-card">
     <h3>About This Guide</h3>
-    <p>A travel guide covering the <strong>Top 5 sightseeing spots</strong> in all 47 Japanese prefectures. Every No.1 ranked spot includes a detailed article with <strong>attractions, food, transport, and souvenir</strong> recommendations. Use it to plan your next trip to Japan!</p>
+    <p>A travel guide covering the <strong>Top 5 sightseeing spots</strong> in all 47 Japanese prefectures. Every No.1 ranked spot includes a detailed article with <strong>attractions, food, transport, and souvenir</strong> recommendations. Click any prefecture on the map above, or browse the regional overview below. Use the <a href="column.html" style="color:#c0392b;">Column</a> section for longer reads on history, local culture, and travel tips.</p>
   </div>
+
+  <section class="region-guide">
+    <h2 class="region-guide-title">Japan by Region — A Traveller's Overview</h2>
+
+    <div class="region-card">
+      <h3>Hokkaido</h3>
+      <p>Japan's northernmost island offers vast, open landscapes that feel unlike anywhere else in the country. Sapporo — the regional capital — draws millions to its annual Snow Festival and is the starting point for exploring the island's famous dairy farms, lavender fields at Furano, and the dramatic volcanic scenery of Biei. Niseko and Furano are among Asia's top ski destinations in winter, while summer brings cool temperatures and seafood of outstanding quality: miso ramen, Jingisukan lamb barbecue, and fresh dairy products that set the national standard. The Shiretoko Peninsula, a UNESCO World Heritage Site, and the caldera lakes of Akan and Mashu complete a region where distances are long and rewards are proportionate.</p>
+    </div>
+
+    <div class="region-card">
+      <h3>Tohoku</h3>
+      <p>The six prefectures of northeastern Honshu — Aomori, Iwate, Miyagi, Akita, Yamagata, and Fukushima — form one of Japan's most undervisited and rewarding regions. Tohoku is defined by its festival culture: Aomori's Nebuta, Akita's Kanto, Sendai's Tanabata, and Yamagata's Hanagasa are among Japan's most spectacular summer events. The landscape is dramatic and varied — mountains, hot spring valleys, forested coastlines, and rice plains — and the culinary tradition is exceptional. Ginzan Onsen in Yamagata, Matsushima in Miyagi, and Hirosaki Castle in Aomori are among the region's signature destinations.</p>
+    </div>
+
+    <div class="region-card">
+      <h3>Kanto</h3>
+      <p>The greater Tokyo region is Japan's most densely populated area, but its diversity extends far beyond the capital. Tokyo's neighbourhoods — from Shinjuku and Shibuya to Yanaka and Shimokitazawa — each carry a distinct character. The broader metropolitan area encompasses some of Japan's finest day-trip destinations: the UNESCO World Heritage temples and shrines of Nikko in Tochigi, the ancient samurai capital of Kamakura in Kanagawa, the hot spring resort of Kusatsu in Gunma, and the pilgrimage mountains of Chichibu in Saitama. Chiba's coastal attractions and Ibaraki's Hitachi Seaside Park round out a region where the variety of experiences is unmatched.</p>
+    </div>
+
+    <div class="region-card">
+      <h3>Chubu &amp; Hokuriku</h3>
+      <p>Central Japan spans an extraordinary range of terrain, from the Pacific coast of Shizuoka — home to Mount Fuji and some of the country's finest green tea — to the Sea of Japan coastline of Toyama and Ishikawa. Kanazawa, the Hokuriku region's cultural capital, is often described as the Kyoto of the north: a city of preserved geisha districts, refined lacquerware, and the spectacular Kenroku-en garden. Inland, Gifu's Shirakawa-go preserves traditional thatched farmhouses designated as a UNESCO World Heritage Site. Nagano's Japanese Alps offer alpine hiking in summer and world-class skiing in winter, while Nagoya anchors the area with its formidable castle and celebrated miso-based cuisine.</p>
+    </div>
+
+    <div class="region-card">
+      <h3>Kansai (Kinki)</h3>
+      <p>The cultural heart of Japan, Kansai encompasses some of the country's most famous and historically significant destinations. Kyoto — Japan's imperial capital for over a thousand years — contains more UNESCO World Heritage Sites than any other Japanese city, including Kinkaku-ji, Fushimi Inari Taisha, and Arashiyama's bamboo grove. Osaka, Japan's second-largest city, is renowned for its food culture and energy: takoyaki, okonomiyaki, and kushikatsu are staples of the local cuisine. Nara's deer park and great Buddha, Kobe's cosmopolitan waterfront, and Wakayama's Kumano Kodo pilgrimage trail add further depth to a region that rewards extended visits.</p>
+    </div>
+
+    <div class="region-card">
+      <h3>Chugoku &amp; Shikoku</h3>
+      <p>Western Honshu and the island of Shikoku offer a quieter, less crowded alternative to Japan's main tourist corridors. Hiroshima's Peace Memorial Park is one of the most emotionally significant sites in Japan, while nearby Miyajima Island's floating torii gate ranks among the country's most iconic images. Tottori's vast sand dunes, Shimane's Izumo Taisha — one of Japan's oldest and most important Shinto shrines — and Okayama's Korakuen garden are the region's highlights. On Shikoku, the 88-temple pilgrimage circuit associated with the Buddhist monk Kukai draws walkers and cyclists from around the world, while Matsuyama's Dogo Onsen is one of Japan's oldest and most celebrated hot spring bathhouses.</p>
+    </div>
+
+    <div class="region-card">
+      <h3>Kyushu &amp; Okinawa</h3>
+      <p>Japan's southwestern island of Kyushu combines volcanic landscapes, historic castle towns, and some of the country's finest hot spring resorts. Beppu in Oita Prefecture is famous for its vivid geothermal "hell ponds," while Fukuoka is a modern, food-focused city popular with international visitors for its hakata ramen, yatai street food stalls, and excellent transport links. Nagasaki's layered history as a centre of international trade makes it one of the most thought-provoking cities in the country. Okinawa, Japan's southernmost prefecture, forms an entirely distinct cultural world: the Ryukyu Kingdom's influence is evident in the cuisine, music, architecture, and crafts of an island chain that feels closer to Southeast Asia than to mainland Japan.</p>
+    </div>
+  </section>
 
   <div class="ad-slot" style="min-height:90px;"></div>
 
